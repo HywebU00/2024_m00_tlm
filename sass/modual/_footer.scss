@@ -1,0 +1,133 @@
+footer {
+  box-sizing: border-box;
+  @include clearfix;
+  text-align: left;
+  font-size: 0.938em;
+  padding: 4em 3%;
+  background: #252424;
+  color: #fff;
+  .container {
+    @include gutter;
+    > div {
+      padding-bottom: 1em;
+    }
+  }
+  .footerBlock {
+    display: flex;
+    flex: 1 1 100%;
+    @include screen('tablet') {
+      flex-wrap: wrap;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $primaryColor;
+    &:hover,
+    &:focus {
+      color: darken($primaryColor, 10);
+    }
+  }
+  p {
+    margin: 0;
+    &.title {
+      font-size: 1.125em;
+    }
+  }
+  .footer_logo {
+    flex: 1 1 30%;
+    padding-right: 60px;
+    img {
+      width: 200px;
+      margin-bottom: 1em;
+    }
+  }
+  .footer_info {
+    flex: 1 1 90%;
+  }
+  .footer_icon {
+    flex: 0 0 20%;
+    text-align: right;
+    @include screen('tablet') {
+      flex: 1 1 100%;
+      text-align: right;
+    }
+  }
+  // 版權連結
+  .footer_link {
+    @include li-reset();
+    @include clearfix();
+    float: right;
+    display: flex;
+    margin-top: -1.5em;
+    @include screen('tablet') {
+      float: none;
+      margin: 1em 0;
+    }
+    @include screen('mobile') {
+      flex-direction: column;
+      margin: 1em 0;
+    }
+    li {
+      flex: 0 1 auto;
+      margin: 0px 1em 5px 0px;
+      @include screen('mobile') {
+        flex: 1 1 100%;
+      }
+      a {
+        display: block;
+        padding: 0;
+        // background: $primaryColor;
+        color: #fff;
+        // border-radius: 4px;
+        // text-align: center;
+        // transition: all 0.3s ease-out;
+        &:hover,
+        &:focus-visible {
+          color: #ebd42b;
+          //   background: darken($primaryColor, 10);
+        }
+      }
+    }
+  }
+  .Copyright {
+    float: left;
+    @include screen('tablet') {
+      float: none;
+    }
+  }
+  p {
+    line-height: 1.65em;
+  }
+  .update,
+  .counter {
+    display: inline-block;
+    margin-right: 5px;
+    em {
+      font-style: normal;
+      //   color: $primaryColor;
+      padding: 0 0.5em;
+    }
+  }
+  .footer_icon {
+    a {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      &:focus {
+        &:after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          box-shadow: 0px 0px 0px 1px $aHover inset;
+          z-index: 99;
+        }
+      }
+    }
+    img {
+      max-width: 120px;
+    }
+  }
+}

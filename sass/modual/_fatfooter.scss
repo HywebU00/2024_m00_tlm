@@ -1,0 +1,142 @@
+.fatfooter {
+  @extend %clearfix;
+  //   overflow: hidden;
+  padding-bottom: 1em;
+  margin: 0 auto;
+  background: $fatfooterBgColor;
+  @include screen('mobile') {
+    display: none;
+  }
+  .container {
+    // overflow: hidden;
+    box-sizing: border-box;
+    @include gutter;
+  }
+  // 按鈕
+  .btn-fatfooter {
+    font-size: 0.813em;
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    border: none;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: -25px;
+    right: 1%;
+    z-index: 90;
+    text-indent: -9999px;
+    border-radius: 50%;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #fff;
+      border-left: none;
+      border-bottom: none;
+      transform: rotate(-45deg);
+      left: 50%;
+      top: 17px;
+      margin-left: -7px;
+      transition: 0.3s ease-out;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 20px;
+      background: #fff;
+      top: 17px;
+      left: 50%;
+      margin-left: -1px;
+    }
+    &:hover,
+    &:focus {
+      background: darken($aHover, 0);
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      box-shadow: none;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+    &.close {
+      &:before {
+        transform: rotate(135deg) !important;
+        top: 20px;
+      }
+      &:after {
+        top: 15px;
+      }
+    }
+  }
+  nav {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding: 3em 0 0 2em;
+    box-sizing: border-box;
+
+    ul {
+      display: flex;
+      @include li-reset;
+
+      li {
+        flex: 1 1 16%;
+        box-sizing: border-box;
+
+        a {
+          line-height: 1.5;
+          display: block;
+          font-weight: bold;
+          padding: 0.5em 0px;
+          box-sizing: border-box;
+          color: #fff;
+          &:hover,
+          &:focus-visible {
+            box-shadow: none;
+            color: #ecd42e;
+          }
+        }
+        ul {
+          // display: flex;
+          // flex-direction:column;
+          // flex-wrap:wrap;
+          display: block;
+          margin: 0;
+          padding: 0 1em 0 0;
+          @include screen('mobile') {
+            width: auto;
+          }
+          li {
+            // flex: 0 0 100%;
+
+            a {
+              display: block;
+              @include aSetting_nocolor;
+              font-weight: normal;
+              text-align: left;
+              font-size: 0.938em;
+              line-height: 1.5em;
+              padding: 0.5em 0;
+              background: none;
+              color: #fff;
+              &:hover,
+              &:focus-visible {
+                box-shadow: none;
+                color: #ecd42e;
+              }
+            }
+          }
+          //第三層關閉
+          ul {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
