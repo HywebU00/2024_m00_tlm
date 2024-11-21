@@ -49,13 +49,12 @@
             <!-- font_size -->
             <div class="font_size">
               <button class="fontsize_btn" title="字型大小">字型大小：</button>
-              <!-- <span>字型大小：</span> -->
-              <!-- 英文用<span>font-size：</span> -->
               <ul>
                 <li><a href="#" role="button" aria-pressed="false" class="small">小</a></li>
                 <li><a href="#" role="button" aria-pressed="true" class="medium active">中</a></li>
                 <li><a href="#" role="button" aria-pressed="false" class="large">大</a></li>
               </ul>
+              <!-- 當選取時出現active時，判斷 aria-pressed="true"  -->
             </div>
           </nav>
           <!-- navigation End -->
@@ -170,7 +169,7 @@
           <div class="container">
             <div class="col">
               <!-- Swiper圖片輪播 start -->
-              <div class="swiper mpSlider">
+              <div class="swiper mpSlider wow fadeIn" data-wow-duration="2s" data-wow-delay=".1s">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide img-container" data-title="圖說1">
                     <a href="#" title="">
@@ -204,7 +203,7 @@
               </div>
               <!-- Swiper圖片輪播 end-->
               <!-- opentoday -->
-              <div class="opentoday">
+              <div class="opentoday wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s">
                 <div class="title">本日開館</div>
                 <ul>
                   <li>週二至週日</li>
@@ -225,7 +224,7 @@
               <div class="swiper eventsSwiper">
                 <div role="button" class="swiper-button-prev prevSlider">上一筆</div>
                 <div role="button" class="swiper-button-next nextSlider">下一筆</div>
-                <div class="swiper-wrapper wow fadeInLeft" data-wow-offset="20" data-wow-delay=".5s">
+                <div class="swiper-wrapper wow fadeInLeft" data-wow-duration="2s" data-wow-delay=".5s">
                   <div class="swiper-slide">
                     <a href="#" title="">
                       <div class="img-container">
@@ -262,11 +261,33 @@
                   <div class="swiper-slide">
                     <a href="#" title="">
                       <div class="img-container">
-                        <img src="images/event_p02.jpg" alt="圖片說明" />
+                        <img src="images/event_p01.jpg" alt="圖片說明" />
                       </div>
                       <div class="caption">
                         <div class="sort1">活動</div>
                         <p>2024桃園鍾肇政文學獎7/20-21拾字超展開</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" title="">
+                      <div class="img-container">
+                        <img src="images/event_p02.jpg" alt="圖片說明" />
+                      </div>
+                      <div class="caption">
+                        <div class="sort2">展覽</div>
+                        <p>和ＯＯ一起說故事 Journey with Story</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" title="">
+                      <div class="img-container">
+                        <img src="images/event_p03.jpg" alt="圖片說明" />
+                      </div>
+                      <div class="caption">
+                        <div class="sort2">展覽</div>
+                        <p>探險未來！桃園市兒童美術館開館展平行展區 「移居城市</p>
                       </div>
                     </a>
                   </div>
@@ -281,9 +302,9 @@
         <section class="col-8-4 newsBlock">
           <div class="container">
             <div class="col">
-              <div class="news">
+              <div class="news wow fadeInLeft" data-wow-offset="-10" data-wow-duration="1s" data-wow-delay=".5s">
                 <h2 class="title">最新消息</h2>
-                <div class="list wow fadeInLeft" data-wow-offset="20" data-wow-delay=".1s">
+                <div class="list">
                   <ul>
                     <li>
                       <span class="dept color_green">文學補助</span>
@@ -311,7 +332,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="service wow fadeInRight" data-wow-offset="20" data-wow-delay="1.5s">
+              <div class="service wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s">
                 <ul>
                   <li>
                     <a href="#"><img src="images/icon_s01.svg" alt="" /><span class="txt">開放時間</span></a>
@@ -335,14 +356,14 @@
           <div class="container">
             <div class="col">
               <h2 class="title">桃園作家</h2>
-              <p class="wow fadeInLeft" data-wow-offset="20" data-wow-delay=".5s">
+              <p class="wow fadeInLeft" data-wow-offset="-30" data-wow-duration="1s" data-wow-delay=".2s">
                 桃園是座充滿故事的城市，擁有豐富多元的族群文化，包括閩南、客家、原住民、新住民、眷村等文化聚集所在，歷經先民們的發展與洗練，成就出許多不同語言及族群豐富的文學創作，本站精選多位桃園作家與作品，題材多樣，各具特色，值得細細品味。
               </p>
               <!-- Swiper -->
-              <div class="swiper writerSwiper wow fadeInUp" data-wow-offset="20" data-wow-delay="1.5s">
+              <div class="swiper writerSwiper">
                 <div role="button" class="swiper-button-prev prevSlider">上一筆</div>
                 <div role="button" class="swiper-button-next nextSlider">下一筆</div>
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper wow fadeInRight" data-wow-offset="-30" data-wow-duration="2s" data-wow-delay=".5s">
                   <div class="swiper-slide">
                     <a href="#" title="作家謝鴻文">
                       <div class="img-container">
@@ -398,6 +419,39 @@
                       </div>
                     </a>
                   </div>
+                  <div class="swiper-slide">
+                    <a href="#" title="作家鍾肇政">
+                      <div class="img-container">
+                        <img src="images/people02.png" alt="圖片說明" />
+                      </div>
+                      <div class="caption">
+                        <div class="authorName">鍾肇政</div>
+                        <p>生於日治時期臺灣新竹州大溪郡龍潭庄字九座寮。在台尊稱其為台灣文學之母，與賴和相互輝映。</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" title="">
+                      <div class="img-container">
+                        <img src="images/people03.png" alt="圖片說明" />
+                      </div>
+                      <div class="caption">
+                        <div class="authorName">陳銘磻</div>
+                        <p>他的散文觀點是「用真心寫熟悉的人事物」，早期的寫作場景多半集中在臺北與新竹。</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" title="">
+                      <div class="img-container">
+                        <img src="images/people04.png" alt="圖片說明" />
+                      </div>
+                      <div class="caption">
+                        <div class="authorName">薛慧瑩</div>
+                        <p>自由插畫工作者。興趣是做陶，喜歡以人、植物、生活為創作的題材。作品散見於各類書籍雜誌。</p>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
               <!-- Swiper end-->
@@ -408,7 +462,7 @@
         <!--  literatureBlock -->
         <section class="col-6-6 literatureBlock">
           <div class="container">
-            <div class="col wow fadeInLeft" data-wow-offset="10" data-wow-delay=".5s">
+            <div class="col wow fadeInRight" data-wow-offset="-10" data-wow-duration="1s" data-wow-delay="1s">
               <!-- literature -->
               <h2 class="title">桃園文學小品<span class="dot">•</span><span class="stxt">摘錄推薦</span></h2>
               <div class="literature">
@@ -425,7 +479,7 @@
               </div>
               <!-- literature end-->
             </div>
-            <div class="col wow fadeInRight" data-wow-offset="10" data-wow-delay="1.5s">
+            <div class="col wow fadeInRight" data-wow-offset="-10" data-wow-duration="1s" data-wow-delay="1.5s">
               <!-- literature -->
               <h2 class="title">桃園文學年表日<span class="dot">•</span><span class="stxt">歷史上的今日</span></h2>
               <div class="literature">
@@ -454,7 +508,7 @@
               <div class="swiper collectionSwiper">
                 <div role="button" class="swiper-button-prev prevSlider">上一筆</div>
                 <div role="button" class="swiper-button-next nextSlider">下一筆</div>
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper wow fadeInUp" data-wow-offset="-10" data-wow-duration="2s" data-wow-delay=".5s">
                   <div class="swiper-slide">
                     <a href="#" title="">
                       <div class="img-container">
