@@ -1412,8 +1412,7 @@ a.goCenter:hover, a.goCenter:focus-visible {
   display: none;
 }
 .no-js .mpSlider .img-container img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .no-js .mpSlider .img-container:nth-child(1) {
   display: block;
@@ -1490,8 +1489,7 @@ a.goCenter:hover, a.goCenter:focus-visible {
   }
 }
 .no-js .cp_slider .img-container img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .no-js .adSlider .img-container {
   display: inline-block;
@@ -1506,16 +1504,14 @@ a.goCenter:hover, a.goCenter:focus-visible {
   }
 }
 .no-js .adSlider .img-container img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .no-js img.lazy {
   display: none;
 }
 .no-js img.lazy + noscript img {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 br {
@@ -2192,6 +2188,7 @@ kbd kbd {
   white-space: nowrap;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
   font-size: 0.813em;
@@ -2229,6 +2226,7 @@ kbd kbd {
   width: auto;
   height: 50%;
   line-height: 0;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .divider-vertical:after, .divider-vertical:before {
@@ -2402,28 +2400,23 @@ img.loaded {
 }
 
 .fill {
-  -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
 }
 
 .contain {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .cover {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .none {
-  -o-object-fit: none;
-     object-fit: none;
+  object-fit: none;
 }
 
 .scale-down {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  object-fit: scale-down;
 }
 
 [class^=i_]:before {
@@ -2940,9 +2933,7 @@ em[tooltip]:hover, em[tooltip]:focus {
 [tooltip]:before,
 [tooltip]:after {
   text-transform: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   pointer-events: none;
   position: absolute;
   display: none;
@@ -4482,8 +4473,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
     width: 280px;
     height: 100%;
     border-radius: 0;
-    -webkit-clip-path: none;
-            clip-path: none;
+    clip-path: none;
   }
 }
 .sidebar .m_area .megamenu {
@@ -5263,7 +5253,6 @@ select::-ms-expand {
   border-bottom: 0;
 }
 .flex-form.form_inline .form_grp .form_title {
-  max-width: -moz-max-content;
   max-width: max-content;
 }
 .flex-form .form_grp {
@@ -5304,16 +5293,14 @@ select::-ms-expand {
 .flex-form .form_grp .birthday select {
   display: inline-block;
   margin-right: 0.5em;
-  -moz-text-align-last: center;
-       text-align-last: center;
+  text-align-last: center;
 }
 @media screen and (max-width: 575px) {
   .flex-form .form_grp .birthday select {
     width: 88% !important;
     min-width: 88% !important;
     display: inline-block !important;
-    -moz-text-align-last: left;
-         text-align-last: left;
+    text-align-last: left;
   }
 }
 .flex-form .form_grp .birthday select option {
@@ -7185,6 +7172,7 @@ table.table_sprite tr:nth-child(even) {
 .scroltable-nav.scroltable-nav-left {
   left: 0;
   background: rgb(255, 255, 255);
+  background: -webkit-linear-gradient(left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
   background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
 }
 .scroltable-nav.scroltable-nav-left .tablearrow_left {
@@ -7213,6 +7201,7 @@ table.table_sprite tr:nth-child(even) {
 .scroltable-nav.scroltable-nav-right {
   right: 0;
   background: rgba(255, 255, 255, 0);
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
 }
 .scroltable-nav.scroltable-nav-right .tablearrow_right {
@@ -7835,8 +7824,7 @@ table.table_sprite tr:nth-child(even) {
     max-width: 40%;
   }
   .flex-equal-4 .typeList .thumbnail .img-container img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 .flex-equal-4 .typeList .thumbnail .caption {
@@ -7927,9 +7915,11 @@ table.table_sprite tr:nth-child(even) {
   box-sizing: border-box;
   -webkit-user-select: text;
   -moz-user-select: text;
+  -ms-user-select: text;
   user-select: text;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
+  -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
@@ -7952,6 +7942,10 @@ table.table_sprite tr:nth-child(even) {
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -8474,8 +8468,7 @@ table.table_sprite tr:nth-child(even) {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: 0.3s;
 }
 .eventsSwiper .caption .sort1 {
@@ -8607,8 +8600,7 @@ table.table_sprite tr:nth-child(even) {
 }
 .writerSwiper .img-container {
   overflow: hidden;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   margin-bottom: 1.5em;
   background: #e4e4e4;
   transition: 0.3s;
@@ -8630,16 +8622,14 @@ table.table_sprite tr:nth-child(even) {
   margin: auto;
 }
 .writerSwiper .img-container:hover {
-  -webkit-clip-path: none;
-          clip-path: none;
+  clip-path: none;
   border-radius: 50%;
 }
 .writerSwiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: 0.3s;
 }
 .writerSwiper .caption .authorName {
@@ -8736,8 +8726,7 @@ table.table_sprite tr:nth-child(even) {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: 0.3s;
 }
 .collectionSwiper .caption p {
@@ -8833,8 +8822,7 @@ table.table_sprite tr:nth-child(even) {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: 0.3s;
 }
 .cpSwiper .caption p {
@@ -8934,8 +8922,7 @@ table.table_sprite tr:nth-child(even) {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: 0.3s;
 }
 .spSwiper .caption p {
@@ -9038,8 +9025,7 @@ table.table_sprite tr:nth-child(even) {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: 0.3s;
 }
 .bookSwiper .caption {
@@ -9176,8 +9162,7 @@ table.table_sprite tr:nth-child(even) {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: 0.3s;
 }
 .storySwiper .caption p {
@@ -9575,6 +9560,8 @@ div.function ul li.icon_forward a:before {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-bottom: 1px solid #dadada;
 }
@@ -10001,10 +9988,13 @@ body.noscroll {
   text-align: center;
   overflow: hidden;
   vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
+  -webkit-transition-property: color;
   transition-property: color;
+  -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
 .more a:after {
@@ -10027,15 +10017,20 @@ body.noscroll {
   right: 0;
   bottom: 0;
   background: #d32c79;
+  -webkit-transform: scale(0);
   transform: scale(0);
+  -webkit-transition-property: transform;
   transition-property: transform;
+  -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 .more a:hover, .more a:focus, .more a.active {
   color: white;
 }
 .more a:hover:before, .more a:focus:before, .more a.active:before {
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 .more a:hover:after, .more a:focus:after, .more a.active:after {
@@ -10463,10 +10458,13 @@ body.noscroll {
   text-align: center;
   overflow: hidden;
   vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
+  -webkit-transition-property: color;
   transition-property: color;
+  -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
 .literature .more:after {
@@ -10489,15 +10487,20 @@ body.noscroll {
   right: 0;
   bottom: 0;
   background: #d32c79;
+  -webkit-transform: scale(0);
   transform: scale(0);
+  -webkit-transition-property: transform;
   transition-property: transform;
+  -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 .literature .more:hover, .literature .more:focus, .literature .more.active {
   color: white;
 }
 .literature .more:hover:before, .literature .more:focus:before, .literature .more.active:before {
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 .literature .more:hover:after, .literature .more:focus:after, .literature .more.active:after {
@@ -10518,10 +10521,13 @@ body.noscroll {
   color: #333;
   overflow: hidden;
   vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
+  -webkit-transition-property: color;
   transition-property: color;
+  -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
   text-decoration: none !important;
   color: #222 !important;
@@ -11100,8 +11106,7 @@ h2.title:before {
 }
 .cpinfoBlock .img-container img {
   transition: 0.3s;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (max-width: 767px) {
   .cpinfoBlock .img-container {
@@ -11165,8 +11170,7 @@ h2.title:before {
 }
 .cpinfoBlock2 .img-container img {
   transition: 0.3s;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (max-width: 767px) {
   .cpinfoBlock2 .img-container {
@@ -11333,8 +11337,7 @@ h2.title:before {
   left: 0;
 }
 .leftblock_banner .item a img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .leftblock_list {
