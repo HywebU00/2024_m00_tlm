@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>桃園市政府文化局桃園文學館</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
+    <!-- animate -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
+  <!-- 內頁body新增一個classname -->
+  <body class="pagebody">
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#aC" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+      <!-- header Start 內頁新增一個classname-->
+      <header class="header full pageheader wow fadeInDown" data-wow-duration=".5s" data-wow-delay=".1s">
+        <div class="container">
+          <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+          <h1>
+            <a href="index.htm"><img src="images/logo.png" alt="" />桃園文學館</a>
+          </h1>
+          <!-- navigation Start -->
+          <nav class="navigation" role="navigation" aria-label="上方導覽列">
+            <!-- 新增div navlist -->
+            <div class="navlist">
+              <ul>
+                <li><a href="#">回首頁</a></li>
+                <li><a href="#">網站導覽</a></li>
+                <li><a href="#">常見問答</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </div>
+
+            <!-- font_size -->
+            <div class="font_size">
+              <button class="fontsize_btn" title="字型大小">字型大小：</button>
+              <ul>
+                <li><a href="#" role="button" aria-pressed="false" class="small">小</a></li>
+                <li><a href="#" role="button" aria-pressed="true" class="medium active">中</a></li>
+                <li><a href="#" role="button" aria-pressed="false" class="large">大</a></li>
+              </ul>
+              <!-- 當選取時出現active時，判斷 aria-pressed="true"  -->
+            </div>
+          </nav>
+          <!-- navigation End -->
+
+          <!-- Search Start -->
+          <div class="search" role="search">
+            <div class="form_grp">
+              <label for="mustSameAsId">搜尋</label>
+              <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容" />
+              <input name="" type="submit" value="查詢" class="btn btn-search" />
+            </div>
+            <div class="btn_grp">
+              <input name="" type="submit" value="進階搜尋" class="btn" />
+            </div>
+            <div class="keywordHot">
+              <ul>
+                <li><a href="#">熱門熱門</a></li>
+                <li><a href="#">查詢</a></li>
+                <li><a href="#">字詞三</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Search End -->
+          <!-- noscript -->
+          <noscript>
+            您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+            <a href="#">網站導覽</a>
+          </noscript>
+          <!-- menu Start -->
+          <nav class="menu" role="navigation" aria-label="主選單">
+            <ul>
+              <li>
+                <a href="#" role="button" aria-expanded="false">關於桃園文學館</a>
+                <!-- a連結有下一層選單，當成按鈕需加入role="button” ，當選單尚未展開，請判斷為aria-expanded="false"，選單展開後，請判斷為aria-expanded="true"-->
+                <ul>
+                  <li><a href="#">創立歷程</a></li>
+                  <li><a href="#">目標展望</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" role="button" aria-expanded="true">參觀資訊</a>
+                <!-- 選單展開後，請判斷為aria-expanded="true" -->
+                <ul>
+                  <li><a href="#">開放時間</a></li>
+                  <li><a href="#">參觀須知</a></li>
+                  <li><a href="#">空間介紹</a></li>
+                  <li><a href="#">交通資訊</a></li>
+                  <li><a href="#">無障礙服務資訊</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">展覽與活動</a>
+                <ul>
+                  <li><a href="#">行事曆</a></li>
+                  <li><a href="#">展覽</a></li>
+                  <li><a href="#">活動</a></li>
+                </ul>
+              </li>
+              <li><a href="#">消息公告</a></li>
+              <!-- 單純 a連結，不需加入role="button” -->
+              <li>
+                <a href="#" role="button" aria-expanded="false">鍾肇政文學獎</a>
+                <ul>
+                  <li><a href="#">背景介紹</a></li>
+                  <li><a href="#">徵文辦法／線上申請</a></li>
+                  <li><a href="#">桃園文學季</a></li>
+                  <li><a href="#">歷屆得獎作品</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">文學補助 </a>
+                <ul>
+                  <li><a href="#">補助公告</a></li>
+                  <li><a href="#">線上申請</a></li>
+                  <li><a href="#">歷屆補助名單</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">桃園文學專區</a>
+                <ul>
+                  <li><a href="#">認識桃園文學</a></li>
+                  <li><a href="#">桃園文學史及年表</a></li>
+                  <li><a href="#">桃園文學作家地圖</a></li>
+                  <li><a href="#">影音資源</a></li>
+                  <li><a href="#">桃園作家作品資源(書目)</a></li>
+                  <li><a href="#">桃園書影</a></li>
+                </ul>
+              </li>
+              <li><a href="#">文物典藏</a></li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">便民服務</a>
+                <ul>
+                  <li><a href="#">場地租借</a></li>
+                  <li><a href="#">導覽服務</a></li>
+                  <li><a href="#">志工服務</a></li>
+                  <li><a href="#">相關連結</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- menu End -->
+        </div>
+      </header>
+      <!-- header End -->
+      <!-- main Start -->
+      <div id="aC" class="main full innerpage">
+        <!-- 內頁新增一個classname-->
+        <div class="topPic">
+          <img src="images/top_pic.jpg" alt="" />
+        </div>
+        <a class="accesskey" href="#ac" id="ac" accesskey="C" title="主要內容區">:::</a>
+        <div class="container">
+          <!-- 主要內容區 -->
+          <div class="center_block">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="#">首頁</a></li>
+                <li>消息公告</li>
+              </ul>
+            </div>
+            <!-- h2節點 -->
+            <h2 class="title">消息公告</h2>
+            <!-- function_panel -->
+            <div class="function_panel">
+              <!-- function功能區塊 -->
+              <div class="function">
+                <ul>
+                  <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                  <li class="print"><a href="#">友善列印</a></li>
+                  <li class="forward"><a href="#">轉寄友人</a></li>
+                </ul>
+              </div>
+              <!-- 社群分享 -->
+              <div class="share">
+                <ul>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CP Start -->
+            <section class="cp">
+              <h3>「桃園文學館」開工動土，讓桃園成為有故事、溫度、文化的城市</h3>
+              <ul class="publish_info">
+                <li>發布單位:新聞聯繫科</li>
+                <li>發布日期:2024/9/1</li>
+              </ul>
+              <figure class="pic">
+                <!-- 此範例為4:3比例 -->
+                <img src="images/cp_pic01.jpg" alt="圖片說明" />
+                <figcaption>圖說</figcaption>
+              </figure>
+              <p>
+                <a href="#">連結文字樣式 </a
+                >桃園市長鄭文燦今（7）日上午前往桃園區，出席「桃園文學館新建工程」開工典禮。鄭市長表示，「桃園文學館新建工程」基地面積約653平方公尺，以總經費約1億2,040萬元興建1棟地上4層的「文學館主館」及1棟地上1層的「仿日式宿舍展示館」，預計明（112）年7月竣工，屆時「一大一小」嶄新的「桃園文學館」，將會典藏桃園文學作家的作品，同時兼具教育、文化交流功能，不僅可舉辦各式座談會、新書發表會，也能以獨立書屋的模式，作為文學的交流基地，成為桃園市民喜愛的地方，也希望吸引、留住更多文學家落腳桃園，讓桃園成為有故事、有溫度、有文化的城市。
+              </p>
+              <p>
+                鄭市長指出，目前台灣的相關文學館舍，除了國立台灣文學館外，僅台北、宜蘭、台中、高雄等有設置公立文學館或文學基地。桃園為了推動地方文學，活化桃園區忠孝街閒置多年且不堪使用的日式宿舍群，規劃興建「桃園文學館」，包括1棟新的文學館主館及1棟仿日式宿舍展示館，其中文學館主館以書本為建築設計意象，1樓規劃大廳、展示廳、洗手間及車輛停放空間；2至4樓則提供展覽室、座談室、展示廳、文學典藏室、會議室及行政辦空間等；另仿日式宿舍展示館則規劃提供展示、休憩及簡單餐飲等空間；未來也將成為新的文化地標。
+              </p>
+              <p>鄭市長提及，「桃園文學館」推動過程中，感謝陳銘磻老師、林央敏老師、林文義老師、許水富老師、賴文誠老師等桃園作家給予大力支持，他們時常書寫桃園，筆下的桃園也讓市民朋友更瞭解桃園。此外，市府也歡迎更多文學家落腳桃園，期盼發展文學家名人堂，打造「桃園文學館」成為文學教育基地。</p>
+
+              <!-- file download 檔案下載 -->
+              <div class="file_download">
+                <h3>相關附件</h3>
+                <ul>
+                  <li>
+                    <span class="file_name">檔案名稱</span>
+                    <span class="file_doc"><a href="xxxx.doc">doc</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_docx"><a href="xxx.docx">docx</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_odt"><a href="xxxx.odt">odt</a>823.8 KB，下載 1,489 次</span>
+                  </li>
+                  <li>
+                    <span class="file_name">檔案名稱檔案名稱</span>
+                    <span class="file_xls"><a href="xxxx.xls">xls</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_xlsx"><a href="xxxx.xlsx">xlsx</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_csv"><a href="xxxx.csv">csv</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_ods"><a href="xxxx.ods">ods</a>823.8 KB，下載 1,489 次</span>
+                  </li>
+                  <li>
+                    <span class="file_name">檔案名稱</span>
+                    <span class="file_ppt"><a href="xxxx.ppt">ppt</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_pptx"><a href="xxxx.pptx">pptx</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_odp"><a href="xxxx.odp">odp</a>823.8 KB，下載 1,489 次</span>
+                  </li>
+                  <li>
+                    <span class="file_name">檔案名稱</span>
+                    <span class="file_pdf"><a href="xxxx.pdf">pdf</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_zip"><a href="xxxx.zip">zip</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_txt"><a href="xxxx.txt">txt</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_mov"><a href="xxxx.mov">mov</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_mp3"><a href="xxxx.mp3">mp3</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_jpg"><a href="xxxx.jpg">jpg</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_wmv"><a href="xxxx.wmv">wmv</a>823.8 KB，下載 1,489 次</span>
+                    <span class="file_mp4"><a href="xxxx.mp4">mp4</a>823.8 KB，下載 1,489 次</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!--  相關照片 -->
+              <div class="cpswiperBlock">
+                <h3>相關照片</h3>
+                <!-- Swiper -->
+                <div class="swiper cpSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="images/cp_pic02.jpg" data-fancybox="gallery" data-caption="圖片說明">
+                        <div class="img-container">
+                          <img src="images/cp_pic02.jpg" alt="圖片說明" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/cp_pic03.jpg" data-fancybox="gallery" data-caption="圖片說明">
+                        <div class="img-container">
+                          <img src="images/cp_pic03.jpg" alt="圖片說明" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/cp_pic04.jpg" data-fancybox="gallery" data-caption="圖片說明">
+                        <div class="img-container">
+                          <img src="images/cp_pic04.jpg" alt="圖片說明" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/cp_pic05.jpg" data-fancybox="gallery" data-caption="圖片說明">
+                        <div class="img-container">
+                          <img src="images/cp_pic05.jpg" alt="圖片說明" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/cp_pic06.jpg" data-fancybox="gallery" data-caption="圖片說明">
+                        <div class="img-container">
+                          <img src="images/cp_pic06.jpg" alt="圖片說明" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/cp_pic07.jpg" data-fancybox="gallery" data-caption="圖片說明">
+                        <div class="img-container">
+                          <img src="images/cp_pic07.jpg" alt="圖片說明" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/cp_pic02.jpg" data-fancybox="gallery" data-caption="圖片說明">
+                        <div class="img-container">
+                          <img src="images/cp_pic02.jpg" alt="圖片說明" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/cp_pic03.jpg" data-fancybox="gallery" data-caption="圖片說明">
+                        <div class="img-container">
+                          <img src="images/cp_pic03.jpg" alt="圖片說明" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/cp_pic04.jpg" data-fancybox="gallery" data-caption="圖片說明">
+                        <div class="img-container">
+                          <img src="images/cp_pic04.jpg" alt="圖片說明" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/cp_pic05.jpg" data-fancybox="gallery" data-caption="圖片說明">
+                        <div class="img-container">
+                          <img src="images/cp_pic05.jpg" alt="圖片說明" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/cp_pic06.jpg" data-fancybox="gallery" data-caption="圖片說明">
+                        <div class="img-container">
+                          <img src="images/cp_pic06.jpg" alt="圖片說明" />
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/cp_pic07.jpg" data-fancybox="gallery" data-caption="圖片說明">
+                        <div class="img-container">
+                          <img src="images/cp_pic07.jpg" alt="圖片說明" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div role="button" class="swiper-button-prev prevSlider">上一筆</div>
+                  <div role="button" class="swiper-button-next nextSlider">下一筆</div>
+                </div>
+                <!-- Swiper end-->
+              </div>
+
+              <!-- weblink 外部連結 -->
+              <!-- <div class="web_link">
+                <h3>外部連結</h3>
+                <ol>
+                  <li><a href="javscript:;">外部連結1</a></li>
+                  <li><a href="javscript:;">外部連結2</a></li>
+                  <li><a href="javscript:;">外部連結3</a></li>
+                  <li><a href="javscript:;">外部連結4</a></li>
+                  <li><a href="javscript:;">外部連結5</a></li>
+                </ol>
+              </div> -->
+              <ul class="f_publish_info">
+                <li>最後更新：2024/9/1</li>
+                <li>瀏覽次數：20,491</li>
+              </ul>
+            </section>
+            <!-- CP End -->
+          </div>
+        </div>
+      </div>
+      <!-- fatfooter Start -->
+      <section class="fatfooter">
+        <div class="container">
+          <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
+          <nav aria-label="fatfooter的導航列">
+            <ul>
+              <li>
+                <a href="#">關於桃園文學館</a>
+                <ul>
+                  <li><a href="#">創立歷程</a></li>
+                  <li><a href="#">目標展望</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">參觀資訊</a>
+                <ul>
+                  <li><a href="#">開放時間</a></li>
+                  <li><a href="#">參觀須知</a></li>
+                  <li><a href="#">空間介紹</a></li>
+                  <li><a href="#">交通資訊</a></li>
+                  <li><a href="#">無障礙服務資訊</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">展覽與活動</a>
+                <ul>
+                  <li><a href="#">行事曆</a></li>
+                  <li><a href="#">展覽</a></li>
+                  <li><a href="#">活動</a></li>
+                </ul>
+              </li>
+              <li><a href="#">消息公告</a></li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">鍾肇政文學獎</a>
+                <ul>
+                  <li><a href="#">背景介紹</a></li>
+                  <li><a href="#">徵文辦法／線上申請</a></li>
+                  <li><a href="#">桃園文學季</a></li>
+                  <li><a href="#">歷屆得獎作品</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">文學補助 </a>
+                <ul>
+                  <li><a href="#">補助公告</a></li>
+                  <li><a href="#">線上申請</a></li>
+                  <li><a href="#">歷屆補助名單</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">桃園文學專區</a>
+                <ul>
+                  <li><a href="#">認識桃園文學</a></li>
+                  <li><a href="#">桃園文學史及年表</a></li>
+                  <li><a href="#">桃園文學作家地圖</a></li>
+                  <li><a href="#">影音資源</a></li>
+                  <li><a href="#">桃園作家作品資源(書目)</a></li>
+                  <li><a href="#">桃園書影</a></li>
+                </ul>
+              </li>
+              <li><a href="#">文物典藏</a></li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">便民服務</a>
+                <ul>
+                  <li><a href="#">場地租借</a></li>
+                  <li><a href="#">導覽服務</a></li>
+                  <li><a href="#">志工服務</a></li>
+                  <li><a href="#">相關連結</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="f_share">
+            <ul>
+              <li>
+                <a href="#"><img src="images/icon_youtube.png" alt="youtube" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_line.png" alt="line" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_facebook.png" alt="facebook" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_instagram.png" alt="instagram" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- fatfooter End -->
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+          <div class="footerBlock">
+            <div class="footer_logo">
+              <img src="images/f_logo.png" alt="桃園文學館" class="img-responsive" />
+            </div>
+            <div class="footer_info">
+              <p class="title">桃園文學館</p>
+              <p>
+                地址：330206桃園市桃園區忠孝街11號<br />
+                電話：(03)3322592
+              </p>
+            </div>
+            <div class="footer_icon">
+              <a target="_blank" href="javascript:;">
+                <img src="images/basic/accessibility_aa.jpg" alt="通過AA優先等級無障礙網頁檢測,另開新視窗" />
+              </a>
+            </div>
+          </div>
+
+          <hr />
+          <p class="Copyright">Copyright © 桃園縣政府文化局 All Rights Reserved.</p>
+          <ul class="footer_link">
+            <li><a href="javascript:;">隱私權及資訊安全</a></li>
+            <li class="update">更新日期:<em>113-11-16</em></li>
+            <li class="counter">瀏覽人次:<em>167,892</em></li>
+          </ul>
+        </div>
+      </footer>
+      <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- scrolltable -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script src="js/wow.js"></script>
+    <script>
+      wow = new WOW({
+        animateClass: 'animated',
+        offset: 100,
+        callback: function (box) {
+          console.log('WOW: animating <' + box.tagName.toLowerCase() + '>');
+        },
+      });
+      wow.init();
+    </script>
+    <!-- <script src="js/anime.js"></script> -->
+
+    <!-- hyUI -->
+    <script src="js/main.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+  </body>
+</html>
