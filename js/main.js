@@ -21,6 +21,8 @@ $(function () {
     ww = _window.outerWidth(),
     wh = _window.height(),
     _body = $('body'),
+    _header = $('header'),
+    _fontSize = $('.font_size'),
     wwNormal = 1920,
     wwMedium = 992,
     wwSmall = 768,
@@ -178,8 +180,10 @@ $(function () {
   _nav.clone().prependTo(_mArea);
 
   _megamenu.clone().prependTo(_mArea);
-  _search.clone().prependTo(_body).removeClass('search').addClass('m_search');
-
+  _search.clone().prependTo(_header).removeClass('search').addClass('m_search');
+  $('header .container .font_size').insertAfter('h1');
+  $('header .container .searchCtrl').insertAfter('.font_size');
+  $('header .container .sidebarCtrl').insertAfter('.searchCtrl');
   // 切換PC/Mobile 選單
   function checkMenuMode() {
     if (ww < wwNormal) {
@@ -1305,6 +1309,11 @@ function tabFunction(obj) {
 // -----   fancyBox新增需要綁定才有效果
 if ($('[data-fancybox="gallery"]').length > 0) {
   Fancybox.bind('[data-fancybox="gallery"]', {
+    l10n: Fancybox.l10n.zh_TW,
+  });
+}
+if ($('[data-fancybox="gallery2"]').length > 0) {
+  Fancybox.bind('[data-fancybox="gallery2"]', {
     l10n: Fancybox.l10n.zh_TW,
   });
 }

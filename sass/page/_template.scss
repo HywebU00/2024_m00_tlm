@@ -25,7 +25,7 @@ body {
 
   @include screen('mobile') {
     padding-top: 60px;
-    background: #fff;
+    // background: #fff;
     overflow: hidden;
     overflow-y: auto;
   }
@@ -59,9 +59,10 @@ body {
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
   > .container {
-    @include gutter(); //gutter 代表左右要留白
+    // @include gutter(); //gutter 代表左右要留白
     display: flex;
     align-items: flex-start;
+    padding: 0 5%;
   }
 
   .center_block {
@@ -112,6 +113,13 @@ body {
 
   &.large_size {
     font-size: 1.125em;
+  }
+
+  .topPic {
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 

@@ -138,160 +138,340 @@ $(function () {
     },
   });
 
+  //cp燈箱輪播
+  var swiper = new Swiper('.cpSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: false,
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+
+  //sp燈箱輪播
+  var swiper = new Swiper('.spSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: false,
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+
+  //著作資源
+  var swiper = new Swiper('.bookSwiper', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: false,
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+
+  //寫作年表
+  var swiper = new Swiper('.chrSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: false,
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  //寫作年表
+  var swiper = new Swiper('.workSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: false,
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  //照片故事
+  var swiper = new Swiper('.storySwiper', {
+    spaceBetween: 10,
+    slidesPerView: 7.5,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiper2 = new Swiper('.storySwiper2', {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
+
   // 廣告輪播
-  $('.adSlider').slick({
-    mobileFirst: true,
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    arrow: true,
-    lazyLoaded: true,
-    lazyLoad: 'ondemand',
-    ease: 'ease',
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          arrows: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          arrows: true,
-        },
-      },
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          arrows: true,
-        },
-      },
-    ],
-  });
+  // $('.adSlider').slick({
+  //   mobileFirst: true,
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 300,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   arrow: true,
+  //   lazyLoaded: true,
+  //   lazyLoad: 'ondemand',
+  //   ease: 'ease',
+  //   responsive: [
+  //     {
+  //       breakpoint: 1200,
+  //       settings: {
+  //         slidesToShow: 5,
+  //         slidesToScroll: 1,
+  //         arrows: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 4,
+  //         slidesToScroll: 1,
+  //         arrows: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 575,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //         arrows: true,
+  //       },
+  //     },
+  //   ],
+  // });
   //燈箱slick+lightBox組合
-  $('.cp_slider').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 1500,
-    pauseOnHover: true,
-    pauseOnFocus: true,
-    focusOnSelect: true,
-    accessibility: true,
-    lazyLoad: 'ondemand',
-    ease: 'ease',
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 545,
-        settings: {
-          arrows: true,
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-        },
-      },
-    ],
-  });
+  // $('.cp_slider').slick({
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   autoplay: false,
+  //   autoplaySpeed: 1500,
+  //   pauseOnHover: true,
+  //   pauseOnFocus: true,
+  //   focusOnSelect: true,
+  //   accessibility: true,
+  //   lazyLoad: 'ondemand',
+  //   ease: 'ease',
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         infinite: true,
+  //         dots: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 545,
+  //       settings: {
+  //         arrows: true,
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         arrows: true,
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         arrows: false,
+  //       },
+  //     },
+  //   ],
+  // });
   //
-  $('.cppic_slider').slick({
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 1500,
-    // pauseOnHover: true,
-    // pauseOnFocus: true,
-    // focusOnSelect: true,
-    // accessibility: true,
-    // lazyLoad: 'ondemand',
-    // ease: 'ease',
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 545,
-        settings: {
-          arrows: true,
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-        },
-      },
-    ],
-  });
+  // $('.cppic_slider').slick({
+  //   dots: true,
+  //   infinite: false,
+  //   speed: 500,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   autoplay: false,
+  //   autoplaySpeed: 1500,
+  //   // pauseOnHover: true,
+  //   // pauseOnFocus: true,
+  //   // focusOnSelect: true,
+  //   // accessibility: true,
+  //   // lazyLoad: 'ondemand',
+  //   // ease: 'ease',
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         infinite: true,
+  //         dots: true,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 545,
+  //       settings: {
+  //         arrows: true,
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         arrows: true,
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         arrows: false,
+  //       },
+  //     },
+  //   ],
+  // });
   // cp_photo
-  $('.Slider-for').on('init reInit afterChange', function (event, slick, currentSlide) {
-    var i = (currentSlide ? currentSlide : 0) + 1;
-    $('.controls').html(i + '/' + slick.slideCount);
-  });
-  $('.Slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    swipe: false,
-    swipeToSlide: false,
-    lazyLoad: 'ondemand',
-    asNavFor: '.Slider-nav',
-    infinite: true,
-  });
-  $('.Slider-nav').slick({
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    asNavFor: '.Slider-for',
-    dots: true,
-    arrows: true,
-    lazyLoad: 'ondemand',
-    focusOnSelect: true,
-    infinite: true,
-  });
+  // $('.Slider-for').on('init reInit afterChange', function (event, slick, currentSlide) {
+  //   var i = (currentSlide ? currentSlide : 0) + 1;
+  //   $('.controls').html(i + '/' + slick.slideCount);
+  // });
+  // $('.Slider-for').slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   fade: true,
+  //   swipe: false,
+  //   swipeToSlide: false,
+  //   lazyLoad: 'ondemand',
+  //   asNavFor: '.Slider-nav',
+  //   infinite: true,
+  // });
+  // $('.Slider-nav').slick({
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  //   asNavFor: '.Slider-for',
+  //   dots: true,
+  //   arrows: true,
+  //   lazyLoad: 'ondemand',
+  //   focusOnSelect: true,
+  //   infinite: true,
+  // });
 
   // password_toggle
   var passShow = false;
@@ -335,4 +515,30 @@ tabFunction({
   modeSwitch: true, // 預設模式自動切換，尺寸以上tab功能，尺寸以下手風琴功能
   width: 767, // 尺寸以上tab功能，尺寸以下手風琴功能
   index: 0, // 預設開啟第幾個
+});
+
+// 固定header
+// $(function () {
+//   header_h = Math.floor($('header').outerHeight(true));
+//   fixedheader_h = Math.floor($('.fixedheader').outerHeight(true) + 10);
+//   $('.fixedheader').css('top', -fixedheader_h);
+//   $(window).bind('scroll', function () {
+//     if ($(this).scrollTop() > header_h) {
+//       $('.fixedheader').css({ top: 0 }, 800, 'easeOutQuint');
+//     } else {
+//       $('.fixedheader').css({ top: -fixedheader_h }, 800, 'easeOutQuint');
+//     }
+//   });
+// });
+
+//切換列表或是區塊
+$('.switchBlock li:first').on('click', function () {
+  $('.lp .Flex-set').removeClass('typeList');
+  $('.typeGrid').addClass('active');
+  $('.typeList').removeClass('active');
+});
+$('.switchBlock li:last').on('click', function () {
+  $('.lp .Flex-set').addClass('typeList');
+  $('.typeList').addClass('active');
+  $('.typeGrid').removeClass('active');
 });

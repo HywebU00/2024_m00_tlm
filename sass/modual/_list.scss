@@ -1,73 +1,264 @@
 .lp {
-    table {
-        td {
-            a {
-                @include aSetting_nocolor;
-            }
-            &.date {
-                text-align: center;
-                color: #666;
-                @include screen('mobile') {
-                    text-align: left;
-                }
-            }
-            &.num {
-                text-align: center;
-                color: #666;
-                @include screen('mobile') {
-                    text-align: left;
-                }
-            }
+  table {
+    td {
+      a {
+        @include aSetting_nocolor;
+      }
+      &.date {
+        text-align: center;
+        color: #666;
+        @include screen('mobile') {
+          text-align: left;
         }
-    }
-    .list {
-        &>ul, ol {
-            list-style-type: none;
-            padding: 0;
-            border-top: 2px solid $primaryColor;
-            &>li {
-                padding: 1em 0;
-                border-bottom: 1px solid #DDD;
-                position: relative; // outline: 1px solid blue;
-                .tag {
-                    margin-left: 2em;
-                }
-                &>a {
-                    display: block;
-                    padding-left: 2em;
-                    position: relative;
-                    line-height: 1.45em;
-                    color: $color-word;
-                    &:hover {
-                        color: $aHover;
-                    }
-                    .num {
-                        width: 1.5em;
-                        text-align: right;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        &:after {
-                            content: ".";
-                            display: inline-block;
-                        }
-                    }
-                }
-                span.dept {
-                    display: inline-block;
-                    font-size: .938em;
-                    @include screen("mobile") {
-                        display: block;
-                    }
-                }
-                time {
-                    display: block;
-                    color: #AAA;
-                    font-size: .938em;
-                }
-            }
+      }
+      &.num {
+        text-align: center;
+        color: #666;
+        @include screen('mobile') {
+          text-align: left;
         }
+      }
     }
+  }
+  .list {
+    & > ul,
+    ol {
+      list-style-type: none;
+      padding: 0;
+      border-top: 2px solid $primaryColor;
+      & > li {
+        padding: 1em 0;
+        border-bottom: 1px solid #ddd;
+        position: relative; // outline: 1px solid blue;
+        .tag {
+          margin-left: 2em;
+        }
+        & > a {
+          display: block;
+          padding-left: 2em;
+          position: relative;
+          line-height: 1.45em;
+          color: $color-word;
+          &:hover {
+            color: $aHover;
+          }
+          .num {
+            width: 1.5em;
+            text-align: right;
+            position: absolute;
+            top: 0;
+            left: 0;
+            &:after {
+              content: '.';
+              display: inline-block;
+            }
+          }
+        }
+        span.dept {
+          display: inline-block;
+          font-size: 0.938em;
+          @include screen('mobile') {
+            display: block;
+          }
+        }
+        time {
+          display: block;
+          color: #aaa;
+          font-size: 0.938em;
+        }
+      }
+    }
+  }
+}
+
+.table_list {
+  margin: 1em 2%;
+  caption {
+    display: none;
+  }
+  table {
+    // background: #fff;
+    thead {
+      border-bottom: solid 3px #d1d1d1;
+      position: relative;
+      &:before {
+        content: '';
+        width: 100px;
+        height: 3px;
+        background: $primaryColor;
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+      }
+      @include screen('mobile') {
+        border-bottom: none;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    th {
+      background: rgba(255, 255, 255, 0);
+      border: none;
+      text-align: left;
+    }
+    td {
+      border: none;
+      padding: 1em 0.5em;
+      //   border-bottom: solid 1px #d1d1d1;
+      &.date {
+        padding: 0.5em 1em 0.5em 3em;
+        position: relative;
+        text-align: left;
+      }
+    }
+  }
+  .pintop {
+    vertical-align: middle;
+    margin: 0 5px;
+    position: absolute;
+    left: 0;
+    top: 0.8em;
+    img {
+      width: 2em;
+      height: 2em;
+    }
+  }
+  @include screen('mobile') {
+    background-color: transparent !important; //Force table to not be like tables anymore
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    tr {
+      border: 1px solid #ccc;
+      margin-bottom: 10px; // background-color: #333;
+    }
+    td {
+      // Behave  like a "row"
+      border: none !important;
+      border-bottom: 1px solid #eee !important;
+      position: relative;
+      padding: 0.5em 0 0.5em 35% !important;
+      white-space: normal;
+      text-align: left;
+      &:before {
+        content: attr(data-title);
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        width: 30%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #000;
+      }
+    }
+    .pintop {
+      position: static;
+    }
+  }
+}
+
+.splist {
+  & > ul,
+  ol {
+    list-style-type: none;
+    padding: 0;
+    // border-top: 2px solid $primaryColor;
+    & > li {
+      padding: 0 0 0 1.5em;
+      position: relative;
+      display: flex;
+      &:before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: $primaryColor;
+        border-radius: 50%;
+        position: absolute;
+        left: 0.5em;
+        top: 0.65em;
+      }
+
+      span.date {
+        display: inline-block;
+        min-width: 7em;
+        position: relative;
+        margin-right: 1em;
+        flex: 0 0 7em;
+        &:before {
+          content: '/';
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+      @include screen('xs_mobile') {
+        flex-wrap: wrap;
+        span.txtinfo {
+          flex: 1 1 100%;
+        }
+      }
+    }
+  }
+}
+
+.worklist {
+  & > ul,
+  ol {
+    list-style-type: none;
+    padding: 0;
+    // border-top: 2px solid $primaryColor;
+    & > li {
+      padding: 0;
+      position: relative;
+      display: flex;
+      margin: 0.8em 0;
+
+      span.sort {
+        display: inline-block;
+        min-width: 7em;
+        position: relative;
+        margin-right: 2em;
+        flex: 0 0 7em;
+        background: $primaryColor;
+        height: 2em;
+        line-height: 2em;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -1em;
+          width: 2em;
+          height: 2em;
+          border-radius: 50%;
+          background: $primaryColor;
+        }
+      }
+      span.txtinfo {
+        line-height: 2em;
+      }
+      @include screen('xs_mobile') {
+        flex-wrap: wrap;
+        span.txtinfo {
+          flex: 1 1 100%;
+        }
+      }
+    }
+  }
 }
 
 // .album {
@@ -93,7 +284,7 @@
 //                 flex:0 0 96%;
 //                 margin:0 3% 5%;
 //             }
-            
+
 //         }
 //     }
 // }

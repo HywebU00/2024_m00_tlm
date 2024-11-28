@@ -1,6 +1,6 @@
 // function_panel setting   ------------------------
 .function_panel {
-  margin: 0.2em 0;
+  margin: -4.6em 2% 0.2em;
   padding: 0.5em 0 0.5em;
   min-height: 35px;
   // border-top: 1px solid #DDD;
@@ -9,10 +9,12 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
+  float: right;
 
   @include screen('mobile') {
-    margin: 0.6em 0;
+    margin: -1em 0 0.6em;
     padding: 0.5em 0 0.5em;
+    float: none;
   }
   .share {
     flex: 0 0 auto;
@@ -124,23 +126,24 @@ div.function {
     flex: initial;
   }
   .function {
-    height: 32px;
+    height: 36px;
     margin: 0;
     ul {
       display: flex;
       li {
         font-size: 1em;
         margin: 0 0.2em;
-        flex: 0 0 32px;
+        flex: 0 0 36px;
         a {
           display: block;
           box-sizing: border-box;
-          width: 32px;
-          height: 32px;
+          width: 36px;
+          height: 36px;
           text-align: center;
-          line-height: 32px;
+          line-height: 36px;
           border-radius: 50%;
-          background: #f1f1f1;
+          background: #fff;
+          border: solid 1px #ccc;
           text-indent: -9999px;
           position: relative;
           &:hover,
@@ -250,15 +253,16 @@ div.function {
   .share {
     box-sizing: border-box;
     text-align: center;
-    height: 32px;
+    height: 36px;
     margin: 0 4px;
     position: relative;
     a.shareButton {
       display: block;
-      background: #f1f1f1;
+      background: #fff;
+      border: solid 1px #ccc;
       border-radius: 50%;
-      width: 32px;
-      height: 32px;
+      width: 36px;
+      height: 36px;
       text-indent: -9999px;
       text-align: center;
       position: relative;
@@ -328,6 +332,73 @@ div.function {
             // outline: 1px solid $primaryColor;
           }
         }
+      }
+    }
+  }
+}
+
+.switchBlock {
+  .switch {
+    li {
+      a {
+        display: block;
+        width: 40px;
+        height: 40px;
+
+        &::before {
+          width: 100%;
+          height: 100%;
+          max-width: 15px;
+          margin: 0;
+          left: 50% !important;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .typeList {
+      a::before {
+        background: url(../images/list.svg) no-repeat center center;
+        background-size: 130%;
+        width: 100%;
+        height: 100%;
+        top: 0;
+      }
+      &.active {
+        a {
+          background: $primaryColor;
+          &:before {
+            background: url(../images/list.svg) no-repeat center center;
+            background-size: 130%;
+            filter: invert(100);
+          }
+        }
+      }
+    }
+    .typeGrid {
+      a::before {
+        background: url(../images/grid.svg) no-repeat center center;
+        background-size: 120%;
+        width: 100%;
+        height: 100%;
+        top: 0;
+      }
+      &.active {
+        a {
+          background: $primaryColor;
+          &:before {
+            background: url(../images/grid.svg) no-repeat center center;
+            background-size: 120%;
+            filter: invert(100);
+          }
+        }
+      }
+    }
+
+    .active {
+      a::before {
+        background: $primaryColor url(../images/grid.svg) no-repeat center center;
+        background-size: 100%;
       }
     }
   }

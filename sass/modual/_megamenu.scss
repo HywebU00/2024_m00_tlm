@@ -257,9 +257,9 @@
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate3d(0, 0, 0);
     box-sizing: border-box;
-    clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%);
-    // border-bottom-left-radius: 50%;
-    // border-bottom-right-radius: 50%;
+    // clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     @include screen('mobile') {
       width: 280px;

@@ -31,6 +31,10 @@ body {
   -webkit-text-size-adjust: none;
   background: url(../images/body_bg.jpg) no-repeat left top;
   background-size: contain;
+  &.pagebody {
+    background: #fafafa url(../images/body_bg2.jpg) no-repeat left top 80px;
+    background-size: 100% auto;
+  }
 }
 a {
   @include aSetting();
@@ -68,6 +72,7 @@ kbd {
   aspect-ratio: 1/1;
   position: relative;
   border: none;
+  background: rgba(255, 255, 255, 0);
   &::before {
     width: 100%;
     aspect-ratio: 1/1;

@@ -484,6 +484,55 @@
   }
 }
 
+.detail {
+  float: right;
+  margin-top: -4em;
+
+  a {
+    display: block;
+    width: 10em;
+    height: 2.8em;
+    margin: 0.5em auto 0.5em;
+    padding-right: 1em;
+    line-height: 2.8;
+    color: $color-dark;
+    // text-align: center;
+    overflow: hidden;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    text-decoration: none !important;
+    color: $color-word !important;
+    &:after {
+      content: '';
+      width: 1.5em;
+      height: 1.5em;
+      background: url(../images/arrow2.svg) no-repeat right center;
+      background-size: 1.3em auto;
+      // border: 2px solid $color-dark;
+      // transform: rotate(45deg);
+      position: absolute;
+      right: 1em;
+      top: 0.6em;
+      // border-left: none;
+      // border-bottom: none;
+      transition: 0.3s ease-out;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $aHover !important;
+    }
+  }
+}
+
 // 範例：
 .demosection {
   [class^='col'] {
