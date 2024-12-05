@@ -10731,6 +10731,7 @@ body.noscroll {
 }
 .more a:hover, .more a:focus, .more a.active {
   color: white;
+  border: solid 1px #d32c79;
 }
 .more a:hover:before, .more a:focus:before, .more a.active:before {
   -webkit-transform: scale(1);
@@ -10738,6 +10739,8 @@ body.noscroll {
 }
 .more a:hover:after, .more a:focus:after, .more a.active:after {
   right: 15px;
+  background: url(../images/arrow2ov.svg) no-repeat right center;
+  background-size: 1.3em auto;
 }
 
 .opentoday {
@@ -11201,6 +11204,7 @@ body.noscroll {
 }
 .literature .more:hover, .literature .more:focus, .literature .more.active {
   color: white;
+  border: solid 1px #d32c79;
 }
 .literature .more:hover:before, .literature .more:focus:before, .literature .more.active:before {
   -webkit-transform: scale(1);
@@ -11208,6 +11212,8 @@ body.noscroll {
 }
 .literature .more:hover:after, .literature .more:focus:after, .literature .more.active:after {
   right: 15px;
+  background: url(../images/arrow2ov.svg) no-repeat right center;
+  background-size: 1.3em auto;
 }
 
 .detail {
