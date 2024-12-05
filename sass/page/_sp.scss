@@ -284,7 +284,7 @@
     position: absolute;
     top: 50%;
     left: 0;
-    margin-top: -0.5em;
+    margin-top: -0.7em;
   }
 }
 .yearBlock {
@@ -422,9 +422,9 @@
 
 // 年月份 月曆 start
 .year_month_block {
-  font-size: 2em;
+  font-size: 1.6em;
   text-align: center;
-  margin: 40px 0;
+  margin: 0.5em 0;
   font-weight: 500;
   @media (max-width: 480px) {
     font-size: 1.75em;
@@ -453,13 +453,17 @@
     vertical-align: middle;
     a {
       display: block;
-      width: 40px;
-      height: 40px;
-      background-color: #666;
-      line-height: 40px;
+      width: 46px;
+      height: 46px;
+      // background-color: #666;
+      line-height: 50px;
       border-radius: 50%;
+      border: solid 1px #575757;
+      img {
+        width: 25px;
+      }
       &:hover {
-        background-color: #000;
+        background-color: #fff;
       }
       @media (max-width: 380px) {
         width: 35px;
@@ -469,11 +473,12 @@
   }
 }
 .calendar_explain {
-  background-image: url('../images/icon_star.png');
+  background-image: url('../images/icon_date.png');
+  background-size: 20px auto;
   background-position: 0 2px;
   background-repeat: no-repeat;
   padding-left: 25px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 30px;
 }
 .people_sort {
   background-color: #fff;
@@ -565,6 +570,11 @@
 }
 // 日曆calendar_Tb
 .calendar_Tb {
+  border-radius: 10px;
+  background: #fff;
+  padding: 0.5em;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+
   table {
     word-break: break-all;
     table-layout: fixed;
@@ -583,13 +593,13 @@
     tr {
       background-color: #fff;
     }
-    tr:hover {
+    td:hover {
       background-color: #fff6d2;
       transition: 0.2s;
     }
     th {
       background-color: #dddddd !important;
-      border: 5px solid transparent;
+      border: 3px solid transparent;
       color: #333;
       padding: 0.5em 1em;
       width: 14.28%;
@@ -609,6 +619,7 @@
       border: 1px solid #c2c2c2;
       padding: 0.5em;
       vertical-align: top;
+      min-height: 2em;
       @include screen('xs_mobile') {
         padding-left: 17% !important;
         min-height: 65px;
@@ -656,11 +667,13 @@
     .num_date {
       position: absolute;
       top: 5px;
-      right: 10px;
-      text-align: right;
+      right: 5px;
+      text-align: center;
       color: $color-word;
       font-size: 1.063em;
       font-weight: bold;
+      width: 1.5em;
+      height: 1.5em;
       @include screen('xs_mobile') {
         position: absolute;
         text-align: center;
@@ -668,6 +681,10 @@
         left: 0;
         top: 30px;
         width: 15%;
+      }
+      &.today {
+        background: #fecee4;
+        border-radius: 50%;
       }
     }
     ul {
@@ -715,6 +732,12 @@
           }
           &.exp {
             background-color: #999;
+            // &:hover {
+            //   background-color: darken(#999, 15);
+            // }
+          }
+          &.today {
+            background-color: $primaryColor;
             // &:hover {
             //   background-color: darken(#999, 15);
             // }
@@ -777,20 +800,64 @@
       }
     }
   }
+  &.table_list td {
+    border-bottom: 1px solid #ccc !important;
+    @include screen('mobile') {
+      padding: 0.5em 1% 0.5em 18% !important;
+    }
+  }
 }
 .popupBlock {
-  .cpinfoBlock {
+  .spinfoBlock {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 2em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
     margin: 1em 0;
-  }
-  i {
-    margin: 0;
-    padding: 0;
-    &.icon_calendar {
-      vertical-align: middle;
-      margin-top: 5px;
+    @include screen('mobile') {
+    }
+    h3 {
+      margin: 0.5em 0;
+      color: $primaryColor;
+      font-size: 1.6em;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      line-height: 2em;
+    }
+    .img-container {
+      @include aspect-ratio(1, 1); //比例
+      flex: 0 0 200px;
       img {
-        width: 1.5em;
+        transition: 0.3s;
+        object-fit: cover;
+      }
+      @include screen('mobile') {
+        flex: 1 1 100%;
       }
     }
+    .caption {
+      padding: 0 2em;
+      height: 100%;
+      flex: 1 1 calc(100% - 300px);
+      position: relative;
+      p {
+        line-height: 2em;
+      }
+      @include screen('mobile') {
+        flex: 1 1 100%;
+        padding: 0;
+      }
+    }
+  }
+  .icon_calendar {
+    width: 1.4em;
+    margin-right: 5px;
+    vertical-align: top;
   }
 }

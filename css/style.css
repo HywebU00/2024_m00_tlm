@@ -12191,7 +12191,7 @@ h2.title:before {
   position: absolute;
   top: 50%;
   left: 0;
-  margin-top: -0.5em;
+  margin-top: -0.7em;
 }
 
 .yearBlock {
@@ -12361,9 +12361,9 @@ h2.title:before {
 }
 
 .year_month_block {
-  font-size: 2em;
+  font-size: 1.6em;
   text-align: center;
-  margin: 40px 0;
+  margin: 0.5em 0;
   font-weight: 500;
 }
 @media (max-width: 480px) {
@@ -12400,15 +12400,19 @@ h2.title:before {
 .year_month_block .prev_btn a,
 .year_month_block .next_btn a {
   display: block;
-  width: 40px;
-  height: 40px;
-  background-color: #666;
-  line-height: 40px;
+  width: 46px;
+  height: 46px;
+  line-height: 50px;
   border-radius: 50%;
+  border: solid 1px #575757;
+}
+.year_month_block .prev_btn a img,
+.year_month_block .next_btn a img {
+  width: 25px;
 }
 .year_month_block .prev_btn a:hover,
 .year_month_block .next_btn a:hover {
-  background-color: #000;
+  background-color: #fff;
 }
 @media (max-width: 380px) {
   .year_month_block .prev_btn a,
@@ -12419,11 +12423,12 @@ h2.title:before {
 }
 
 .calendar_explain {
-  background-image: url("../images/icon_star.png");
+  background-image: url("../images/icon_date.png");
+  background-size: 20px auto;
   background-position: 0 2px;
   background-repeat: no-repeat;
   padding-left: 25px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 30px;
 }
 
 .people_sort {
@@ -12495,6 +12500,12 @@ h2.title:before {
   background-color: #b38850;
 }
 
+.calendar_Tb {
+  border-radius: 10px;
+  background: #fff;
+  padding: 0.5em;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+}
 .calendar_Tb table {
   word-break: break-all;
   table-layout: fixed;
@@ -12509,13 +12520,13 @@ h2.title:before {
 .calendar_Tb table tr {
   background-color: #fff;
 }
-.calendar_Tb table tr:hover {
+.calendar_Tb table td:hover {
   background-color: #fff6d2;
   transition: 0.2s;
 }
 .calendar_Tb table th {
   background-color: #dddddd !important;
-  border: 5px solid transparent;
+  border: 3px solid transparent;
   color: #333;
   padding: 0.5em 1em;
   width: 14.28%;
@@ -12533,6 +12544,7 @@ h2.title:before {
   border: 1px solid #c2c2c2;
   padding: 0.5em;
   vertical-align: top;
+  min-height: 2em;
 }
 @media screen and (max-width: 575px) {
   .calendar_Tb table td {
@@ -12578,11 +12590,13 @@ h2.title:before {
 .calendar_Tb table .num_date {
   position: absolute;
   top: 5px;
-  right: 10px;
-  text-align: right;
+  right: 5px;
+  text-align: center;
   color: #222;
   font-size: 1.063em;
   font-weight: bold;
+  width: 1.5em;
+  height: 1.5em;
 }
 @media screen and (max-width: 575px) {
   .calendar_Tb table .num_date {
@@ -12593,6 +12607,10 @@ h2.title:before {
     top: 30px;
     width: 15%;
   }
+}
+.calendar_Tb table .num_date.today {
+  background: #fecee4;
+  border-radius: 50%;
 }
 .calendar_Tb table ul {
   margin: 25px 0 0;
@@ -12638,6 +12656,9 @@ h2.title:before {
 }
 .calendar_Tb table ul li a.exp {
   background-color: #999;
+}
+.calendar_Tb table ul li a.today {
+  background-color: #d32c79;
 }
 .calendar_Tb table ul li a.no01 {
   background-color: #00a18b;
@@ -12693,20 +12714,84 @@ h2.title:before {
 .calendar_Tb table ul li a.no09:hover {
   background-color: #7f6037;
 }
+.calendar_Tb.table_list td {
+  border-bottom: 1px solid #ccc !important;
+}
+@media screen and (max-width: 767px) {
+  .calendar_Tb.table_list td {
+    padding: 0.5em 1% 0.5em 18% !important;
+  }
+}
 
-.popupBlock .cpinfoBlock {
+.popupBlock .spinfoBlock {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2em;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
   margin: 1em 0;
 }
-.popupBlock i {
-  margin: 0;
+.popupBlock .spinfoBlock h3 {
+  margin: 0.5em 0;
+  color: #d32c79;
+  font-size: 1.6em;
+}
+.popupBlock .spinfoBlock ul {
+  list-style: none;
   padding: 0;
+  margin: 0;
+  line-height: 2em;
 }
-.popupBlock i.icon_calendar {
-  vertical-align: middle;
-  margin-top: 5px;
+.popupBlock .spinfoBlock .img-container {
+  overflow: hidden;
+  flex: 0 0 200px;
 }
-.popupBlock i.icon_calendar img {
-  width: 1.5em;
+.popupBlock .spinfoBlock .img-container:before {
+  display: inline-block;
+  content: "";
+  padding-top: 100%;
+}
+.popupBlock .spinfoBlock .img-container img {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.popupBlock .spinfoBlock .img-container img {
+  transition: 0.3s;
+  object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  .popupBlock .spinfoBlock .img-container {
+    flex: 1 1 100%;
+  }
+}
+.popupBlock .spinfoBlock .caption {
+  padding: 0 2em;
+  height: 100%;
+  flex: 1 1 calc(100% - 300px);
+  position: relative;
+}
+.popupBlock .spinfoBlock .caption p {
+  line-height: 2em;
+}
+@media screen and (max-width: 767px) {
+  .popupBlock .spinfoBlock .caption {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+}
+.popupBlock .icon_calendar {
+  width: 1.4em;
+  margin-right: 5px;
+  vertical-align: top;
 }
 
 /* sitemap */

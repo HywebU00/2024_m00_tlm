@@ -1317,6 +1317,11 @@ if ($('[data-fancybox="gallery2"]').length > 0) {
     l10n: Fancybox.l10n.zh_TW,
   });
 }
+if ($('[data-fancybox="gallery3"]').length > 0) {
+  Fancybox.bind('[data-fancybox="gallery3"]', {
+    l10n: Fancybox.l10n.zh_TW,
+  });
+}
 
 // -----------------------------------------------------------------------
 // -----   swiper 箭頭設定 / 手機版主選單語系設定   ------------------------------------------------
