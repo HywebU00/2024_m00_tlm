@@ -622,7 +622,13 @@
         box-shadow: $aFocus 0 0 0 2px inset;
         outline: none;
       }
-      &:hover {
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        .img-container {
+          clip-path: none;
+          border-radius: 50%;
+        }
         img {
           transform: scale(1.1);
         }

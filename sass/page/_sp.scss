@@ -452,6 +452,7 @@
     display: inline-block;
     vertical-align: middle;
     a {
+      font-size: 0;
       display: block;
       width: 46px;
       height: 46px;
@@ -459,15 +460,34 @@
       line-height: 50px;
       border-radius: 50%;
       border: solid 1px #575757;
-      img {
-        width: 25px;
-      }
-      &:hover {
-        background-color: #fff;
-      }
+
       @media (max-width: 380px) {
         width: 35px;
         height: 35px;
+      }
+    }
+  }
+  .prev_btn {
+    a {
+      background: url('../images/slick/icon_arrow_left.svg') no-repeat center center;
+      background-size: 25px auto;
+      &:hover,
+      &:focus {
+        background: $primaryColor url('../images/slick/icon_arrow_left_ov.svg') no-repeat center center;
+        background-size: 25px auto;
+        border: solid 1px $primaryColor;
+      }
+    }
+  }
+  .next_btn {
+    a {
+      background: url('../images/slick/icon_arrow_right.svg') no-repeat center center;
+      background-size: 25px auto;
+      &:hover,
+      &:focus {
+        background: $primaryColor url('../images/slick/icon_arrow_right_ov.svg') no-repeat center center;
+        background-size: 25px auto;
+        border: solid 1px $primaryColor;
       }
     }
   }

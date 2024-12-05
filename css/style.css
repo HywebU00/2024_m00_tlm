@@ -4407,19 +4407,30 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   }
   .sidebar .m_area .menu ul > li > a,
   .sidebar .m_area .megamenu ul > li > a {
-    border: none;
+    border: none !important;
     height: auto;
-    padding: 0.5em 1em;
+    padding: 0.5em 0.8em;
   }
   .sidebar .m_area .menu ul > li > a:after,
   .sidebar .m_area .megamenu ul > li > a:after {
     display: none;
   }
+  .sidebar .m_area .menu ul > li > a:hover, .sidebar .m_area .menu ul > li > a:focus,
+  .sidebar .m_area .megamenu ul > li > a:hover,
+  .sidebar .m_area .megamenu ul > li > a:focus {
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  }
   .sidebar .m_area .menu ul > li.hasChild > a,
   .sidebar .m_area .megamenu ul > li.hasChild > a {
     position: relative;
-    padding: 0.5em 1em;
+    padding: 0.5em 0.8em;
     color: #fff;
+    border: none;
+  }
+  .sidebar .m_area .menu ul > li.hasChild > a:hover, .sidebar .m_area .menu ul > li.hasChild > a:focus,
+  .sidebar .m_area .megamenu ul > li.hasChild > a:hover,
+  .sidebar .m_area .megamenu ul > li.hasChild > a:focus {
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   }
   .sidebar .m_area .menu ul > li ul,
   .sidebar .m_area .megamenu ul > li ul {
@@ -4428,6 +4439,28 @@ div.tag ul li a:hover, div.tag ul li a:focus {
     border: none;
     font-size: 1rem;
     padding-top: 0;
+  }
+  .sidebar .m_area .menu ul > li ul li a,
+  .sidebar .m_area .megamenu ul > li ul li a {
+    display: block;
+    min-height: 1.5em;
+    line-height: 1.5em;
+    font-weight: normal;
+    padding: 0.5em 1em 0.4em 2em;
+    border: none;
+    background: url(../images/arrow2ov.svg) no-repeat left 1em top 0.8em;
+    background-size: 0.8em auto;
+    border: none;
+  }
+  .sidebar .m_area .menu ul > li ul li a:hover, .sidebar .m_area .menu ul > li ul li a:focus,
+  .sidebar .m_area .megamenu ul > li ul li a:hover,
+  .sidebar .m_area .megamenu ul > li ul li a:focus {
+    background: #fff url(../images/arrow3.svg) no-repeat left 1em top 0.8em;
+    background-size: 0.8em auto;
+    border-radius: 2em;
+    color: #d32c79;
+    border: none;
+    text-shadow: none;
   }
 }
 .sidebar .navigation {
@@ -9007,7 +9040,11 @@ table.table_sprite tr:nth-child(even) {
   box-shadow: #ff3e4d 0 0 0 2px inset;
   outline: none;
 }
-.writerSwiper .swiper-slide a:hover img {
+.writerSwiper .swiper-slide a:hover .img-container, .writerSwiper .swiper-slide a:focus .img-container, .writerSwiper .swiper-slide a:focus-visible .img-container {
+  clip-path: none;
+  border-radius: 50%;
+}
+.writerSwiper .swiper-slide a:hover img, .writerSwiper .swiper-slide a:focus img, .writerSwiper .swiper-slide a:focus-visible img {
   transform: scale(1.1);
 }
 .writerSwiper .img-container {
@@ -12405,6 +12442,7 @@ h2.title:before {
 }
 .year_month_block .prev_btn a,
 .year_month_block .next_btn a {
+  font-size: 0;
   display: block;
   width: 46px;
   height: 46px;
@@ -12412,20 +12450,30 @@ h2.title:before {
   border-radius: 50%;
   border: solid 1px #575757;
 }
-.year_month_block .prev_btn a img,
-.year_month_block .next_btn a img {
-  width: 25px;
-}
-.year_month_block .prev_btn a:hover,
-.year_month_block .next_btn a:hover {
-  background-color: #fff;
-}
 @media (max-width: 380px) {
   .year_month_block .prev_btn a,
   .year_month_block .next_btn a {
     width: 35px;
     height: 35px;
   }
+}
+.year_month_block .prev_btn a {
+  background: url("../images/slick/icon_arrow_left.svg") no-repeat center center;
+  background-size: 25px auto;
+}
+.year_month_block .prev_btn a:hover, .year_month_block .prev_btn a:focus {
+  background: #d32c79 url("../images/slick/icon_arrow_left_ov.svg") no-repeat center center;
+  background-size: 25px auto;
+  border: solid 1px #d32c79;
+}
+.year_month_block .next_btn a {
+  background: url("../images/slick/icon_arrow_right.svg") no-repeat center center;
+  background-size: 25px auto;
+}
+.year_month_block .next_btn a:hover, .year_month_block .next_btn a:focus {
+  background: #d32c79 url("../images/slick/icon_arrow_right_ov.svg") no-repeat center center;
+  background-size: 25px auto;
+  border: solid 1px #d32c79;
 }
 
 .calendar_explain {

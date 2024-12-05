@@ -208,19 +208,28 @@ $menuItems: 15;
           > li {
             flex: 0 1 10%;
             > a {
-              border: none;
+              border: none !important;
               // padding: 0;
               height: auto;
-              padding: 0.5em 1em;
+              padding: 0.5em 0.8em;
               &:after {
                 display: none;
+              }
+              &:hover,
+              &:focus {
+                text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
               }
             }
             &.hasChild {
               > a {
                 position: relative;
-                padding: 0.5em 1em;
+                padding: 0.5em 0.8em;
                 color: #fff;
+                border: none;
+                &:hover,
+                &:focus {
+                  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+                }
               }
             }
             ul {
@@ -230,6 +239,27 @@ $menuItems: 15;
               font-size: 1rem;
               padding-top: 0;
               li {
+                a {
+                  display: block;
+                  min-height: 1.5em;
+                  line-height: 1.5em;
+                  font-weight: normal;
+                  padding: 0.5em 1em 0.4em 2em;
+                  border: none;
+                  background: url(../images/arrow2ov.svg) no-repeat left 1em top 0.8em;
+                  background-size: 0.8em auto;
+                  border: none;
+
+                  &:hover,
+                  &:focus {
+                    background: #fff url(../images/arrow3.svg) no-repeat left 1em top 0.8em;
+                    background-size: 0.8em auto;
+                    border-radius: 2em;
+                    color: $primaryColor;
+                    border: none;
+                    text-shadow: none;
+                  }
+                }
               }
             }
           }
