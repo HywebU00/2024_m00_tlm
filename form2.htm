@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>桃園市政府文化局桃園文學館</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
+    <!-- animate -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
+  <!-- 內頁body新增一個classname -->
+  <body class="pagebody">
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#aC" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+      <!-- header Start 內頁新增一個classname-->
+      <header class="header full pageheader wow fadeInDown" data-wow-duration=".5s" data-wow-delay=".1s">
+        <div class="container">
+          <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+          <h1>
+            <a href="index.htm"><img src="images/logo.png" alt="" />桃園文學館</a>
+          </h1>
+          <!-- navigation Start -->
+          <nav class="navigation" role="navigation" aria-label="上方導覽列">
+            <!-- 新增div navlist -->
+            <div class="navlist">
+              <ul>
+                <li><a href="#">回首頁</a></li>
+                <li><a href="#">網站導覽</a></li>
+                <li><a href="#">常見問答</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </div>
+
+            <!-- font_size -->
+            <div class="font_size">
+              <button class="fontsize_btn" title="字型大小">字型大小：</button>
+              <ul>
+                <li><a href="#" role="button" aria-pressed="false" class="small">小</a></li>
+                <li><a href="#" role="button" aria-pressed="true" class="medium active">中</a></li>
+                <li><a href="#" role="button" aria-pressed="false" class="large">大</a></li>
+              </ul>
+              <!-- 當選取時出現active時，判斷 aria-pressed="true"  -->
+            </div>
+          </nav>
+          <!-- navigation End -->
+
+          <!-- Search Start -->
+          <div class="search" role="search">
+            <div class="form_grp">
+              <label for="mustSameAsId">搜尋</label>
+              <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容" />
+              <input name="" type="submit" value="查詢" class="btn btn-search" />
+            </div>
+            <div class="btn_grp">
+              <input name="" type="submit" value="進階搜尋" class="btn" />
+            </div>
+            <div class="keywordHot">
+              <ul>
+                <li><a href="#">熱門熱門</a></li>
+                <li><a href="#">查詢</a></li>
+                <li><a href="#">字詞三</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Search End -->
+          <!-- noscript -->
+          <noscript>
+            您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+            <a href="#">網站導覽</a>
+          </noscript>
+          <!-- menu Start -->
+          <nav class="menu" role="navigation" aria-label="主選單">
+            <ul>
+              <li>
+                <a href="#" role="button" aria-expanded="false">關於桃園文學館</a>
+                <!-- a連結有下一層選單，當成按鈕需加入role="button” ，當選單尚未展開，請判斷為aria-expanded="false"，選單展開後，請判斷為aria-expanded="true"-->
+                <ul>
+                  <li><a href="#">創立歷程</a></li>
+                  <li><a href="#">目標展望</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" role="button" aria-expanded="true">參觀資訊</a>
+                <!-- 選單展開後，請判斷為aria-expanded="true" -->
+                <ul>
+                  <li><a href="#">開放時間</a></li>
+                  <li><a href="#">參觀須知</a></li>
+                  <li><a href="#">空間介紹</a></li>
+                  <li><a href="#">交通資訊</a></li>
+                  <li><a href="#">無障礙服務資訊</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">展覽與活動</a>
+                <ul>
+                  <li><a href="#">行事曆</a></li>
+                  <li><a href="#">展覽</a></li>
+                  <li><a href="#">活動</a></li>
+                </ul>
+              </li>
+              <li><a href="#">消息公告</a></li>
+              <!-- 單純 a連結，不需加入role="button” -->
+              <li>
+                <a href="#" role="button" aria-expanded="false">鍾肇政文學獎</a>
+                <ul>
+                  <li><a href="#">背景介紹</a></li>
+                  <li><a href="#">徵文辦法／線上申請</a></li>
+                  <li><a href="#">桃園文學季</a></li>
+                  <li><a href="#">歷屆得獎作品</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">文學補助 </a>
+                <ul>
+                  <li><a href="#">補助公告</a></li>
+                  <li><a href="#">線上申請</a></li>
+                  <li><a href="#">歷屆補助名單</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">桃園文學專區</a>
+                <ul>
+                  <li><a href="#">認識桃園文學</a></li>
+                  <li><a href="#">桃園文學史及年表</a></li>
+                  <li><a href="#">桃園文學作家地圖</a></li>
+                  <li><a href="#">影音資源</a></li>
+                  <li><a href="#">桃園作家作品資源(書目)</a></li>
+                  <li><a href="#">桃園書影</a></li>
+                </ul>
+              </li>
+              <li><a href="#">文物典藏</a></li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">便民服務</a>
+                <ul>
+                  <li><a href="#">場地租借</a></li>
+                  <li><a href="#">導覽服務</a></li>
+                  <li><a href="#">志工服務</a></li>
+                  <li><a href="#">相關連結</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- menu End -->
+        </div>
+      </header>
+      <!-- header End -->
+      <!-- main Start -->
+      <div id="aC" class="main full innerpage">
+        <!-- 內頁新增一個classname-->
+        <div class="topPic">
+          <img src="images/top_pic.jpg" alt="" />
+        </div>
+        <a class="accesskey" href="#ac" id="ac" accesskey="C" title="主要內容區">:::</a>
+        <div class="container">
+          <!-- 主要內容區 -->
+          <div class="center_block">
+            <!-- breadcrumb路徑 -->
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">鍾肇政文學獎</a></li>
+                <li>線上申請</li>
+              </ul>
+            </div>
+            <!-- h2節點 -->
+            <h2 class="title">線上申請</h2>
+            <!-- function_panel -->
+            <div class="function_panel">
+              <!-- function功能區塊 -->
+              <div class="function">
+                <ul>
+                  <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                  <li class="print"><a href="#">友善列印</a></li>
+                  <li class="forward"><a href="#">轉寄友人</a></li>
+                </ul>
+              </div>
+              <!-- 社群分享 -->
+              <div class="share">
+                <ul>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- form -->
+            <div class="flex-form formBlock">
+              <!-- text -->
+              <div class="form_grp">
+                <label for="" class="form_title">申請主題</label>
+                <div class="form_content">桃園市政府文化局「113年補助文學閱讀推廣活動實施計畫」補助申請</div>
+              </div>
+              <!-- radio -->
+              <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                <label for="fake-legend" class="form_title" aria-required="true">申請類別</label>
+                <div class="form_content" id="fake-legend">
+                  <div class="radio_grp form_inline">
+                    <label><input type="radio" name="sampleRadio1" value="" checked />個人</label>
+                    <label><input type="radio" name="sampleRadio1" value="" />團體</label>
+                    <label><input type="radio" name="sampleRadio1" value="" />學校</label>
+                    <label><input type="radio" name="sampleRadio1" value="" />法人組織(公司行號)</label>
+                    <label><input type="radio" name="sampleRadio1" value="" />其他相關學術研究機構</label>
+                  </div>
+                </div>
+              </div>
+              <!-- input -->
+              <div class="form_grp">
+                <label for="fake-legend" class="form_title" aria-required="true">計畫名稱</label>
+                <div class="form_content">
+                  <input type="text" id="fake-legend" placeholder="請輸入計畫名稱" value="請輸入計畫名稱" />
+                </div>
+              </div>
+              <!-- 2欄 -->
+              <div class="form_grp">
+                <div class="flex-col-equal-2">
+                  <div class="form_grp">
+                    <label for="inputSample" class="form_title">申請者</label>
+                    <div class="form_content">
+                      <input name="username" id="inputSample" type="text" placeholder="請輸入申請者姓名" value="請輸入申請者姓名" />
+                    </div>
+                  </div>
+                  <div class="form_grp">&nbsp;</div>
+                </div>
+              </div>
+              <!-- checkbox -->
+              <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                <label for="fake-legend" class="form_title">申請項目</label>
+                <div class="form_content" id="fake-legend">
+                  <div class="check_grp form_inline">
+                    <label><input type="radio" name="sampleRadio22" value="" checked />文學出版：</label>
+                    <label><input type="checkbox" name="" value="" checked="" />創作</label>
+                    <label><input type="checkbox" name="" value="" />翻譯</label>
+                    <label><input type="checkbox" name="" value="" />複選選項</label>
+                    <label><input type="checkbox" name="" value="" checked="" />複選選項</label>
+                  </div>
+                  <div class="form_content" id="fake-legend">
+                    <div class="check_grp form_inline">
+                      <label><input type="radio" name="sampleRadio22" value="" />文學推廣：</label>
+                      <label><input type="checkbox" name="" value="" />寫作班</label>
+                      <label><input type="checkbox" name="" value="" />文學營</label>
+                      <label><input type="checkbox" name="" value="" />文學研討</label>
+                      <label><input type="checkbox" name="" value="" />文學交流</label>
+                      <label><input type="checkbox" name="" value="" />其他</label>
+                      <input name="username" id="inputSample" type="text" placeholder="" value="" />
+                    </div>
+                  </div>
+                  <div class="form_content" id="fake-legend">
+                    <div class="check_grp form_inline">
+                      <label><input type="radio" name="sampleRadio22" value="" />閱讀推廣：</label>
+                      <label><input type="checkbox" name="" value="" />讀書會</label>
+                      <label><input type="checkbox" name="" value="" />說故事人才培育</label>
+                      <label><input type="checkbox" name="" value="" />演講</label>
+                      <label><input type="checkbox" name="" value="" />座談</label>
+                      <label><input type="checkbox" name="" value="" />其他</label>
+                      <input name="username" id="inputSample" type="text" placeholder="" value="" />
+                    </div>
+                  </div>
+                  <div class="notice_info">申請項目大類請擇一勾選，勾選後請再選擇辦理小類</div>
+                </div>
+              </div>
+
+              <!-- 檔案上傳 -->
+              <div class="form_grp">
+                <label for="fake-legend" class="form_title">申請總表</label>
+                <div class="form_content">
+                  <div class="upload_grp">
+                    <input class="upload_file" type="text" placeholder="請上傳檔案" value="請上傳檔案" readonly="" />
+                    <div class="upload_btn">
+                      <span>選擇檔案</span>
+                      <input type="file" class="check_file" />
+                    </div>
+                  </div>
+                  <div class="notice_info">限PDF檔。請確實檢附身分證或登記證書影本，並用印用掃描上傳</div>
+                </div>
+              </div>
+
+              <!-- 檔案上傳 -->
+              <div class="form_grp">
+                <label for="fake-legend" class="form_title">計畫書</label>
+                <div class="form_content">
+                  <div class="upload_grp">
+                    <input class="upload_file" type="text" placeholder="請上傳檔案" value="請上傳檔案" readonly="" />
+                    <div class="upload_btn">
+                      <span>選擇檔案</span>
+                      <input type="file" class="check_file" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 檔案上傳 -->
+              <div class="form_grp">
+                <label for="fake-legend" class="form_title">同意書</label>
+                <div class="form_content">
+                  <div class="upload_grp">
+                    <input class="upload_file" type="text" placeholder="請上傳檔案" value="請上傳檔案" readonly="" />
+                    <div class="upload_btn">
+                      <span>選擇檔案</span>
+                      <input type="file" class="check_file" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 檔案上傳 -->
+              <div class="form_grp">
+                <label for="fake-legend" class="form_title">合作意向書</label>
+                <div class="form_content">
+                  <div class="upload_grp">
+                    <input class="upload_file" type="text" placeholder="請上傳檔案" value="請上傳檔案" readonly="" />
+                    <div class="upload_btn">
+                      <span>選擇檔案</span>
+                      <input type="file" class="check_file" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 檔案上傳 -->
+              <div class="form_grp">
+                <label for="fake-legend" class="form_title">授權書</label>
+                <div class="form_content">
+                  <div class="upload_grp">
+                    <input class="upload_file" type="text" placeholder="請上傳檔案" value="請上傳檔案" readonly="" />
+                    <div class="upload_btn">
+                      <span>選擇檔案</span>
+                      <input type="file" class="check_file" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 檔案上傳 -->
+              <div class="form_grp">
+                <label for="fake-legend" class="form_title">計費經費預算表</label>
+                <div class="form_content">
+                  <div class="upload_grp">
+                    <input class="upload_file" type="text" placeholder="請上傳檔案" value="請上傳檔案" readonly="" />
+                    <div class="upload_btn">
+                      <span>選擇檔案</span>
+                      <input type="file" class="check_file" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- checkbox -->
+              <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                <label for="fake-legend" class="form_title">備用樣式</label>
+                <div class="form_content" id="fake-legend">
+                  <div class="check_grp form_inline">
+                    <label><input type="checkbox" name="" value="" checked="" />全部</label>
+                    <label><input type="checkbox" name="" value="" />複選選項</label>
+                    <label><input type="checkbox" name="" value="" />複選選項</label>
+                    <label><input type="checkbox" name="" value="" />複選選項</label>
+                    <label><input type="checkbox" name="" value="" />複選選項</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form_grp spcheck">
+                <div class="check_grp">
+                  <label><input name="checkSample" type="checkbox" value="" />已詳閱並同意遵守<a href="#">「2024桃園鍾肇政文學獎」徵文辦法</a></label>
+                </div>
+              </div>
+              <div class="btn_grp form_inline">
+                <button class="btn btn-submit">送出申請</button>
+                <button class="btn btn-reset">重設</button>
+              </div>
+            </div>
+            <!-- form end -->
+          </div>
+        </div>
+      </div>
+      <!-- fatfooter Start -->
+      <section class="fatfooter">
+        <div class="container">
+          <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
+          <nav aria-label="fatfooter的導航列">
+            <ul>
+              <li>
+                <a href="#">關於桃園文學館</a>
+                <ul>
+                  <li><a href="#">創立歷程</a></li>
+                  <li><a href="#">目標展望</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">參觀資訊</a>
+                <ul>
+                  <li><a href="#">開放時間</a></li>
+                  <li><a href="#">參觀須知</a></li>
+                  <li><a href="#">空間介紹</a></li>
+                  <li><a href="#">交通資訊</a></li>
+                  <li><a href="#">無障礙服務資訊</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">展覽與活動</a>
+                <ul>
+                  <li><a href="#">行事曆</a></li>
+                  <li><a href="#">展覽</a></li>
+                  <li><a href="#">活動</a></li>
+                </ul>
+              </li>
+              <li><a href="#">消息公告</a></li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">鍾肇政文學獎</a>
+                <ul>
+                  <li><a href="#">背景介紹</a></li>
+                  <li><a href="#">徵文辦法／線上申請</a></li>
+                  <li><a href="#">桃園文學季</a></li>
+                  <li><a href="#">歷屆得獎作品</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">文學補助 </a>
+                <ul>
+                  <li><a href="#">補助公告</a></li>
+                  <li><a href="#">線上申請</a></li>
+                  <li><a href="#">歷屆補助名單</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">桃園文學專區</a>
+                <ul>
+                  <li><a href="#">認識桃園文學</a></li>
+                  <li><a href="#">桃園文學史及年表</a></li>
+                  <li><a href="#">桃園文學作家地圖</a></li>
+                  <li><a href="#">影音資源</a></li>
+                  <li><a href="#">桃園作家作品資源(書目)</a></li>
+                  <li><a href="#">桃園書影</a></li>
+                </ul>
+              </li>
+              <li><a href="#">文物典藏</a></li>
+              <li>
+                <a href="#" role="button" aria-expanded="false">便民服務</a>
+                <ul>
+                  <li><a href="#">場地租借</a></li>
+                  <li><a href="#">導覽服務</a></li>
+                  <li><a href="#">志工服務</a></li>
+                  <li><a href="#">相關連結</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="f_share">
+            <ul>
+              <li>
+                <a href="#"><img src="images/icon_youtube.png" alt="youtube" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_line.png" alt="line" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_facebook.png" alt="facebook" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/icon_instagram.png" alt="instagram" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- fatfooter End -->
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+          <div class="footerBlock">
+            <div class="footer_logo">
+              <img src="images/f_logo.png" alt="桃園文學館" class="img-responsive" />
+            </div>
+            <div class="footer_info">
+              <p class="title">桃園文學館</p>
+              <p>
+                地址：330206桃園市桃園區忠孝街11號<br />
+                電話：(03)3322592
+              </p>
+            </div>
+            <div class="footer_icon">
+              <a target="_blank" href="javascript:;">
+                <img src="images/basic/accessibility_aa.jpg" alt="通過AA優先等級無障礙網頁檢測,另開新視窗" />
+              </a>
+            </div>
+          </div>
+
+          <hr />
+          <p class="Copyright">Copyright © 桃園縣政府文化局 All Rights Reserved.</p>
+          <ul class="footer_link">
+            <li><a href="javascript:;">隱私權及資訊安全</a></li>
+            <li class="update">更新日期:<em>113-11-16</em></li>
+            <li class="counter">瀏覽人次:<em>167,892</em></li>
+          </ul>
+        </div>
+      </footer>
+      <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- scrolltable -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script src="js/wow.js"></script>
+    <script>
+      wow = new WOW({
+        animateClass: 'animated',
+        offset: 100,
+        callback: function (box) {
+          console.log('WOW: animating <' + box.tagName.toLowerCase() + '>');
+        },
+      });
+      wow.init();
+    </script>
+    <!-- <script src="js/anime.js"></script> -->
+
+    <!-- hyUI -->
+    <script src="js/main.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+  </body>
+</html>

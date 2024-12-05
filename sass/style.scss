@@ -42,6 +42,7 @@
 @import 'modual/_paginations'; //分頁
 @import 'modual/_notice'; //提示
 @import 'modual/_accordion.scss'; //收合式選單
+@import 'modual/_map'; //map
 @import '../vendor/fancybox/fancybox.css'; //燈箱
 
 // @import '../vendor/slick/slick.css'; //燈箱
@@ -51,6 +52,7 @@
 @import 'page/_template'; //版型初始設定
 @import 'page/_mp'; //首頁
 @import 'page/_cp'; //CP
+@import 'page/_sp'; //CP
 @import 'page/_sitemap'; //Sitemap
 @import 'page/_left_block'; //左欄left_block
 @import 'common/_print'; //列印樣式

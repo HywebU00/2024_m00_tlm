@@ -13,6 +13,17 @@
     display: block;
     @include aSetting(#333);
     position: relative;
+    .img-container {
+      img {
+        object-fit: cover;
+        transition: 0.3s;
+      }
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
     &:focus {
       &:before {
         content: '';
@@ -37,7 +48,7 @@
   h2,
   h3,
   h4 {
-    margin: 1.2rem 1rem 0.8rem 0;
+    margin: 1.2rem 0 0.8rem 0;
     color: $primaryColor;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -54,6 +65,21 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .lineclamp2 {
+    line-height: 1.6em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    white-space: normal;
+  }
+  .lineclamp4 {
+    line-height: 1.8em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
     overflow: hidden;
   }
   .lineclamp5 {
@@ -78,6 +104,10 @@
     li {
       margin: 0.4em 0;
     }
+  }
+  .infolist2 {
+    font-size: 1em;
+    font-weight: normal;
   }
 }
 
@@ -137,5 +167,91 @@
         margin-right: 0;
       }
     }
+  }
+}
+
+.flex-equal-5 {
+  .thumbnail {
+    a {
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      .img-container {
+        img {
+          object-fit: cover;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    p {
+      margin: 0.5em 0;
+    }
+  }
+  .rwork {
+    font-weight: bold;
+    border-bottom: solid 1px #aeaeae;
+    padding-bottom: 0.5em;
+    img {
+      width: auto;
+      height: 1.5em;
+      vertical-align: middle;
+      margin-right: 0.5em;
+    }
+  }
+  .area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5em 2em;
+    color: #000;
+    border-bottom-right-radius: 10px;
+  }
+  .cls-1 {
+    background: #ea9eae;
+  }
+  .cls-2 {
+    background: #e87e7d;
+  }
+  .cls-3 {
+    background: #e9c066;
+  }
+  .cls-4 {
+    background: #83a23f;
+  }
+  .cls-5 {
+    background: #f5af72;
+  }
+  .cls-6 {
+    background: #7f93ca;
+  }
+  .cls-7 {
+    background: #9fa9d5;
+  }
+  .cls-8 {
+    background: #71a2ce;
+  }
+  .cls-9 {
+    background: #7cb5b5;
+  }
+  .cls-10 {
+    background: #97bb4b;
+  }
+  .cls-11 {
+    background: #f0d273;
+  }
+  .cls-12 {
+    background: #93ccb6;
+  }
+  .cls-13 {
+    background: #e26d9f;
+  }
+  .cls-14 {
+    background: #aeaeae;
+  }
+  .cls-15 {
+    background: #e26d9f;
   }
 }

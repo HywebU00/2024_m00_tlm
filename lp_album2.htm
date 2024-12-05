@@ -174,11 +174,11 @@
               <ul>
                 <li><a href="#">首頁</a></li>
                 <li><a href="#">桃園文學專區</a></li>
-                <li>桃園文學作家地圖</li>
+                <li>桃園書影</li>
               </ul>
             </div>
             <!-- h2節點 -->
-            <h2 class="title">作家介紹</h2>
+            <h2 class="title">桃園書影</h2>
             <!-- function_panel -->
             <div class="function_panel">
               <!-- function功能區塊 -->
@@ -222,310 +222,368 @@
                 </ul>
               </div>
             </div>
-
-            <!-- CP Start -->
-            <section class="cp">
-              <!-- cpinfoBlock2 -->
-              <div class="cpinfoBlock2">
-                <div class="caption">
-                  <h3>陳銘磻</h3>
-                  <ul class="infoList">
-                    <li><span class="t1">出身地｜</span>新竹市, 石坊里</li>
-                    <li><span class="t1">居住地｜</span>桃園市, 桃園區</li>
-                  </ul>
-                  <p>1951年出生新竹市石坊里，超過50年的創作生涯，截至2024年，總計寫作出版了118冊各類文學作品，以〈最後一把番刀〉獲中國時報第一屆報導文學優等獎。曾獲金鼎獎最佳出版獎。喜歡日本旅行，舉辦過畫展、文學展、文學旅人私房收藏展，以及數十冊文學旅行之作。</p>
-                </div>
-                <div class="img-container">
-                  <img src="images/people01.jpg" alt="圖片說明" />
-                </div>
-              </div>
-              <!-- cpinfoBlock2 end-->
-              <!-- 作家小傳 -->
-              <h3 class="aCenter">作家小傳</h3>
-              <p>
-                陳銘磻，1951年出生新竹市石坊里，父業教師、新聞記者、雜誌社、出版社創辦人。少年時代受父業影響、散文大家羅蘭《安全島》廣播節目啟發，發願以寫作為畢生職志。曾任國小教師、電台廣播節目主持人、雜誌社總編輯、出版社發行人、電影《香火》編劇、耕莘寫作會主任導師、救國團復興文藝營駐隊導師、大愛電視台《發現》節目主持人。獲2009年新竹市名人錄。以〈最後一把番刀〉獲中國時報第一屆報導文學優等獎。曾獲金鼎獎最佳出版獎。喜歡日本旅行，舉辦過畫展、文學展、文學旅人私房收藏展，以及數十冊文學旅行之作。
-              </p>
-              <p>
-                超過50年的創作生涯，截至2024年，總計寫作出版了118冊各類文學作品：《賣血人》、《最後一把番刀》、《報告班長》、《陳銘磻報導文學集》、《尖石櫻花落》、《源氏物語之旅》、《川端康成文學の旅》、《三島由紀夫文學の旅》、《跟著夏目漱石去旅行》、《一生必讀的50本日本文學名著1、2》、《片段作文》、《國門之都》、《木藝師游禮海》、《大漢溪紀行》、《尖石風物詩》、《給人生的道歉書》、《我的少爺時代》、《日本文學館紀行》、《記得你的好》、《文學旅人》等。
-              </p>
-              <!--  相關照片 -->
-              <div class="spswiperBlock">
-                <!-- Swiper -->
-                <div class="swiper spSwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <a href="images/people02.jpg" data-fancybox="gallery" data-caption="圖片說明">
-                        <div class="img-container">
-                          <img src="images/people02.jpg" alt="圖片說明" />
+            <!-- 進階查詢 -->
+            <section class="col-12 adv_searchBlock">
+              <div class="container">
+                <div class="adv_search">
+                  <div class="col">
+                    <form action="">
+                      <div class="flex-form form-column">
+                        <div class="form_grp">
+                          <!-- flex-col-equal-3 -->
+                          <div class="flex-col-equal-3">
+                            <div class="form_grp">
+                              <label for="inputSample" class="form_title">作家／作者</label>
+                              <div class="form_content">
+                                <input name="username" id="inputSample" type="text" placeholder="" />
+                              </div>
+                            </div>
+                            <div class="form_grp">
+                              <label for="inputSample2" class="form_title">作品名稱</label>
+                              <div class="form_content">
+                                <input name="username" id="inputSample2" type="text" placeholder="" />
+                              </div>
+                            </div>
+                            <div class="form_grp">
+                              <label for="fake-legend" class="form_title" aria-required="true">類別</label>
+                              <div class="form_content">
+                                <select name="" id="fake-legend">
+                                  <option value="">全部</option>
+                                  <option value="">...</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form_grp">
+                              <label for="inputSample2" class="form_title">作品出版日期(起)</label>
+                              <div class="form_content">
+                                <div class="datepick">
+                                  <input name="trip-start" type="date" id="trip-start" value="" class="calendar" placeholder="開始日期" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form_grp">
+                              <label for="inputSample2" class="form_title">作品出版日期(迄)</label>
+                              <div class="form_content">
+                                <div class="datepick">
+                                  <input name="trip-end" type="date" id="trip-end" value="" class="calendar" placeholder="結束日期" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- flex-col-equal-3 -->
+                          <div class="flex-col-equal-3">
+                            <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                              <label for="fake-legend" class="form_title">複選選項標題</label>
+                              <div class="form_content" id="fake-legend">
+                                <div class="check_grp form_inline">
+                                  <label><input type="checkbox" name="" value="" checked="" />複選選項</label>
+                                  <label><input type="checkbox" name="" value="" />複選選項</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                              <label for="fake-legend" class="form_title" aria-required="true">單選選項標題</label>
+                              <div class="form_content" id="fake-legend">
+                                <div class="radio_grp form_inline">
+                                  <label><input type="radio" name="sampleRadio1" value="" checked="" />單選選項</label>
+                                  <label><input type="radio" name="sampleRadio1" value="" />單選選項</label>
+                                  <label><input type="radio" name="sampleRadio1" value="" />單選選項</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="images/people03.jpg" data-fancybox="gallery" data-caption="圖片說明">
-                        <div class="img-container">
-                          <img src="images/people03.jpg" alt="圖片說明" />
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="images/people04.jpg" data-fancybox="gallery" data-caption="圖片說明">
-                        <div class="img-container">
-                          <img src="images/people04.jpg" alt="圖片說明" />
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="images/people05.jpg" data-fancybox="gallery" data-caption="圖片說明">
-                        <div class="img-container">
-                          <img src="images/people05.jpg" alt="圖片說明" />
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="images/people06.jpg" data-fancybox="gallery" data-caption="圖片說明">
-                        <div class="img-container">
-                          <img src="images/people06.jpg" alt="圖片說明" />
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="images/people02.jpg" data-fancybox="gallery" data-caption="圖片說明">
-                        <div class="img-container">
-                          <img src="images/people02.jpg" alt="圖片說明" />
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="images/people03.jpg" data-fancybox="gallery" data-caption="圖片說明">
-                        <div class="img-container">
-                          <img src="images/people03.jpg" alt="圖片說明" />
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="images/people04.jpg" data-fancybox="gallery" data-caption="圖片說明">
-                        <div class="img-container">
-                          <img src="images/people04.jpg" alt="圖片說明" />
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="images/people05.jpg" data-fancybox="gallery" data-caption="圖片說明">
-                        <div class="img-container">
-                          <img src="images/people05.jpg" alt="圖片說明" />
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="images/people06.jpg" data-fancybox="gallery" data-caption="圖片說明">
-                        <div class="img-container">
-                          <img src="images/people06.jpg" alt="圖片說明" />
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div role="button" class="swiper-button-prev prevSlider">上一筆</div>
-                  <div role="button" class="swiper-button-next nextSlider">下一筆</div>
-                </div>
-                <!-- Swiper end-->
-              </div>
-              <!-- 寫作年表-->
-              <div class="chrBlock">
-                <h3 class="aCenter">寫作年表</h3>
-
-                <!-- Swiper -->
-                <div class="swiper chrSwiper">
-                  <div class="swiper-wrapper">
-                    <!-- swiper-slide -->
-                    <div class="swiper-slide">
-                      <div class="splist">
-                        <ul>
-                          <li><span class="date">1951年 3月</span><span class="txtinfo">出生新竹市西門石坊街。</span></li>
-                          <li><span class="date">1958年 9月</span><span class="txtinfo">就讀新竹市民富國小、新竹市第三初級中學、新竹私立天主教磐石高級中學、世界新聞專校（今世新大學）廣電科。</span></li>
-                          <li><span class="date">1967年</span><span class="txtinfo">於磐石高中主編〈磐石青年〉，訪問任教東門國小的小說家邵僩，開啟文學創作。</span></li>
-                          <li><span class="date">1968年</span><span class="txtinfo">開始在中國時報、台灣時報、台灣新生報、國語日報、青溪雜誌、文壇雜誌發表散文、小品。</span></li>
-                          <li><span class="date">1969年</span><span class="txtinfo">追隨父親採訪七虎少棒隊在清華大學集訓，啟動生平初次現場採訪的報導寫作。</span></li>
-                          <li><span class="date">1969年夏</span><span class="txtinfo">新竹教育局派任尖石鄉錦屏國小教師。</span></li>
-                          <li><span class="date">1970年夏</span><span class="txtinfo">派任尖石鄉玉峰國小教職。</span></li>
-                          <li><span class="date">1971年春</span><span class="txtinfo">徵召入伍，是年於營區寫作〈窗前的玫瑰〉歌詞，獲「金曲小姐」洪小喬主持的「綺麗屋」節目青睞，譜曲成歌。</span></li>
-                          <li><span class="date">1973年2月</span><span class="txtinfo">退役，派任湖口鄉中興國小教師。</span></li>
-                          <li><span class="date">1973年12月</span><span class="txtinfo">北上應試，進入小說家曹又方主編的《老爺財富》雜誌任中文編輯。</span></li>
-                        </ul>
                       </div>
-                    </div>
-                    <!-- swiper-slide end-->
-                    <!-- swiper-slide -->
-                    <div class="swiper-slide">
-                      <div class="splist">
-                        <ul>
-                          <li><span class="date">1951年 3月</span><span class="txtinfo">出生新竹市西門石坊街。</span></li>
-                          <li><span class="date">1958年 9月</span><span class="txtinfo">就讀新竹市民富國小、新竹市第三初級中學、新竹私立天主教磐石高級中學、世界新聞專校（今世新大學）廣電科。</span></li>
-                          <li><span class="date">1967年</span><span class="txtinfo">於磐石高中主編〈磐石青年〉，訪問任教東門國小的小說家邵僩，開啟文學創作。</span></li>
-                          <li><span class="date">1968年</span><span class="txtinfo">開始在中國時報、台灣時報、台灣新生報、國語日報、青溪雜誌、文壇雜誌發表散文、小品。</span></li>
-                          <li><span class="date">1969年</span><span class="txtinfo">追隨父親採訪七虎少棒隊在清華大學集訓，啟動生平初次現場採訪的報導寫作。</span></li>
-                          <li><span class="date">1969年夏</span><span class="txtinfo">新竹教育局派任尖石鄉錦屏國小教師。</span></li>
-                        </ul>
+                      <div class="btn_grp form_inline">
+                        <button class="btn btn-submit">查詢</button>
+                        <button class="btn btn-reset">重設條件</button>
                       </div>
-                    </div>
-                    <!-- swiper-slide end-->
+                    </form>
                   </div>
-                  <div role="button" class="swiper-button-prev prevSlider">上一筆</div>
-                  <div role="button" class="swiper-button-next nextSlider">下一筆</div>
                 </div>
-                <!-- Swiper end-->
+                <div class="btnBlock">
+                  <button class="btn btn-adv"><i class="i_arrow_up" aria-label="收合查詢區塊"></i>收合</button>
+                </div>
               </div>
-
-              <!--  著作資源 -->
-              <section class="col-12 bookBlock">
-                <h3>著作資源</h3>
-                <div class="detail"><a href="popup_1.htm" data-fancybox="gallery2" data-type="iframe" data-src="popup_1.htm">作家著作一覽表</a></div>
-                <!-- Swiper -->
-                <div class="swiper bookSwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <a href="#" title="">
-                        <div class="img-container">
-                          <img src="images/s_book01.jpg" alt="圖片說明" />
-                        </div>
-                        <div class="caption">
-                          <h4>車過臺北橋</h4>
-                          <p>勝夫書局出版 / 1975</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" title="">
-                        <div class="img-container">
-                          <img src="images/s_book02.jpg" alt="圖片說明" />
-                        </div>
-                        <div class="caption">
-                          <h4>賣血人</h4>
-                          <p>遠流出版公司 / 1979</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" title="">
-                        <div class="img-container">
-                          <img src="images/s_book03.jpg" alt="圖片說明" />
-                        </div>
-                        <div class="caption">
-                          <h4>報告班長</h4>
-                          <p>城邦布克文化公司 / 2010</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" title="">
-                        <div class="img-container">
-                          <img src="images/noimg.jpg" alt="圖片說明" />
-                        </div>
-                        <div class="caption">
-                          <h4>月亮棚</h4>
-                          <p>林白出版社 / 1977</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" title="">
-                        <div class="img-container">
-                          <img src="images/s_book04.jpg" alt="圖片說明" />
-                        </div>
-                        <div class="caption">
-                          <h4>尖石櫻花落</h4>
-                          <p>城邦紅樹林出版公司 / 2002</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" title="">
-                        <div class="img-container">
-                          <img src="images/noimg.jpg" alt="圖片說明" />
-                        </div>
-                        <div class="caption">
-                          <h4>車過臺北橋</h4>
-                          <p>勝夫書局出版 / 1975</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" title="">
-                        <div class="img-container">
-                          <img src="images/s_book01.jpg" alt="圖片說明" />
-                        </div>
-                        <div class="caption">
-                          <h4>車過臺北橋</h4>
-                          <p>勝夫書局出版 / 1975</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" title="">
-                        <div class="img-container">
-                          <img src="images/s_book02.jpg" alt="圖片說明" />
-                        </div>
-                        <div class="caption">
-                          <h4>賣血人</h4>
-                          <p>遠流出版公司 / 1979</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" title="">
-                        <div class="img-container">
-                          <img src="images/s_book03.jpg" alt="圖片說明" />
-                        </div>
-                        <div class="caption">
-                          <h4>報告班長</h4>
-                          <p>城邦布克文化公司 / 2010</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" title="">
-                        <div class="img-container">
-                          <img src="images/noimg.jpg" alt="圖片說明" />
-                        </div>
-                        <div class="caption">
-                          <h4>月亮棚</h4>
-                          <p>林白出版社 / 1977</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="swiper-slide">
-                      <a href="#" title="">
-                        <div class="img-container">
-                          <img src="images/s_book04.jpg" alt="圖片說明" />
-                        </div>
-                        <div class="caption">
-                          <h4>尖石櫻花落</h4>
-                          <p>城邦紅樹林出版公司 / 2002</p>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div role="button" class="swiper-button-prev prevSlider">上一筆</div>
-                  <div role="button" class="swiper-button-next nextSlider">下一筆</div>
-                </div>
-                <!-- Swiper end-->
-              </section>
-              <!-- weblink 外部連結 -->
-              <!-- <div class="web_link">
-                <h3>外部連結</h3>
-                <ol>
-                  <li><a href="javscript:;">外部連結1</a></li>
-                  <li><a href="javscript:;">外部連結2</a></li>
-                  <li><a href="javscript:;">外部連結3</a></li>
-                  <li><a href="javscript:;">外部連結4</a></li>
-                  <li><a href="javscript:;">外部連結5</a></li>
-                </ol>
-              </div> -->
-              <ul class="f_publish_info">
-                <li>最後更新：2024/9/1</li>
-                <li>瀏覽次數：20,491</li>
-              </ul>
             </section>
-            <!-- CP End -->
+
+            <!-- LP Start -->
+            <section class="lp">
+              <!-- grid:flex -->
+              <section class="flex-equal-5">
+                <div class="container">
+                  <div class="Flex-set">
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book1.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">桃園文學的前世今生— 桃園文學發展史</h3>
+                          <ul class="infolist2">
+                            <li>作者：林央敏 著</li>
+                            <li>出版社：草根出版公司</li>
+                            <li>發行年：2019</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book2.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">桃園文學百年選—桃園 作家作品精選集</h3>
+                          <ul class="infolist2">
+                            <li>作者：林央敏 主編</li>
+                            <li>出版社：遠景出版公司</li>
+                            <li>發行年：2021</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/noimg.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">2020桃園學研討會論文集</h3>
+                          <ul class="infolist2">
+                            <li>作者：蔣竹山 主編</li>
+                            <li>出版社：桃園文化局</li>
+                            <li>發行年：2020</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book3.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">桃之夭夭，灼灼其華—桃園作家訪談錄</h3>
+                          <ul class="infolist2">
+                            <li>作者：李瑞騰 策劃</li>
+                            <li>出版社：釀出版</li>
+                            <li>發行年：2018</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book4.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">桃園文學の星空—桃園作家描述誌</h3>
+                          <ul class="infolist2">
+                            <li>作者：謝鴻文 著</li>
+                            <li>出版社：show劇團</li>
+                            <li>發行年：2015</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book5.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">桃園作家日常—桃園作家的文學生活圖片集</h3>
+                          <ul class="infolist2">
+                            <li>作者：謝鴻文 主編</li>
+                            <li>出版社：布克文化</li>
+                            <li>發行年：2020</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book6.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">桃園人—多元移民的生活寫照</h3>
+                          <ul class="infolist2">
+                            <li>作者：向鴻全 著</li>
+                            <li>出版社：聯合文學</li>
+                            <li>發行年：2023</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book7.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">南崁手記—作家初遷南崁的生活誌</h3>
+                          <ul class="infolist2">
+                            <li>作者：林文義 著</li>
+                            <li>出版社：聯合文學</li>
+                            <li>發行年：2022</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book8.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">我父親—作家與親族的中壢情懷</h3>
+                          <ul class="infolist2">
+                            <li>作者：蔡詩萍 著</li>
+                            <li>出版社：有鹿文化</li>
+                            <li>發行年：2021</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book9.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">洗車人家—作家在龜山洗車的勞動生涯</h3>
+                          <ul class="infolist2">
+                            <li>作者：姜泰宇 著</li>
+                            <li>出版社：寶瓶文化</li>
+                            <li>發行年：2020</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book10.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">國門之都－人文地景紀行之桃園再發現</h3>
+                          <ul class="infolist2">
+                            <li>作者： 陳銘磻 著</li>
+                            <li>出版社：聯合文學</li>
+                            <li>發行年：2016</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book11.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">木藝師游禮海—國寶大師的大溪創作歷程</h3>
+                          <ul class="infolist2">
+                            <li>作者： 陳銘磻 著</li>
+                            <li>出版社：城邦布克文化</li>
+                            <li>發行年：2017</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book12.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">大漢溪紀行 大漢溪沿岸的水文歷史與人文地景</h3>
+                          <ul class="infolist2">
+                            <li>作者： 陳銘磻 著</li>
+                            <li>出版社：城邦布克文化</li>
+                            <li>發行年：2018</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book13.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">戀戀桃花源—文學家筆下的桃園藝術職人</h3>
+                          <ul class="infolist2">
+                            <li>作者： 陳謙 主編</li>
+                            <li>出版社：聯合文學</li>
+                            <li>發行年：2022</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="thumbnail">
+                      <a href="#" title="連結說明文字">
+                        <div class="img-container">
+                          <img src="images/book14.jpg" alt="圖片說明" />
+                        </div>
+                        <div class="caption">
+                          <h3 class="lineclamp2">桃仔園漫步遊—桃園古蹟與美食</h3>
+                          <ul class="infolist2">
+                            <li>作者： 魚夫 著</li>
+                            <li>出版社：桃園文化局</li>
+                            <li>發行年：2022</li>
+                          </ul>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
+            <!-- LP End -->
+            <!-- Pagination -->
+            <div class="pagination">
+              <form action="">
+                <div class="form_inline">
+                  <div class="total">
+                    共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                    <select name="" id="" aria-label="每頁顯示">
+                      <option value="">10</option>
+                      <option value="">20</option>
+                      <option value="">30</option>
+                      <option value="">40</option>
+                    </select>
+                    筆， <input type="button" class="btn" value="確定" />
+                  </div>
+                </div>
+              </form>
+              <ul class="page">
+                <li class="first">
+                  <a href="#" title="第一頁">第一頁 </a>
+                </li>
+                <li class="prev">
+                  <a href="#" title="回上一頁">回上一頁 </a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li class="next">
+                  <a href="#" title="下一頁">下一頁 </a>
+                </li>
+                <li class="last">
+                  <a href="#" title="最後一頁">最後一頁 </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

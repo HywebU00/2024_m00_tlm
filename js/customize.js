@@ -542,3 +542,14 @@ $('.switchBlock li:last').on('click', function () {
   $('.typeList').addClass('active');
   $('.typeGrid').removeClass('active');
 });
+
+// adv_search
+if ($('.adv_search').length > 0) {
+  $('.adv_search').show();
+  $('.btn-adv')
+    .off()
+    .click(function (e) {
+      $('.adv_search').stop().slideToggle(400, 'easeOutCubic');
+      e.preventDefault();
+    });
+}

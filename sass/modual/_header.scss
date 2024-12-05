@@ -363,9 +363,13 @@
       padding: 0.5em;
       flex: 1 1 50%;
       max-width: 70%;
+      background: #fff;
+      border: solid 1px #ccc;
       &[type='submit'] {
         flex: 0 1 15%;
         margin: 0.5em;
+        background: $primaryColor;
+        border: solid 1px $primaryColor;
       }
     }
     .btn,

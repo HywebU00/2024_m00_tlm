@@ -1,15 +1,18 @@
-$form_title_width: 150px; // 表單title寬度
+$form_title_width: 180px; // 表單title寬度
 $m-gutter: 4px; // Flex grid system default margin
-@mixin formStyle($f_color: $color-word, $f_border: $color-gray, $f_radius: $btn-radius) {
+@mixin formStyle($f_color: $color-word, $f_border: $primaryColor, $f_radius: $btn-radius) {
   color: $f_color;
   font-size: 1em;
-  border: 1px solid $f_border;
+  // border: 1px solid $f_border;
+  border: none;
+  border-bottom: solid 2px $f_border;
   padding: 0.5em;
-  background: #fff;
+  background: rgba(255, 255, 255, 0);
   vertical-align: middle;
   margin: 0.3em;
   box-sizing: border-box;
-  border-radius: $f_radius;
+  border-radius: 0;
+  // border-radius: $f_radius;
   transition: all 0.3s ease-out;
   // @include screen('mobile') {
   //     margin: 0 0 .3em 0;
@@ -222,10 +225,10 @@ select::-ms-expand {
 .necessary {
   font-size: 0.875rem;
   color: $color-red;
-  padding: 1px 6px;
+  padding: 1px 3px;
   border-radius: 2px;
   margin: 0 6px 0 0;
-  box-shadow: 0 0 0 1px $color-red inset;
+  // box-shadow: 0 0 0 1px $color-red inset;
 }
 
 .form_grid {
@@ -237,7 +240,7 @@ select::-ms-expand {
   // 表單的線 ----------------------- start
   // border-top: 1px solid #DDD;
   .form_grp {
-    border-bottom: 1px dashed #ddd;
+    // border-bottom: 1px dashed #ddd;
     padding: 0.5em 0;
     // &:last-child{
     //     border-bottom: transparent;  // 最後一筆不要下虛線
@@ -396,7 +399,7 @@ select::-ms-expand {
     // 第一層的 form_title
     .form_title {
       // padding: 18px 0;
-      color: darken($primaryColor, 10);
+      color: darken($primaryColor, 0);
       font-weight: 500;
     }
   }
@@ -483,7 +486,7 @@ select::-ms-expand {
       border-bottom: none;
       // 調整標題
       .form_title {
-        color: #008175;
+        color: $primaryColor;
       }
       .form_content {
         flex-shrink: 0;
@@ -526,6 +529,14 @@ select::-ms-expand {
         border-bottom: none;
         margin-bottom: 0;
       }
+    }
+    .pagenum {
+      flex: 1 1 100%;
+      clear: both;
+      text-align: right;
+      color: #666;
+      font-size: 0.938em;
+      margin-right: 0.5em;
     }
   }
   // 選單格線系統
@@ -628,8 +639,10 @@ select::-ms-expand {
   .form_col-4-4-4 {
     > .form_grp {
       width: calc(100% * 0.33333);
-      flex-basis: calc(100% * 0.33333);
+      flex: 1 1 calc(100% * 0.33333);
+      // flex-basis: calc(100% * 0.33333);
       max-width: calc(100% * 0.33333);
+      padding: 0.5em;
       @include screen('xs_mobile') {
         width: 100%;
         flex-basis: 100%;
@@ -1237,14 +1250,37 @@ select::-ms-expand {
     // }
   }
   .btn_grp {
-    padding: 0;
+    padding: 2em 0;
     .btn,
     input[type='submit'],
-    input[type='reset'],
     input[type='button'],
     input[type='search'] {
       margin: 0.3em;
-      padding: 0.45em 1em;
+      padding: 0.6em 2em;
+      border: none;
+      background: $primaryColor;
+      border-radius: 2em;
+      color: #fff;
+      font-weight: bold;
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        background: darken($primaryColor, 5);
+      }
+    }
+    input[type='reset'] {
+      margin: 0.3em;
+      padding: 0.6em 2em;
+      border: none;
+      background: #666;
+      border-radius: 2em;
+      color: #fff;
+      font-weight: bold;
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        background: darken(#666, 5);
+      }
     }
   }
 }
@@ -1369,7 +1405,8 @@ input[type='submit'] {
 
 textarea {
   @include formStyle();
-  height: 5em;
+  border: solid 2px $primaryColor;
+  height: 6em;
   overflow-y: scroll;
   @include screen('xs_mobile') {
     width: 100%;
@@ -1394,8 +1431,10 @@ select:focus-visible {
 select {
   line-height: 1.4em;
   padding: 0.5em 24px 0.5em 0.5em;
-  border: 1px solid $color-gray;
-  background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
+  // border: 1px solid $color-gray;
+  border: none;
+  border-bottom: solid 2px $primaryColor;
+  background: rgba(255, 255, 255, 0) url(../images/icon/icon_select_arrow.png) no-repeat right center;
   background-size: 16px;
   option {
     outline: none;
@@ -1537,8 +1576,9 @@ input[type='file'] {
 }
 
 .error {
-  @include box-shadow(0px 0px 0px 2px #b70000);
-  border: transparent;
+  // @include box-shadow(0px 0px 0px 2px #b70000);
+  // border: transparent;
+  // border-bottom: solid 2px #ccc;
 }
 
 // 第二層
@@ -1555,8 +1595,8 @@ input[type='file'] {
     input,
     select,
     textarea {
-      @include box-shadow(0px 0px 0px 2px #b70000);
-      border: transparent;
+      // @include box-shadow(0px 0px 0px 2px #b70000);
+      // border: transparent;
     }
   }
 }

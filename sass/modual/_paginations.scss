@@ -134,6 +134,15 @@
     .btn {
       min-width: auto;
       padding: 0.4em 1em !important;
+      border-radius: 2em;
+      background: $primaryColor;
+      color: #fff;
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        background: darken($primaryColor, 5);
+        border: solid 1px $primaryColor;
+      }
     }
     // input[type="button"] {
     //     @include gradient(#F7F7F7, #EAEAEA, vertical);

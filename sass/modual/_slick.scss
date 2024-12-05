@@ -864,6 +864,10 @@
       bottom: -3px;
     }
   }
+  @include screen('mobile') {
+    padding: 1em 0;
+    margin-bottom: 0;
+  }
 }
 .spSwiper {
   margin: 1em 0 1em;
@@ -951,6 +955,9 @@
       left: 5em;
       bottom: -3px;
     }
+  }
+  @include screen('mobile') {
+    margin-bottom: 0;
   }
 }
 .bookSwiper {
@@ -1059,17 +1066,27 @@
   width: 100%;
   .swiper-slide {
   }
-
   .prevSlider {
-    top: auto;
+    top: 50px;
     left: auto;
     right: 80px;
-    bottom: 20px;
   }
   .nextSlider {
-    top: auto;
+    top: 50px;
     right: 20px;
-    bottom: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    .prevSlider {
+      top: auto;
+      left: auto;
+      right: 80px;
+      bottom: 20px;
+    }
+    .nextSlider {
+      top: auto;
+      right: 20px;
+      bottom: 20px;
+    }
   }
 }
 
@@ -1078,6 +1095,12 @@
   padding: 2em 2em 3em;
   .form_inline {
     justify-content: flex-start !important;
+  }
+  .total {
+    text-align: left;
+  }
+  @include screen('mobile') {
+    padding: 2em 1em 1em;
   }
 }
 

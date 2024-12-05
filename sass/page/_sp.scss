@@ -1,0 +1,796 @@
+@charset "utf-8";
+.adv_searchBlock {
+  position: relative;
+  .container {
+    padding: 0 2%;
+  }
+}
+.adv_search {
+  position: relative;
+  display: none;
+  flex: 1 1 100%;
+  line-height: 2em;
+  .form_inline {
+    padding: 1em 0;
+    p {
+      margin: 1em 0.25em;
+      font-weight: bold;
+      color: $primaryColor;
+      line-height: 1.5em;
+    }
+
+    .form_grp {
+      flex: 1 1 30%;
+      position: relative;
+      margin: 2em 0.5em;
+      label {
+        position: absolute;
+        margin-top: -1.8em;
+        color: $primaryColor;
+      }
+      input,
+      select {
+        width: 100%;
+        flex: 1 1 100%;
+      }
+      @include screen('mobile') {
+        flex: 1 1 100%;
+
+        input,
+        select {
+          width: 100%;
+          flex: 1 1 100%;
+          margin-bottom: 2em;
+        }
+      }
+    }
+  }
+  .btn_grp {
+    display: block;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .datepick {
+    padding-right: 0.5em;
+    position: relative;
+    display: block;
+    flex: 1 1 30%;
+    @include screen('xs_mobile') {
+      width: 100%;
+      display: block;
+    }
+    & + .datepick {
+      margin-left: 0.3em;
+      margin-right: 0;
+      padding-right: 0;
+      &:before {
+        content: '~';
+        font-size: 1.5em;
+        display: inline-block;
+        position: absolute;
+        left: -0.65em;
+        top: 0.3em;
+        color: #777;
+      }
+      @include screen('xs_mobile') {
+        margin-left: 0em;
+        &:before {
+          display: none;
+        }
+      }
+      i {
+        right: 0.5em;
+      }
+    }
+    i {
+      position: absolute;
+      padding: 0.37em 0.1em !important;
+      right: 1em;
+      top: 0.2em;
+      min-width: 1em;
+      background: none;
+      border: none;
+      width: auto;
+      pointer-events: none;
+      &:hover,
+      &:focus {
+        box-shadow: none;
+        border: none !important;
+      }
+    }
+    input[type='text'] {
+      width: 100% !important;
+      width: calc(100% - 0.6em);
+      padding-right: 2em;
+      @include screen('xs_mobile') {
+        width: 100%;
+      }
+    }
+  }
+  .form_title {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+  .flex-form .form_grp .datepick > input[type='date'] {
+    width: calc(100% - 0.6em);
+  }
+}
+.btnBlock {
+  display: block;
+  width: 100%;
+  // border-bottom: solid 1px #aeaeae;
+  flex: 1 1 100%;
+  text-align: right;
+  margin-bottom: 0.5em;
+  position: relative;
+  &:before {
+    content: '';
+    width: calc(100% - 6em);
+    height: 1px;
+    background: #aeaeae;
+    position: absolute;
+    left: 0;
+    top: 2.1em;
+  }
+  .btn-adv {
+    padding: 0.3em 1em 0.3em 0.8em;
+    margin: 1em 0;
+    min-width: 0em;
+    font-size: 1em;
+    color: $color-word;
+    background: rgba(255, 255, 255, 0);
+    border: solid 1px #484848;
+    border-radius: 2em;
+    // background: $secondaryColor;
+    // border: 1px solid $secondaryColor;
+    // border-radius: 2em;
+    // border-top-left-radius: 8px;
+    // border-top-right-radius: 8px;
+    // color: #fff;
+    i {
+      opacity: 1;
+      // filter: invert(100%);
+      font-style: normal;
+      span {
+        // filter: invert(100%);
+      }
+    }
+
+    .ink {
+      display: block;
+    }
+  }
+}
+.spcheck {
+  margin: 1em 0;
+  .check_grp {
+    label {
+      display: block;
+      text-align: center;
+    }
+  }
+  a {
+    color: $primaryColor;
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      color: darken($primaryColor, 10);
+      text-decoration: none;
+    }
+  }
+}
+.formBlock {
+  font-size: 1.125em;
+  .form_title {
+    position: relative;
+    padding: 0.65em 1em;
+    &:before {
+      content: '';
+      width: 1px;
+      height: 1em;
+      background: $primaryColor;
+      position: absolute;
+      top: 0.83em;
+      right: 1em;
+      @include screen('mobile') {
+        content: '';
+        width: 3px;
+        height: 1em;
+        background: $primaryColor;
+        position: absolute;
+        top: 0.8em;
+        right: auto;
+        left: 2px;
+      }
+    }
+  }
+  .flex-form .form_grp .datepick > input[type='date'] {
+    width: calc(100% - 0.6em);
+  }
+}
+.scrollBlock {
+  height: 70vh;
+  overflow-y: scroll;
+  border: solid 1px #ccc;
+  padding: 2em;
+  background: #fff;
+  h4 {
+    color: $primaryColor;
+    font-size: 1.125em;
+  }
+}
+.msginfo {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  padding: 2em 5%;
+  border-radius: 5px;
+  margin-bottom: 2em;
+  @include screen('mobile') {
+    padding: 1em 8%;
+  }
+  h3 {
+    position: relative;
+    // border: solid 3px #d1d1d1;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 3px;
+      background: #d1d1d1;
+      position: absolute;
+      left: 0;
+      top: 2em;
+    }
+
+    &:after {
+      content: '';
+      width: 20%;
+      height: 3px;
+      background: $primaryColor;
+      position: absolute;
+      right: 0;
+      top: 2em;
+    }
+  }
+  .appnum {
+    font-size: 1.25em;
+    padding: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    .title {
+      position: relative;
+      min-width: 6em;
+      flex: 0 0 6em;
+      &:before {
+        content: '';
+        width: 1px;
+        height: 1em;
+        background: $primaryColor;
+        position: absolute;
+        top: 0.2em;
+        right: 1em;
+      }
+    }
+    .num {
+      font-weight: bold;
+      color: $primaryColor;
+    }
+  }
+}
+.sp_calendar {
+  .closed {
+    text-align: center;
+    color: #6f6f6f;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -0.5em;
+  }
+}
+.yearBlock {
+  margin: 2em 0;
+  .container {
+    padding: 0 30px;
+    &:before {
+      content: '';
+      width: 10px;
+      height: 100%;
+      background: #e0dfdf;
+      position: absolute;
+      top: 0;
+      left: 114px;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .year {
+    padding: 0.3em 0;
+    border-radius: 2em;
+    color: $primaryColor;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.25em;
+  }
+  .typeList {
+    list-style: none;
+    margin: 0 0 0 48px;
+    padding: 0;
+    > li {
+      padding: 1em 0 1em 40px;
+      margin-left: 40px;
+      position: relative;
+      border-left: solid 2px #e95098;
+      &:before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        border: solid 3px $primaryColor;
+        border-radius: 50%;
+        left: -12px;
+        top: 50%;
+        margin-top: -8px;
+        background: #fff;
+      }
+    }
+    .Flex-set {
+      align-items: flex-start;
+    }
+    .thumbnail {
+      @include flex-xs-equal(1, 0px);
+      @include flex-sm-equal(1, $m-gutter);
+      @include flex-md-equal(1, $m-gutter);
+      @include flex-lg-equal(1, $m-gutter);
+      display: flex;
+      width: 100%;
+      @include screen('mobile') {
+        justify-content: center;
+      }
+      // a {
+      //   display: flex;
+      //   width: 100%;
+      //   // align-items: flex-start;
+      // }
+      .img-container {
+        flex: 0 0 30%;
+        max-width: 150px;
+        margin: 0;
+        img {
+          object-fit: cover;
+        }
+
+        @media screen and (max-width: 767px) {
+          flex: 0 0 40%;
+          max-width: 40%;
+          display: none;
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+      .caption {
+        flex: 1 1 calc(100% - 30%);
+        width: auto;
+        padding: 1em 1.5em 1em 2em;
+        @media screen and (max-width: 767px) {
+          padding: 1em;
+          width: 60%;
+        }
+      }
+      .year2 {
+        color: $primaryColor;
+        font-weight: bold;
+        font-size: 1.125em;
+        margin-bottom: 0.2em;
+      }
+      h3 {
+        margin: 0;
+        color: $color-word;
+      }
+      p {
+        margin: 0;
+      }
+      .mark {
+        float: right;
+        font-size: 0.875em;
+        color: $primaryColor;
+        margin-top: -2em;
+        span {
+          display: inline-block;
+          margin: 0 0.5em;
+        }
+        @include screen('mobile') {
+          float: none;
+          margin-top: 0;
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      .thumbnail:last-child:nth-child(4n-1) {
+        margin-right: 0;
+      }
+      .thumbnail:last-child:nth-child(4n-2) {
+        margin-right: 0;
+      }
+      .thumbnail:last-child:nth-child(4n-3) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// 年月份 月曆 start
+.year_month_block {
+  font-size: 2em;
+  text-align: center;
+  margin: 40px 0;
+  font-weight: 500;
+  @media (max-width: 480px) {
+    font-size: 1.75em;
+  }
+  @media (max-width: 380px) {
+    font-size: 1.5em;
+  }
+  .year_month {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    span {
+      color: $primaryColor;
+      padding: 0 10px;
+      // font-family: 'Merriweather', serif;
+      font-weight: 500;
+      font-size: 1.25em;
+      @media (max-width: 380px) {
+        padding: 0 5px;
+      }
+    }
+  }
+  .prev_btn,
+  .next_btn {
+    display: inline-block;
+    vertical-align: middle;
+    a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: #666;
+      line-height: 40px;
+      border-radius: 50%;
+      &:hover {
+        background-color: #000;
+      }
+      @media (max-width: 380px) {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
+.calendar_explain {
+  background-image: url('../images/icon_star.png');
+  background-position: 0 2px;
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+.people_sort {
+  background-color: #fff;
+  padding: 15px 20px 7px;
+  box-shadow: 0 0 2px #ccc;
+  overflow: hidden;
+  margin-bottom: 20px;
+  text-align: center;
+  // @include screen('mobile'){
+  //  padding: 15px 100px 7px;
+  // }
+  // @include screen('xs_mobile'){
+  //  padding: 15px 30px 7px;
+  // }
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+    list-style: none;
+    text-align: left;
+    @include screen('mobile') {
+      width: 90%;
+    }
+    @media (max-width: 590px) {
+      width: 95%;
+    }
+    li {
+      display: inline-block;
+      width: 105px;
+      margin: 0 4px 8px;
+      padding-left: 20px;
+      position: relative;
+      &:before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: 0;
+        top: 5px;
+        background-color: #666;
+      }
+      &.no01 {
+        &:before {
+          background-color: #00a18b;
+        }
+      }
+      &.no02 {
+        &:before {
+          background-color: #ff6e35;
+        }
+      }
+      &.no03 {
+        &:before {
+          background-color: #006ccf;
+        }
+      }
+      &.no04 {
+        &:before {
+          background-color: #e50022;
+        }
+      }
+      &.no05 {
+        &:before {
+          background-color: #dda300;
+        }
+      }
+      &.no06 {
+        &:before {
+          background-color: #0fa6c9;
+        }
+      }
+      &.no07 {
+        &:before {
+          background-color: #9c2c8a;
+        }
+      }
+      &.no08 {
+        &:before {
+          background-color: #707070;
+        }
+      }
+      &.no09 {
+        &:before {
+          background-color: #b38850;
+        }
+      }
+    }
+  }
+}
+// 日曆calendar_Tb
+.calendar_Tb {
+  table {
+    word-break: break-all;
+    table-layout: fixed;
+    thead {
+      margin-bottom: 5px;
+      border: none;
+      &:before {
+        display: none;
+      }
+    }
+    tbody {
+      // border-top: 1px solid #ccc;
+      // padding: 0 10px;
+      // border-radius: 10px;
+    }
+    tr {
+      background-color: #fff;
+    }
+    tr:hover {
+      background-color: #fff6d2;
+      transition: 0.2s;
+    }
+    th {
+      background-color: #dddddd !important;
+      border: 5px solid transparent;
+      color: #333;
+      padding: 0.5em 1em;
+      width: 14.28%;
+      font-size: 1.125em;
+      font-weight: 400;
+      text-align: center;
+      font-weight: 500;
+      &.weekend {
+        background-color: $primaryColor !important;
+        color: #fff;
+      }
+    }
+    td {
+      position: relative;
+      // min-height: 130px!important;
+      // background-color: #fff !important;
+      border: 1px solid #c2c2c2;
+      padding: 0.5em;
+      vertical-align: top;
+      @include screen('xs_mobile') {
+        padding-left: 17% !important;
+        min-height: 65px;
+        border: 1px solid #dedddd !important;
+      }
+      &:after {
+        content: '';
+        width: 1px;
+        height: 20px;
+        float: left;
+        background-color: #fff;
+        border: none;
+        @include screen('xs_mobile') {
+          float: none;
+          height: auto;
+          background-color: red;
+        }
+      }
+      &:before {
+        position: absolute;
+        // top: .5em;
+        // left: .5em;
+        // padding-right: 10px;
+        // border-right: 1px solid #ccc;
+        // height: 50px;
+        width: 15%;
+        // padding-left:0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding: 5px;
+        background-color: #eee;
+        color: #333;
+        text-align: center;
+      }
+      &.othermonth {
+        .num_date {
+          color: #d5d5d5;
+        }
+        @include screen('xs_mobile') {
+          display: none;
+        }
+      }
+    }
+    .num_date {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      text-align: right;
+      color: $color-word;
+      font-size: 1.063em;
+      font-weight: bold;
+      @include screen('xs_mobile') {
+        position: absolute;
+        text-align: center;
+        right: 0;
+        left: 0;
+        top: 30px;
+        width: 15%;
+      }
+    }
+    ul {
+      margin: 25px 0 0;
+      padding: 0;
+      list-style-type: none;
+      @include screen('xs_mobile') {
+        margin: 0 6px 0 10px;
+      }
+      li {
+        margin-bottom: 5px;
+        a {
+          display: block;
+          padding: 8px;
+          background-color: #666;
+          color: #fff;
+          font-size: 0.938em;
+          border-radius: 5px;
+          // white-space: nowrap;
+          // overflow: hidden;
+          // text-overflow: ellipsis;
+          &:hover {
+            background-color: darken(#666, 15);
+          }
+          .event {
+          }
+          .place {
+            font-size: 0.875em;
+            position: relative;
+            padding-left: 1.5em;
+
+            &:before {
+              content: '';
+              width: 1.2em;
+              height: 1.2em;
+              background: url('../images/icon_place.png') no-repeat left top;
+              background-size: 100% auto;
+              position: absolute;
+              top: 0.35em;
+              left: 0.1em;
+            }
+          }
+          hr {
+            margin: 0.3em 0;
+          }
+          &.exp {
+            background-color: #999;
+            // &:hover {
+            //   background-color: darken(#999, 15);
+            // }
+          }
+          &.no01 {
+            background-color: #00a18b;
+            &:hover {
+              background-color: darken(#00a18b, 15);
+            }
+          }
+          &.no02 {
+            background-color: #ff6e35;
+            &:hover {
+              background-color: darken(#ff6e35, 15);
+            }
+          }
+          &.no03 {
+            background-color: #006ccf;
+            &:hover {
+              background-color: darken(#006ccf, 15);
+            }
+          }
+          &.no04 {
+            background-color: #e50022;
+            &:hover {
+              background-color: darken(#e50022, 15);
+            }
+          }
+          &.no05 {
+            background-color: #dda300;
+            &:hover {
+              background-color: darken(#dda300, 10);
+            }
+          }
+          &.no06 {
+            background-color: #0fa6c9;
+            &:hover {
+              background-color: darken(#0fa6c9, 15);
+            }
+          }
+          &.no07 {
+            background-color: #9c2c8a;
+            &:hover {
+              background-color: darken(#9c2c8a, 15);
+            }
+          }
+          &.no08 {
+            background-color: #707070;
+            &:hover {
+              background-color: darken(#707070, 15);
+            }
+          }
+          &.no09 {
+            background-color: #b38850;
+            &:hover {
+              background-color: darken(#b38850, 15);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.popupBlock {
+  .cpinfoBlock {
+    margin: 1em 0;
+  }
+  i {
+    margin: 0;
+    padding: 0;
+    &.icon_calendar {
+      vertical-align: middle;
+      margin-top: 5px;
+      img {
+        width: 1.5em;
+      }
+    }
+  }
+}
