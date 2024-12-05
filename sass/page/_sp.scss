@@ -658,6 +658,9 @@
       &.othermonth {
         .num_date {
           color: #d5d5d5;
+          &.satsun {
+            color: #fdbcda !important;
+          }
         }
         @include screen('xs_mobile') {
           display: none;
@@ -685,6 +688,9 @@
       &.today {
         background: #fecee4;
         border-radius: 50%;
+      }
+      &.satsun {
+        color: #d32c79;
       }
     }
     ul {

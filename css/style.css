@@ -12582,6 +12582,9 @@ h2.title:before {
 .calendar_Tb table td.othermonth .num_date {
   color: #d5d5d5;
 }
+.calendar_Tb table td.othermonth .num_date.satsun {
+  color: #fdbcda !important;
+}
 @media screen and (max-width: 575px) {
   .calendar_Tb table td.othermonth {
     display: none;
@@ -12611,6 +12614,9 @@ h2.title:before {
 .calendar_Tb table .num_date.today {
   background: #fecee4;
   border-radius: 50%;
+}
+.calendar_Tb table .num_date.satsun {
+  color: #d32c79;
 }
 .calendar_Tb table ul {
   margin: 25px 0 0;
