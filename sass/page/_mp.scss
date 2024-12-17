@@ -163,6 +163,7 @@
     }
   }
 }
+
 .news {
   margin: 5em 0 2em;
   @include screen('tablet') {
@@ -416,6 +417,9 @@
     p {
       line-height: 2em;
     }
+    @include screen('xs_mobile') {
+      padding: 0 0 2em 2em;
+    }
   }
   .more {
     margin: 1em 0;
@@ -537,6 +541,80 @@
       color: $aHover !important;
     }
   }
+}
+
+.modeBlock {
+  position: relative;
+  margin: 1.5em 0 8em;
+  @include screen('tablet') {
+    margin: 0 0 4em 0;
+  }
+  &:before {
+    content: '';
+    background: #fff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: -6%;
+    width: 76%;
+    height: 100%;
+    @include screen('tablet') {
+      display: none;
+    }
+  }
+  &:after {
+    content: '';
+    background: url(../images/newsBlock_bg2.jpg) no-repeat right top;
+    position: absolute;
+    right: -6%;
+    top: 5em;
+    width: 90%;
+    height: 95%;
+    z-index: -1;
+    @include screen('tablet') {
+      display: none;
+    }
+  }
+  h2 {
+    &.title {
+      margin-bottom: 1.5em;
+    }
+  }
+  h3 {
+    color: $primaryColor;
+    position: relative;
+    padding-left: 0.6em;
+    margin: 0.5em 0 0.5em 2rem;
+    &:before {
+      content: '';
+      width: 3px;
+      height: 1em;
+      background: $primaryColor;
+      position: absolute;
+      left: 0;
+      top: 0.15em;
+    }
+  }
+  p {
+    line-height: 1.8em;
+    margin: 0.5em 1em 2em 2em;
+  }
+  .mode {
+    margin: 5em 0 4em;
+  }
+}
+.awardBlock {
+  margin: 0 0 3em;
+  .topPic2 {
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+    margin: 2em 3%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.newsBlock2 {
+  margin: 2em 0 3em;
 }
 
 // 範例：

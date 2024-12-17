@@ -72,6 +72,12 @@ $(function () {
   var swiper = new Swiper('.writerSwiper', {
     slidesPerView: 1,
     spaceBetween: 30,
+    centeredSlides: false,
+    slidesPerGroupSkip: 1,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+    },
     // pagination: {
     //   el: '.swiper-pagination',
     //   clickable: true,
@@ -79,22 +85,27 @@ $(function () {
     breakpoints: {
       320: {
         slidesPerView: 1,
+        slidesPerGroup: 1,
         spaceBetween: 70,
       },
       640: {
         slidesPerView: 2,
+        slidesPerGroup: 1,
         spaceBetween: 70,
       },
       768: {
         slidesPerView: 2,
+        slidesPerGroup: 1,
         spaceBetween: 70,
       },
       1024: {
         slidesPerView: 3,
+        slidesPerGroup: 1,
         spaceBetween: 70,
       },
       1200: {
         slidesPerView: 4,
+        slidesPerGroup: 1,
         spaceBetween: 70,
       },
     },
@@ -102,12 +113,15 @@ $(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
   });
 
   //作品文物典藏
   var swiper = new Swiper('.collectionSwiper', {
     slidesPerView: 2,
-    spaceBetween: 30,
+    spaceBetween: 20,
     loop: false,
     // pagination: {
     //   el: '.swiper-pagination',
@@ -318,160 +332,27 @@ $(function () {
     },
   });
 
-  // 廣告輪播
-  // $('.adSlider').slick({
-  //   mobileFirst: true,
-  //   dots: false,
-  //   infinite: true,
-  //   speed: 300,
-  //   slidesToShow: 2,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   arrow: true,
-  //   lazyLoaded: true,
-  //   lazyLoad: 'ondemand',
-  //   ease: 'ease',
-  //   responsive: [
-  //     {
-  //       breakpoint: 1200,
-  //       settings: {
-  //         slidesToShow: 5,
-  //         slidesToScroll: 1,
-  //         arrows: true,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         slidesToShow: 4,
-  //         slidesToScroll: 1,
-  //         arrows: true,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 575,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 1,
-  //         arrows: true,
-  //       },
-  //     },
-  //   ],
-  // });
-  //燈箱slick+lightBox組合
-  // $('.cp_slider').slick({
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   autoplay: false,
-  //   autoplaySpeed: 1500,
-  //   pauseOnHover: true,
-  //   pauseOnFocus: true,
-  //   focusOnSelect: true,
-  //   accessibility: true,
-  //   lazyLoad: 'ondemand',
-  //   ease: 'ease',
-  //   responsive: [
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //         infinite: true,
-  //         dots: true,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 545,
-  //       settings: {
-  //         arrows: true,
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         arrows: true,
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //         arrows: false,
-  //       },
-  //     },
-  //   ],
-  // });
-  //
-  // $('.cppic_slider').slick({
-  //   dots: true,
-  //   infinite: false,
-  //   speed: 500,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   autoplay: false,
-  //   autoplaySpeed: 1500,
-  //   // pauseOnHover: true,
-  //   // pauseOnFocus: true,
-  //   // focusOnSelect: true,
-  //   // accessibility: true,
-  //   // lazyLoad: 'ondemand',
-  //   // ease: 'ease',
-  //   responsive: [
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //         infinite: true,
-  //         dots: true,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 545,
-  //       settings: {
-  //         arrows: true,
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         arrows: true,
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //         arrows: false,
-  //       },
-  //     },
-  //   ],
-  // });
-  // cp_photo
-  // $('.Slider-for').on('init reInit afterChange', function (event, slick, currentSlide) {
-  //   var i = (currentSlide ? currentSlide : 0) + 1;
-  //   $('.controls').html(i + '/' + slick.slideCount);
-  // });
-  // $('.Slider-for').slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  //   fade: true,
-  //   swipe: false,
-  //   swipeToSlide: false,
-  //   lazyLoad: 'ondemand',
-  //   asNavFor: '.Slider-nav',
-  //   infinite: true,
-  // });
-  // $('.Slider-nav').slick({
-  //   slidesToShow: 2,
-  //   slidesToScroll: 1,
-  //   asNavFor: '.Slider-for',
-  //   dots: true,
-  //   arrows: true,
-  //   lazyLoad: 'ondemand',
-  //   focusOnSelect: true,
-  //   infinite: true,
-  // });
+  //作品介紹
+  var swiper = new Swiper('.sbookSwiper', {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  var swiper2 = new Swiper('.sbookSwiper2', {
+    spaceBetween: 10,
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
 
   // password_toggle
   var passShow = false;
