@@ -584,6 +584,125 @@
     }
   }
 }
+.newsBlock2 {
+  .eventsSwiper {
+    margin: 1em 3% 1em;
+    position: static;
+    .swiper-slide {
+      width: 100%;
+      background: rgba(255, 255, 255, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        flex: 1 1 100%;
+        padding: 1em;
+        &:focus-visible {
+          box-shadow: $aFocus 0 0 0 2px inset;
+          outline: none;
+        }
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .img-container {
+      @include aspect-ratio(5, 4); //比例
+      border-radius: 6px;
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+      margin-bottom: 1.5em;
+    }
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+    .caption {
+      .sort1 {
+        font-size: 1.25em;
+        font-weight: bold;
+        color: $primaryColor;
+        margin: 0.2em 0;
+        padding-right: 1em;
+        position: relative;
+        display: inline-block;
+        &:before {
+          content: '';
+          width: 2px;
+          height: 1em;
+          background: lighten($primaryColor, 10);
+          position: absolute;
+          top: 0.1em;
+          right: 0;
+        }
+      }
+      .sort2 {
+        font-size: 1.25em;
+        font-weight: bold;
+        color: $color-blue;
+        margin: 0.2em 0;
+        padding-right: 1em;
+        position: relative;
+        display: inline-block;
+        &:before {
+          content: '';
+          width: 2px;
+          height: 1em;
+          background: lighten($color-blue, 10);
+          position: absolute;
+          top: 0.1em;
+          right: 0;
+        }
+      }
+      p {
+        margin: 0.5em 0;
+      }
+      h3 {
+        margin: 0;
+      }
+      .date {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $primaryColor;
+        margin: 0.2em 0;
+        padding-right: 0.5em;
+        position: relative;
+        display: inline-block;
+        &:before {
+          content: '';
+          width: 2px;
+          height: 1em;
+          background: lighten($primaryColor, 10);
+          position: absolute;
+          top: 0.1em;
+          right: 0;
+        }
+      }
+      .titlename {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $primaryColor;
+        display: inline-block;
+        padding-left: 0.5em;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .prevSlider {
+        top: 30px;
+        left: auto;
+        right: calc(7% + 60px);
+      }
+      .nextSlider {
+        top: 30px;
+        right: 7%;
+      }
+    }
+  }
+}
 
 //writerSwiper
 .writerBlock {
@@ -753,9 +872,7 @@
   background-size: cover;
   padding: 3em 0 3em;
 }
-.collectionBlock2 {
-  padding: 3em 0 3em;
-}
+
 .collectionSwiper {
   margin: 1em 3% 1em;
   position: static;
@@ -814,6 +931,72 @@
     .nextSlider {
       top: 30px;
       right: 7%;
+    }
+  }
+}
+
+//collectionBlock2
+.collectionBlock2 {
+  padding: 3em 0 3em;
+  .collectionSwiper {
+    margin: 1em 3% 1em;
+    position: static;
+    .swiper-slide {
+      width: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        flex: 1 1 100%;
+        padding: 1em;
+        &:focus-visible {
+          box-shadow: $aFocus 0 0 0 2px inset;
+          outline: none;
+        }
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .img-container {
+      @include aspect-ratio(3.9, 5); //比例
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+      margin-bottom: 0;
+    }
+    .swiper-slide {
+      background: transparent;
+    }
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+    .caption {
+      p {
+        margin: 0.5em 0;
+      }
+    }
+    .prevSlider {
+      top: 55%;
+    }
+    .nextSlider {
+      top: 55%;
+    }
+    @media screen and (min-width: 768px) {
+      .prevSlider {
+        top: 30px;
+        left: auto;
+        right: calc(7% + 60px);
+      }
+      .nextSlider {
+        top: 30px;
+        right: 7%;
+      }
     }
   }
 }

@@ -34,6 +34,7 @@ body {
   &.pagebody {
     background: #fafafa url(../images/body_bg2.jpg) no-repeat left top 80px;
     background-size: 100% auto;
+    background-attachment: fixed;
   }
 }
 a {
