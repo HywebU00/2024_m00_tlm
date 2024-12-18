@@ -7,6 +7,9 @@
   @extend %clearfix; // outline: 1px solid red;
   .form_inline {
     justify-content: center;
+    label {
+      display: inline-block;
+    }
   }
   span {
     color: $primaryColor;
