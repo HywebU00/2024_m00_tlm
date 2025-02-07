@@ -10171,6 +10171,15 @@ div.function ul li.icon_forward a:before {
   background: url(../images/basic/icon_back-style2.svg) no-repeat center center;
   background-size: 100%;
 }
+.function_panel .function ul li.lpsearch a:before {
+  background: url(../images/basic/icon_search-style2.svg) no-repeat center center;
+  background-size: 100%;
+}
+@media screen and (max-width: 767px) {
+  .function_panel .function ul li.lpsearch {
+    display: none;
+  }
+}
 .function_panel .function ul li.print a:before {
   background: url(../images/basic/icon_print-style2.svg) no-repeat center center;
   background-size: 100%;
