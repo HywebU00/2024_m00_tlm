@@ -37,7 +37,7 @@ footer {
     flex: 1 1 30%;
     padding-right: 60px;
     img {
-      width: 200px;
+      width: 180px;
       margin-bottom: 1em;
     }
   }
@@ -83,7 +83,7 @@ footer {
         // transition: all 0.3s ease-out;
         &:hover,
         &:focus-visible {
-          color: #ebd42b;
+          color: #fdede4;
           //   background: darken($primaryColor, 10);
         }
       }
