@@ -78,7 +78,7 @@
     max-width: $container-max;
     overflow: visible;
     position: relative;
-    padding: 20px 3% 35px;
+    padding: 25px 3% 30px;
     @include screen('mobile') {
       padding: 0 3% 0;
     }
@@ -167,7 +167,7 @@
     }
     img {
       display: block;
-      max-width: 280px;
+      max-width: 230px;
       max-height: 75px;
     }
     @include screen('mobile') {

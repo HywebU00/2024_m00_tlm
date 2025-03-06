@@ -3555,7 +3555,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   max-width: 1600px;
   overflow: visible;
   position: relative;
-  padding: 20px 3% 35px;
+  padding: 25px 3% 30px;
 }
 @media screen and (max-width: 767px) {
   .header > .container {
@@ -3642,7 +3642,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .header h1 img {
   display: block;
-  max-width: 280px;
+  max-width: 230px;
   max-height: 75px;
 }
 @media screen and (max-width: 767px) {
@@ -8724,7 +8724,7 @@ table.table_sprite tr:nth-child(even) {
 .mpSlider .img-container .title {
   position: absolute;
   top: 28%;
-  left: 6%;
+  left: 5%;
   z-index: 1;
   font-size: 3em;
   font-weight: bold;
@@ -8745,7 +8745,7 @@ table.table_sprite tr:nth-child(even) {
 .mpSlider .img-container .inttxt {
   position: absolute;
   top: 35%;
-  left: 6%;
+  left: 5%;
   z-index: 1;
   font-size: 1.25em;
   line-height: 2em;
