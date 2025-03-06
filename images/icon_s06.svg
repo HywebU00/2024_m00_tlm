@@ -1,16 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 696 696">
-  <defs>
-    <style>
-      .cls-1 {
-        isolation: isolate;
-      }
-    </style>
-  </defs>
-  <!-- Generator: Adobe Illustrator 28.7.5, SVG Export Plug-In . SVG Version: 1.2.0 Build 176)  -->
-  <g>
-    <g id="_圖層_1" data-name="圖層_1">
-      <image id="_圖層_1-2" data-name="圖層_1" class="cls-1" width="530" height="642" transform="translate(83 25)" xlink:href="icon_s06-1.png"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <g id="工作區域_1" data-name="工作區域 1">
+    <image id="icon_s06" x="4" y="2" width="51" height="62" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAA+CAYAAACGPyP0AAAFAUlEQVRoge2aXYhWRRiAn++4i6b0Q1m5W6SRZWiIVFZgVshKdyUpWg5EEWQXdWVNc7F5U9k4ZC6EQWQ31WBE2o9XgZGJGQiZgv26YG6/lgqapWW7dTHn+/j27Pn7zpzjfls98F2cmXfe733PvPPOz5kaCVglO4EJQC1JpmJOCm1Ot9IgSKl7BzgOHBul333Nxlglz/Nx5oKsxmcYa5W8Ik0gzZnRCq8kZgK7rZJXJQmkOdOOnAO8a5WcGVc51pwBmAHsskrOilaMRWcAJgFbrJKzmwvHqjMAl+N66Np6QccoGtMqrxKfYXusknuENkNjxhmhzaosmXYOswmtNmhnZ+5otUE7h1mPVfIg0A8M5pDva2dnAC4Lf3l4s53DrGX+Vc74htlJYD3wXaT8L+DvSNk4hr+8ALgOuIeSXqqvM71Cm+d8FFglz6ZA5orD940MlGDDLyXoAPydWW2VvKhoY6vkNcBiTxsa+IbZlcCAVfJ4gbY13FqrtE1gGfPMeODCEvR4839qjrAD+ISRqdiXALerXEjOl+7rzHrgEaFN2Y40sEr2Ak/mkfUNsy1VOhKyK6+grzOP+qTmLKySE4F788r7hlkP8L1V8rCnnjhqwGTcMigXZSSADmBKCXq8+c+k5rwDew/wjb8psXQBcykhNef5nPAWsLji1PwssDKPrG+YbTgDqfm9vIJZCeAn4FNgHy6UjuIOFzpwa7J9xexriRFnykmkOXOX0ObnvIqskgEggEvytsmgBkwF7m+lQWlYJccDDwOrcJ8fziQrWh4zVsnE3hTa/CG0WQtcDXzhY1kRUnvGKnk9bn8+D2fgxbgZ+RRuy7wXeB/YJLQ5HGnbjTvsXlC+2bGsiHXGKnku8Ar5DxpOA48LbdZF9ATAdtzLqJqRzlgllwPPA+cXULgDWCG0+bxJ33RgJ9XvRoePGavkQ8BrFHME4GZgaxhiAAht+oFllL95G0HDGavkMuAF/DNcF7DTKtk4IxbafABs9tSbSQBglZyEC60sRw7hxsBQhtxUYHWkbH0RA1uh3jMvkR3THwPThDa34hZ/pzLkl1olb2p63g58WcjKnARWycm4894stgltTgEIbXYDBzLkO4G++oPQZpCKeycApueUjQ7grFADuNEqOaPp+Q3yfTgqRABcWpXykMYcE671Dlb1RwHVr6Gid10qdWZ8Qt2fuKXKjxk69uMmxaR5JJpYjua2rkUCkjdoS4Q2PbhTxaeB3yP13wIPArOENvOAxxL0dEae84y1QnTgvnLFsRVAaPMr0BveDGxmidDmt6h8DCcizxNbtjInQcyf1VnW/BC9YhhxBGBpgp7oGOmOlSqBDuBIQt0Gq+QUYE3aPj88dXwZuDtBZE+TbI2RCaE0ApInv3HAM8Bmq2RXnIBV8hbgI5IdOYZLDnVuw12vqoQAdwMi7Xh1EfCVVXJ+c6FVUgEfAnNS2q4Lx1ydB4oamoPBWmjYImAT6UdPJ4AXga9x3yEXkr4w7Qfm1MdW2LsHSJ4KfBgC5jeMsUpuJDlcirBcaLOxSX83cEOJ+usMAnuFNgPNhxMrcTdUZ8e3yc0Qbqy93lwotPkBeNtTdyrDwsQqeRZuHMz10PmU0OYJL6sKMmyMCG1OArcDa0mef5LYjwvTzBt7VZE4gMPb3WuAO0k/+TyCc74vfBmjRuZ+P9zLLwCm4Q46OnEXgA4Bn+E2ba32YiX8A6FWWdBMqX4eAAAAAElFTkSuQmCC"/>
   </g>
 </svg>
