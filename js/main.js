@@ -21,7 +21,7 @@ $(function () {
     ww = _window.outerWidth(),
     wh = _window.height(),
     _body = $('body'),
-    _header = $('header'),
+    _header = $('.header'),
     _fontSize = $('.font_size'),
     wwNormal = 1920,
     wwMedium = 992,
@@ -484,18 +484,18 @@ $(function () {
   });
   // fixed navbar
   var resizeNavTimer;
-  if ($('header .menu').length > 0) {
-    var stickyMenuTop = Math.floor($('header .menu').offset().top),
-      menuH = Math.floor(_menu.outerHeight());
+  if ($('.header').length > 0) {
+    var stickyMenuTop = Math.floor($('.header').offset().top),
+      headerH = Math.floor(_header.outerHeight());
 
     function stickynavBar() {
-      if (ww >= wwNormal && $(this).scrollTop() > stickyMenuTop) {
-        $('header .menu').addClass('sticky');
-        $('header .megamenu').addClass('sticky');
-        $('.main').css('padding-top', menuH);
+      if (ww >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
+        $('.header').addClass('sticky');
+        // $('header').addClass('sticky');
+        $('.main').css('padding-top', headerH);
       } else {
-        $('header .menu').removeClass('sticky');
-        $('header .megamenu').removeClass('sticky');
+        $('.header').removeClass('sticky');
+        // $('header').removeClass('sticky');
         $('.main').removeAttr('style');
       }
     }
@@ -505,7 +505,7 @@ $(function () {
     _window.on('resize', function (event) {
       clearTimeout(resizeNavTimer);
       resizeNavTimer = setTimeout(function () {
-        stickyMenuTop = Math.floor($('header .menu').offset().top);
+        stickyMenuTop = Math.floor($('.header').offset().top);
         $('.main').removeAttr('style');
         stickynavBar();
       }, 200);
