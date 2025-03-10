@@ -3491,7 +3491,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   width: 100%;
   z-index: 999;
   background-color: #fff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 10px -1px, rgba(0, 0, 0, 0.3) 0px 1px 8px -1px;
 }
 .header.sticky:after {
   position: absolute;
@@ -11096,13 +11096,14 @@ body.noscroll {
 
 .more {
   margin-bottom: 2em;
+  text-align: center;
 }
 .more a {
-  display: block;
-  width: 10em;
+  display: inline-block;
+  min-width: 10em;
   height: 2.8em;
   margin: 0.5em auto 0.5em;
-  padding-right: 1em;
+  padding: 0 2.5em 0 1.5em;
   line-height: 2.8;
   color: #333;
   border: 1px solid #333;
@@ -12511,9 +12512,18 @@ h2.title:before {
 
 .adv_search {
   position: relative;
-  display: none;
+  opacity: 1;
+  visibility: visible;
+  height: auto;
   flex: 1 1 100%;
   line-height: 2em;
+  transition: opacity 0.4s ease, height 0.4s ease, visibility 0.4s ease;
+}
+.adv_search.closed {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
 }
 .adv_search .form_inline {
   padding: 1em 0;
@@ -12628,7 +12638,6 @@ h2.title:before {
 .btnBlock {
   display: block;
   width: 100%;
-  flex: 1 1 100%;
   text-align: right;
   margin-bottom: 0.5em;
   position: relative;
@@ -12640,14 +12649,12 @@ h2.title:before {
   background: #aeaeae;
   position: absolute;
   left: 0;
-  top: 2.1em;
+  top: 1.3em;
 }
 .btnBlock .btn-adv {
   padding: 0.3em 1em 0.3em 0.8em;
-  margin: 1em 0;
-  min-width: 0em;
   font-size: 1em;
-  color: #222;
+  color: #484848;
   background: rgba(255, 255, 255, 0);
   border: solid 1px #484848;
   border-radius: 2em;
@@ -12658,6 +12665,21 @@ h2.title:before {
 }
 .btnBlock .btn-adv .ink {
   display: block;
+}
+.btnBlock .btn-adv:hover, .btnBlock .btn-adv:focus {
+  background: #9a6965;
+  border: solid 1px #9a6965;
+  color: #fff;
+  font-weight: bold;
+}
+.btnBlock .btn-adv:hover i, .btnBlock .btn-adv:focus i {
+  filter: invert(100%);
+}
+.btnBlock .show_btn {
+  display: none;
+}
+.btnBlock .hide_btn {
+  display: inline-block;
 }
 
 .spcheck {

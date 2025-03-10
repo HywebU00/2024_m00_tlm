@@ -3,12 +3,13 @@
 // more按鈕
 .more {
   margin-bottom: 2em;
+  text-align: center;
   a {
-    display: block;
-    width: 10em;
+    display: inline-block;
+    min-width: 10em;
     height: 2.8em;
     margin: 0.5em auto 0.5em;
-    padding-right: 1em;
+    padding: 0 2.5em 0 1.5em;
     line-height: 2.8;
     color: $color-dark;
     border: 1px solid $color-dark;

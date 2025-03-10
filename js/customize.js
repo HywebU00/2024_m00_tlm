@@ -425,12 +425,44 @@ $('.switchBlock li:last').on('click', function () {
 });
 
 // adv_search
-if ($('.adv_search').length > 0) {
-  $('.adv_search').show();
-  $('.btn-adv')
-    .off()
-    .click(function (e) {
-      $('.adv_search').stop().slideToggle(400, 'easeOutCubic');
-      e.preventDefault();
-    });
-}
+// if ($('.adv_search').length > 0) {
+//   $('.adv_search').show();
+//   $('.adv_search').addClass('open');
+//   $('.adv_search .hide_btn').click(function () {
+//     $('.adv_search').removeClass('open');
+//     $(this).hide();
+//     $('.adv_search .show_btn').show();
+//   });
+//   $('.show_btn')
+//     .off()
+//     .click(function (e) {
+//       $('.adv_search').stop().slideToggle(400, 'easeOutCubic');
+//       e.preventDefault();
+//     });
+// }
+$(document).ready(function () {
+  const $advSearch = $('.adv_search');
+  const $showBtn = $('.show_btn');
+  const $hideBtn = $('.hide_btn');
+
+  // 預設展開狀態
+  $advSearch.addClass('open').show();
+  $showBtn.hide();
+  $hideBtn.show();
+
+  // 收合按鈕點擊
+  $hideBtn.on('click', function (e) {
+    e.preventDefault();
+    $advSearch.removeClass('open').addClass('closed').slideUp(300, 'easeOutCubic');
+    $hideBtn.hide(); // 立即隱藏
+    $showBtn.show(); // 立即顯示
+  });
+
+  // 展開按鈕點擊
+  $showBtn.on('click', function (e) {
+    e.preventDefault();
+    $showBtn.hide(); // 立即隱藏
+    $hideBtn.show(); // 立即顯示
+    $advSearch.removeClass('closed').addClass('open').slideDown(300, 'easeOutCubic');
+  });
+});

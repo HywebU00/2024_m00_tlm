@@ -7,9 +7,18 @@
 }
 .adv_search {
   position: relative;
-  display: none;
+  opacity: 1;
+  visibility: visible;
+  height: auto;
   flex: 1 1 100%;
   line-height: 2em;
+  transition: opacity 0.4s ease, height 0.4s ease, visibility 0.4s ease;
+  &.closed {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
   .form_inline {
     padding: 1em 0;
     p {
@@ -118,11 +127,10 @@
 .btnBlock {
   display: block;
   width: 100%;
-  // border-bottom: solid 1px #aeaeae;
-  flex: 1 1 100%;
   text-align: right;
   margin-bottom: 0.5em;
   position: relative;
+
   &:before {
     content: '';
     width: calc(100% - 6em);
@@ -130,23 +138,15 @@
     background: #aeaeae;
     position: absolute;
     left: 0;
-    top: 2.1em;
+    top: 1.3em;
   }
   .btn-adv {
     padding: 0.3em 1em 0.3em 0.8em;
-    margin: 1em 0;
-    min-width: 0em;
     font-size: 1em;
-    color: $color-word;
+    color: #484848;
     background: rgba(255, 255, 255, 0);
     border: solid 1px #484848;
     border-radius: 2em;
-    // background: $secondaryColor;
-    // border: 1px solid $secondaryColor;
-    // border-radius: 2em;
-    // border-top-left-radius: 8px;
-    // border-top-right-radius: 8px;
-    // color: #fff;
     i {
       opacity: 1;
       // filter: invert(100%);
@@ -159,8 +159,26 @@
     .ink {
       display: block;
     }
+    &:hover,
+    &:focus {
+      background: $primaryColor;
+      border: solid 1px $primaryColor;
+      color: #fff;
+      font-weight: bold;
+      i {
+        filter: invert(100%);
+      }
+    }
+  }
+  .show_btn {
+    display: none;
+  }
+  .hide_btn {
+    display: inline-block;
   }
 }
+
+// spcheck
 .spcheck {
   margin: 1em 0;
   .check_grp {
