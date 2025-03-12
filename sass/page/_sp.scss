@@ -319,6 +319,9 @@
       left: 114px;
       bottom: 0;
       right: 0;
+      @include screen('mobile') {
+        left: 51px;
+      }
     }
   }
 
@@ -329,6 +332,9 @@
     display: inline-block;
     font-weight: bold;
     font-size: 1.25em;
+    @include screen('mobile') {
+      margin-left: 50px;
+    }
   }
   .typeList {
     list-style: none;
@@ -405,9 +411,17 @@
       h3 {
         margin: 0;
         color: $color-word;
+        &.lineclamp2 {
+          display: block;
+          -webkit-line-clamp: auto;
+          overflow: visible;
+        }
       }
       p {
         margin: 0;
+        display: block;
+        -webkit-line-clamp: auto;
+        overflow: visible;
       }
       .mark {
         float: right;
@@ -433,6 +447,12 @@
       }
       .thumbnail:last-child:nth-child(4n-3) {
         margin-right: 0;
+      }
+    }
+    @include screen('mobile') {
+      margin: 0;
+      > li {
+        margin-left: 25px;
       }
     }
   }
@@ -903,5 +923,30 @@
     width: 1.4em;
     margin-right: 5px;
     vertical-align: top;
+  }
+}
+.placard {
+  background: #fae7e4;
+  margin: 1em 2% 2em;
+  padding: 0.5em 1.5em;
+  border-left: solid 5px #e5b6af;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  line-height: 1.6em;
+  h3 {
+    margin: 0.5em 0 0;
+    color: #784d49;
+  }
+  p {
+    margin: 0.5em 0;
+  }
+  a {
+    color: #784d49;
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      color: darken(#784d49, 10);
+      text-decoration: none;
+    }
   }
 }

@@ -192,15 +192,18 @@
 
       span.date {
         display: inline-block;
-        min-width: 7em;
+        min-width: 10em;
         position: relative;
         margin-right: 1em;
-        flex: 0 0 7em;
+        flex: 0 0 10em;
         &:before {
           content: '/';
           position: absolute;
           top: 0;
           right: 0;
+          @include screen('xs_mobile') {
+            display: none;
+          }
         }
       }
       @include screen('xs_mobile') {

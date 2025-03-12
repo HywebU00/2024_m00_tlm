@@ -7822,10 +7822,10 @@ table.table_sprite tr:nth-child(even) {
 .splist > ul > li span.date,
 .splist ol > li span.date {
   display: inline-block;
-  min-width: 7em;
+  min-width: 10em;
   position: relative;
   margin-right: 1em;
-  flex: 0 0 7em;
+  flex: 0 0 10em;
 }
 .splist > ul > li span.date:before,
 .splist ol > li span.date:before {
@@ -7833,6 +7833,12 @@ table.table_sprite tr:nth-child(even) {
   position: absolute;
   top: 0;
   right: 0;
+}
+@media screen and (max-width: 575px) {
+  .splist > ul > li span.date:before,
+  .splist ol > li span.date:before {
+    display: none;
+  }
 }
 @media screen and (max-width: 575px) {
   .splist > ul > li,
@@ -12827,6 +12833,11 @@ h2.title:before {
   bottom: 0;
   right: 0;
 }
+@media screen and (max-width: 767px) {
+  .yearBlock .container:before {
+    left: 51px;
+  }
+}
 .yearBlock .year {
   padding: 0.3em 0;
   border-radius: 2em;
@@ -12834,6 +12845,11 @@ h2.title:before {
   display: inline-block;
   font-weight: bold;
   font-size: 1.25em;
+}
+@media screen and (max-width: 767px) {
+  .yearBlock .year {
+    margin-left: 50px;
+  }
 }
 .yearBlock .typeList {
   list-style: none;
@@ -12945,8 +12961,16 @@ h2.title:before {
   margin: 0;
   color: #222;
 }
+.yearBlock .typeList .thumbnail h3.lineclamp2 {
+  display: block;
+  -webkit-line-clamp: auto;
+  overflow: visible;
+}
 .yearBlock .typeList .thumbnail p {
   margin: 0;
+  display: block;
+  -webkit-line-clamp: auto;
+  overflow: visible;
 }
 .yearBlock .typeList .thumbnail .mark {
   float: right;
@@ -12973,6 +12997,14 @@ h2.title:before {
   }
   .yearBlock .typeList .thumbnail:last-child:nth-child(4n-3) {
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .yearBlock .typeList {
+    margin: 0;
+  }
+  .yearBlock .typeList > li {
+    margin-left: 25px;
   }
 }
 
@@ -13425,6 +13457,31 @@ h2.title:before {
   width: 1.4em;
   margin-right: 5px;
   vertical-align: top;
+}
+
+.placard {
+  background: #fae7e4;
+  margin: 1em 2% 2em;
+  padding: 0.5em 1.5em;
+  border-left: solid 5px #e5b6af;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  line-height: 1.6em;
+}
+.placard h3 {
+  margin: 0.5em 0 0;
+  color: #784d49;
+}
+.placard p {
+  margin: 0.5em 0;
+}
+.placard a {
+  color: #784d49;
+  text-decoration: underline;
+}
+.placard a:hover, .placard a:focus {
+  color: #583936;
+  text-decoration: none;
 }
 
 /* sitemap */
