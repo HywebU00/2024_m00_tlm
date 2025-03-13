@@ -11048,6 +11048,7 @@ body.noscroll {
   display: flex;
   align-items: flex-start;
   padding: 0 5% 2em;
+  box-sizing: border-box;
 }
 .innerpage .center_block {
   flex: none;
@@ -11751,7 +11752,7 @@ body.noscroll {
   margin: 0.5em 1em 2em 2em;
 }
 .modeBlock .mode {
-  margin: 5em 0 4em 5%;
+  margin: 5em 0 4em 3%;
 }
 @media screen and (max-width: 991px) {
   .modeBlock .mode {
