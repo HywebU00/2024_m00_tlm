@@ -138,7 +138,7 @@ img {
 
 .full .container {
   padding: 0 3%;
-  max-width: 100% !important;
+  max-width: 100%;
 }
 
 .col-6-6 .col {
@@ -3552,7 +3552,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   }
 }
 .header > .container {
-  max-width: 1600px;
   overflow: visible;
   position: relative;
   padding: 25px 3% 30px;
