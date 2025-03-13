@@ -555,8 +555,8 @@
     background: #fff;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
     position: absolute;
-    // left: -6%;
-    left: 0;
+    left: -5.5%;
+    // left: 0;
     width: 76%;
     height: 100%;
     @include screen('tablet') {
@@ -567,8 +567,8 @@
     content: '';
     background: url(../images/newsBlock_bg3.jpg) no-repeat right top;
     position: absolute;
-    // right: -6%;
-    right: 0;
+    right: -5.5%;
+    // right: 0;
     top: 5em;
     width: 90%;
     height: 95%;
@@ -577,10 +577,10 @@
       display: none;
     }
   }
-  .container {
-    max-width: 1600px;
-    padding: 0;
-  }
+  // .container {
+  //   max-width: 1600px;
+  //   padding: 0;
+  // }
   h2 {
     &.title {
       margin-bottom: 1.5em;
@@ -606,9 +606,9 @@
     margin: 0.5em 1em 2em 2em;
   }
   .mode {
-    margin: 5em 0 4em 3%;
+    margin: 5em 0 4em 0;
     @include screen('tablet') {
-      margin: 5em 0 4em 3%;
+      margin: 0 0 4em 0;
     }
   }
 }
