@@ -11448,7 +11448,7 @@ body.noscroll {
   }
 }
 .service ul {
-  margin: 0;
+  margin: 0 3% 0 0;
   padding: 10em 0 0 0;
   list-style: none;
 }
@@ -11726,6 +11726,7 @@ body.noscroll {
   }
 }
 .modeBlock .container {
+  max-width: auto !important;
   padding: 0;
 }
 .modeBlock h2.title {
