@@ -11725,6 +11725,9 @@ body.noscroll {
     display: none;
   }
 }
+.modeBlock .container {
+  padding: 0;
+}
 .modeBlock h2.title {
   margin-bottom: 1.5em;
 }
@@ -11748,7 +11751,7 @@ body.noscroll {
   margin: 0.5em 1em 2em 2em;
 }
 .modeBlock .mode {
-  margin: 5em 0 4em;
+  margin: 5em 0 4em 3%;
 }
 
 .awardBlock {
