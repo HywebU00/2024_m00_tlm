@@ -11047,13 +11047,13 @@ body.noscroll {
 .innerpage > .container {
   display: flex;
   align-items: flex-start;
-  padding: 0 5% 2em;
-  box-sizing: border-box;
+  padding: 0 0 2em;
 }
 .innerpage .center_block {
   flex: none;
   flex-basis: 100%;
   max-width: 100%;
+  padding: 0 5%;
 }
 .innerpage .left_block {
   flex: none;
@@ -11701,7 +11701,7 @@ body.noscroll {
   background: #fff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
-  left: -6%;
+  left: 0;
   width: 76%;
   height: 100%;
 }
@@ -11714,7 +11714,7 @@ body.noscroll {
   content: "";
   background: url(../images/newsBlock_bg3.jpg) no-repeat right top;
   position: absolute;
-  right: -6%;
+  right: 0;
   top: 5em;
   width: 90%;
   height: 95%;
