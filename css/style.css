@@ -1831,7 +1831,7 @@ body {
   font-weight: normal;
   color: #222;
   line-height: 1.5em;
-  font-family: Lato, "PingFang TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif;
+  font-family: Lato, "PingFang TC", "Noto Sans TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif;
   -webkit-text-size-adjust: none;
   background: url(../images/body_bg.jpg) no-repeat left top;
   background-size: contain;
@@ -2564,7 +2564,7 @@ img.loaded {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: #F1F1F1;
+  background: #f1f1f1;
 }
 .img-container:before {
   display: inline-block;
@@ -2597,7 +2597,7 @@ img.loaded {
   background: rgba(0, 0, 0, 0.45);
   padding: 0 1em;
   font-size: 1.25em;
-  color: #FFF;
+  color: #fff;
   margin: 0;
   bottom: 0;
   left: 0;
@@ -8725,6 +8725,11 @@ table.table_sprite tr:nth-child(even) {
     height: 100%;
     margin: auto;
   }
+}
+.mpSlider .img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 .mpSlider .img-container .title {
   position: absolute;
