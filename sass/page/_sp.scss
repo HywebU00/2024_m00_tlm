@@ -209,7 +209,7 @@
       background: $primaryColor;
       position: absolute;
       top: 0.83em;
-      right: 1em;
+      right: 0.5em;
       @include screen('mobile') {
         content: '';
         width: 3px;

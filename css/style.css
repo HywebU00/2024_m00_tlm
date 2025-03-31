@@ -5733,8 +5733,8 @@ select::-ms-expand {
   font-weight: 500;
 }
 .flex-form .form_title {
-  max-width: 180px;
-  flex: 0 0 180px;
+  max-width: 13em;
+  flex: 0 0 13em;
   align-self: flex-start;
   padding: 0.65em 0;
   font-weight: 500;
@@ -5753,8 +5753,8 @@ select::-ms-expand {
   }
 }
 .flex-form .form_title + .form_content[class*=form_col] {
-  flex-basis: calc(100% - 180px);
-  max-width: calc(100% - 180px);
+  flex-basis: calc(100% - 13em);
+  max-width: calc(100% - 13em);
   padding-top: 0;
 }
 @media screen and (max-width: 767px) {
@@ -5765,9 +5765,9 @@ select::-ms-expand {
 }
 .flex-form .form_content {
   display: flex;
-  max-width: calc(100% - 180px);
+  max-width: calc(100% - 13em);
   flex: auto;
-  flex-basis: calc(100% - 180px);
+  flex-basis: calc(100% - 13em);
   position: relative;
   min-height: 1px;
   flex-wrap: wrap;
@@ -12729,7 +12729,7 @@ h2.title:before {
   background: #9a6965;
   position: absolute;
   top: 0.83em;
-  right: 1em;
+  right: 0.5em;
 }
 @media screen and (max-width: 767px) {
   .formBlock .form_title:before {
