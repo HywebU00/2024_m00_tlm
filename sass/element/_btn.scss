@@ -113,6 +113,7 @@ $btn-radius: 0.2em;
   color: #fff;
   border-radius: 2em;
   background: #666;
+  border: solid 1px #666;
   &:hover,
   &:focus {
     background: darken(#666, 5);

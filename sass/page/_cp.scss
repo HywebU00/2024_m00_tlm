@@ -31,7 +31,7 @@ h2.title {
 
 // .tt{ color: #222; }
 .cp {
-  margin-bottom: 3em;
+  margin: 0 1.5em 3em;
   .pic {
     float: left;
     margin: 0px 1em 1em 0;
@@ -48,9 +48,11 @@ h2.title {
       display: block;
     }
     figcaption {
-      text-align: center;
+      text-align: left;
       display: block;
-      font-size: 0.938em;
+      font-size: 0.875em;
+      text-align: justify;
+      padding: 0.5em;
     }
     @include screen('mobile') {
       float: none;
@@ -184,10 +186,10 @@ h2.title {
       &.file_docx,
       &.file_odt {
         a {
-          background: $color-blue;
+          background: darken($color-blue, 10);
           &:hover,
           &:focus {
-            background: darken($color-blue, 5%);
+            background: darken($color-blue, 15);
           }
         }
       }
@@ -196,10 +198,10 @@ h2.title {
       &.file_csv,
       &.file_ods {
         a {
-          background: $color-green;
+          background: darken($color-green, 10);
           &:hover,
           &:focus {
-            background: darken($color-green, 5%);
+            background: darken($color-green, 15);
           }
         }
       }
@@ -245,10 +247,10 @@ h2.title {
       }
       &.file_mov {
         a {
-          background: #1c8686;
+          background: #653f89;
           &:hover,
           &:focus {
-            background: darken(#1c8686, 5%);
+            background: darken(#653f89, 5);
           }
         }
       }
@@ -385,7 +387,7 @@ h2.title {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
-  margin: 1em 2% 2em;
+  margin: 1em 0 2em;
   @include screen('mobile') {
   }
   h3 {
@@ -431,7 +433,7 @@ h2.title {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
-  margin: 1em 2% 2em;
+  margin: 1em 0 2em;
   @include screen('mobile') {
   }
 
@@ -447,6 +449,8 @@ h2.title {
   .img-container {
     @include aspect-ratio(5, 4); //比例
     flex: 0 0 300px;
+    margin-top: 1.5em;
+
     img {
       transition: 0.3s;
       object-fit: cover;
@@ -456,7 +460,7 @@ h2.title {
     }
   }
   .caption {
-    padding: 0 2em;
+    padding: 0 2em 0 1em;
     height: 100%;
     flex: 1 1 calc(100% - 300px);
     position: relative;
@@ -510,6 +514,7 @@ h2.title {
     .img-container {
       @include aspect-ratio(5, 4); //比例
       flex: 0 0 300px;
+      margin-top: 1.3em;
       img {
         transition: 0.3s;
         object-fit: contain;
@@ -535,8 +540,17 @@ h2.title {
   }
   .t1 {
     min-width: 5em;
-    text-align: right;
-    display: inline-block;
+    // text-align: right;
+    // display: inline-block;
+    &:after {
+      content: '｜';
+      padding-right: 0.5em;
+      font-size: 0.875em;
+      position: absolute;
+      right: 0;
+      top: 0.95em !important;
+      transform: translateY(-50%);
+    }
   }
 }
 
@@ -548,4 +562,30 @@ h2.title {
 }
 .aRight {
   text-align: right;
+}
+.infoList {
+  li {
+    display: flex;
+    // flex-wrap: wrap;
+    position: relative;
+  }
+  .t1 {
+    flex: 0 0 7em;
+    position: relative;
+    padding-right: 0.5em;
+
+    &:after {
+      content: '｜';
+      padding-right: 0.5em;
+      font-size: 0.875em;
+      position: absolute;
+      right: 0;
+      top: 0.9em;
+      transform: translateY(-50%);
+    }
+  }
+  .infotxt {
+    flex: 1 1 auto;
+    text-align: justify;
+  }
 }

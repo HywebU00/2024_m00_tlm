@@ -422,23 +422,23 @@
     border: none;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
     left: 5px;
-    @media screen and (min-width: 768px) {
-      top: auto;
-      left: auto;
-      bottom: 10%;
-      right: calc(5% + 70px);
-    }
+    // @media screen and (min-width: 768px) {
+    //   top: auto;
+    //   left: auto;
+    //   bottom: 10%;
+    //   right: calc(5% + 70px);
+    // }
   }
 
   .nextSlider {
     border: none;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
     right: 5px;
-    @media screen and (min-width: 768px) {
-      top: auto;
-      bottom: 10%;
-      right: 5%;
-    }
+    // @media screen and (min-width: 768px) {
+    //   top: auto;
+    //   bottom: 10%;
+    //   right: 5%;
+    // }
   }
   .swiper-pagination {
     width: 6em;
@@ -530,7 +530,7 @@
     .sort2 {
       font-size: 1.25em;
       font-weight: bold;
-      color: $color-blue;
+      color: darken($color-blue, 10);
       margin: 0.2em 0;
       padding-right: 1em;
       position: relative;

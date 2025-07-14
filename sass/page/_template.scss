@@ -63,6 +63,12 @@ body {
     display: flex;
     align-items: flex-start;
     padding: 0 0 2em;
+    margin: 0 auto;
+    max-width: $container-max; //請看_variable.scss
+    @include screen('tablet') {
+      flex-direction: column;
+      padding: 0 2%;
+    }
   }
 
   .center_block {

@@ -259,6 +259,8 @@ $(function () {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: false,
+    allowTouchMove: false, // 禁止滑鼠/手指拖曳
+    simulateTouch: false, // 禁止模擬觸控
     // pagination: {
     //   el: '.swiper-pagination',
     //   clickable: true,

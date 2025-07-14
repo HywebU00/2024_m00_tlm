@@ -58,6 +58,7 @@
     display: block;
     width: 100%;
     margin-bottom: 2em;
+    padding: 1em;
   }
   .datepick {
     padding-right: 0.5em;
@@ -381,7 +382,7 @@
         max-width: 150px;
         margin: 0;
         img {
-          object-fit: cover;
+          object-fit: contain;
         }
 
         @media screen and (max-width: 767px) {
@@ -389,7 +390,7 @@
           max-width: 40%;
           display: none;
           img {
-            object-fit: cover;
+            object-fit: contain;
           }
         }
       }
@@ -897,6 +898,7 @@
     .img-container {
       @include aspect-ratio(1, 1); //比例
       flex: 0 0 200px;
+      margin-top: 1em;
       img {
         transition: 0.3s;
         object-fit: cover;
@@ -923,6 +925,13 @@
     width: 1.4em;
     margin-right: 5px;
     vertical-align: top;
+  }
+  .infoList {
+    .t1 {
+      &:after {
+        top: 1.2em;
+      }
+    }
   }
 }
 .placard {

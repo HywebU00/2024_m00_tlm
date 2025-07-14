@@ -82,11 +82,23 @@
   background: $primaryColor;
   color: #fff;
   position: absolute;
-  bottom: 200px;
+  bottom: 100px;
   right: 0;
   z-index: 2;
-  padding: 1em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  &:hover {
+    background: darken($primaryColor, 10%);
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    &:focus-visible {
+      box-shadow: $aFocus 0 0 0 2px inset;
+    }
+  }
   .title {
     font-size: 1.25em;
     font-weight: bold;
@@ -116,9 +128,13 @@
   @include screen('mobile') {
     width: 100px;
     height: 100px;
-    padding: 0.5em;
+    // padding: 0.5em;
     bottom: auto;
     top: 0;
+    display: none;
+    a {
+      padding: 0.5em;
+    }
     .title {
       font-size: 1em;
     }
@@ -239,10 +255,10 @@
           color: #fff;
           margin-right: 1em;
           &.color_green {
-            background: $color-green;
+            background: darken($color-green, 10);
           }
           &.color_blue {
-            background: $color-blue;
+            background: darken($color-blue, 10);
           }
           &.color_pink {
             background: $primaryColor;
@@ -359,7 +375,7 @@
           content: '';
           width: 1.5rem;
           height: 1.5rem;
-          background: url(../images/arrow3.svg) no-repeat right center;
+          background: url(../images/arrow2.svg) no-repeat right center;
           background-size: 1.5rem auto;
           position: absolute;
           right: 1em;

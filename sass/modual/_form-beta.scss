@@ -1421,7 +1421,7 @@ input[type='email']:focus-visible,
 input[type='password']:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  border: 2px dashed $form-focus;
+  border: 2px dashed $aFocus;
   //   @include box-shadow(0px 0px 0px 2px lighten($form-focus, 0));
   outline: none;
 }

@@ -181,7 +181,8 @@ $(function () {
 
   _megamenu.clone().prependTo(_mArea);
   _search.clone().prependTo(_header).removeClass('search').addClass('m_search');
-  $('header .container .font_size').insertAfter('h1');
+  $('header .container .share').insertAfter('h1');
+  $('header .container .font_size').insertAfter('.header .container .share');
   $('header .container .searchCtrl').insertAfter('.font_size');
   $('header .container .sidebarCtrl').insertAfter('.searchCtrl');
   // 切換PC/Mobile 選單

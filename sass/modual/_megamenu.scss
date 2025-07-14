@@ -419,7 +419,41 @@
 
           &:hover,
           &:focus {
-            background: darken($primaryColor, 5);
+            background: darken($primaryColor, 10);
+          }
+        }
+      }
+    }
+    .share {
+      margin: 0 1.25%;
+      ul {
+        height: 52px;
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+        @include screen('mobile') {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        li {
+          flex: 0 0 36px;
+          margin: 0 4px;
+          a {
+            height: auto;
+            padding: 2px;
+            border: none;
+            height: 36px;
+            width: 36px;
+            &:hover,
+            &:focus {
+              background: none !important;
+            }
+            &:focus-visible {
+              border-radius: 0;
+            }
           }
         }
       }
