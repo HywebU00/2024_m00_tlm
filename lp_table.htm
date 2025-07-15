@@ -229,49 +229,45 @@
             <!-- adv_searchBlock -->
             <section class="col-12 adv_searchBlock">
               <div class="container">
-                <div class="adv_search open">
-                  <div class="col">
-                    <form name="queryForm" action="lp" id="Form1">
-                      <input type="hidden" name="usersubmit" value="1" /><input type="hidden" name="mp" value="1" /><input type="hidden" name="ctNode" value="38025" /><input type="hidden" name="CtUnit" value="20481" />
-                      <div class="flex-form form-column">
-                        <div class="form_grp">
-                          <div class="flex-col-equal-2">
-                            <div class="form_grp">
-                              <label class="form_title" for="q_stitle">標題</label>
-                              <div class="form_content">
-                                <input type="text" name="q_stitle" id="q_stitle" />
-                              </div>
-                            </div>
-                            <div class="form_grp">
-                              <label class="form_title" for="q_xbody">內文</label>
-                              <div class="form_content">
-                                <input type="text" name="q_xbody" id="q_xbody" />
-                              </div>
-                            </div>
-                            <div class="form_grp">
-                              <div class="form_title">日期</div>
-                              <div class="form_content">
-                                <div class="datepick">
-                                  <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
-                                </div>
-                                <div class="datepick">
-                                  <input name="" type="date" value="" class="calendar" placeholder="結束日期" />
-                                </div>
-                              </div>
-                            </div>
-                            <div class="btn_grp">
-                              <button type="submit" class="btn btn-submit">查詢</button>
-                              <button type="reset" class="btn btn-reset">重設</button>
-                            </div>
-                          </div>
+                <!-- pageSearch -->
+                <div class="pageSearch">
+                  <form action="" class="form_inline" role="search" aria-label="進階查詢">
+                    <div class="form_grp">
+                      <label class="form_title" for="q_stitle">標題</label>
+                      <div class="form_content">
+                        <input type="text" name="q_stitle" id="q_stitle" aria-label="標題" />
+                      </div>
+                    </div>
+                    <div class="form_grp">
+                      <label class="form_title" for="q_xbody">內文</label>
+                      <div class="form_content">
+                        <input type="text" name="q_xbody" id="q_xbody" aria-label="內文" />
+                      </div>
+                    </div>
+                    <div class="form_grp datepick_grp">
+                      <span class="form_title" id="date_range_label">日期</span>
+                      <div class="form_content" aria-labelledby="date_range_label">
+                        <div class="datepick">
+                          <label for="date_start" class="visually-hidden">開始日期</label>
+                          <input name="date_start" id="date_start" type="date" class="calendar" placeholder="開始日期" aria-label="開始日期" />
+                        </div>
+                        <div class="datepick">
+                          <label for="date_end" class="visually-hidden">結束日期</label>
+                          <input name="date_end" id="date_end" type="date" class="calendar" placeholder="結束日期" aria-label="結束日期" />
                         </div>
                       </div>
-                    </form>
-                  </div>
+                    </div>
+                    <div class="btn_grp">
+                      <input class="btn" name="" type="submit" role="button" value="查詢" />
+                      <input class="btn" name="" type="reset" role="button" value="重設" />
+                    </div>
+                  </form>
                 </div>
+
+                <!--pageSearch end -->
               </div>
             </section>
-            <!-- adv_searchBlock end-->
+            <!-- adv_searchBlock end -->
 
             <!-- LP Start -->
             <section class="lp">
