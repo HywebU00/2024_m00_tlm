@@ -11128,9 +11128,13 @@ body.noscroll {
 .innerpage.large_size {
   font-size: 1.125em;
 }
+.innerpage .topPic {
+  position: relative;
+}
 .innerpage .topPic img {
   width: 100%;
   height: auto;
+  max-height: 300px;
 }
 
 .hidden {

@@ -14,7 +14,7 @@ $(function () {
     speed: 1000,
 
     autoplay: {
-      delay: 5000,
+      delay: 8000,
       disableOnInteraction: false,
     },
     effect: 'fade',
@@ -63,7 +63,7 @@ $(function () {
       prevEl: '.swiper-button-prev',
     },
     autoplay: {
-      delay: 3000,
+      delay: 8000,
       disableOnInteraction: false,
     },
   });

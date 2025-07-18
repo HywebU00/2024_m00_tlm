@@ -631,11 +631,42 @@
 .awardBlock {
   margin: 0 0 3em;
   .topPic2 {
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
-    margin: 2em 3%;
+    // box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+    // margin: 2em 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // @include screen('tablet') {
+    //   margin: 0 0 2em;
+    // }
+    // @include screen('mobile') {
+    //   margin: 0 0 1em;
+    // }
     img {
       width: 100%;
       height: auto;
+      @include aspect-ratio(3.9, 2); //比例
+      box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+    }
+    .col {
+      flex: 1 1 calc(100% - 30%);
+      padding: 1em 2%;
+      &:nth-of-type(2n) {
+        flex: 0 0 30%;
+        iframe {
+          width: 100%;
+          height: 98.5%;
+          box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+        }
+        @include screen('mobile') {
+          flex: 1 1 100%;
+          iframe {
+            box-shadow: none;
+            height: 400px;
+            margin: 0 auto;
+          }
+        }
+      }
     }
   }
 }
