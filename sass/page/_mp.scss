@@ -263,6 +263,9 @@
           &.color_pink {
             background: $primaryColor;
           }
+          &.color_gry {
+            background: #666;
+          }
           @include screen('mobile') {
             display: block;
           }
