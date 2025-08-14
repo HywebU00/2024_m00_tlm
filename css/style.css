@@ -8597,7 +8597,7 @@ table.table_sprite tr:nth-child(even) {
 
 /* 上一則 位置 圖片*/
 .prevSlider {
-  left: 0;
+  left: 15px;
   background: url("../images/slick/icon_arrow_left.svg") center center no-repeat RGBA(255, 255, 255, 0.9);
   background-size: 24px 24px;
   /* 箭頭 hover及focus 樣式 */
@@ -8612,7 +8612,7 @@ table.table_sprite tr:nth-child(even) {
 
 /* 下一則 位置 圖片*/
 .nextSlider {
-  right: 0;
+  right: 15px;
   background: url("../images/slick/icon_arrow_right.svg") center center no-repeat RGBA(255, 255, 255, 0.8);
   background-size: 24px 24px;
   /* 箭頭 hover及focus 樣式 */
@@ -10145,12 +10145,12 @@ table.table_sprite tr:nth-child(even) {
   border: dashed 2px #ff3e4d;
 }
 .sbookSwiper .prevSlider {
-  top: 50%;
+  top: 65%;
   margin-top: -15px;
   left: 0;
 }
 .sbookSwiper .nextSlider {
-  top: 50%;
+  top: 65%;
   margin-top: -15px;
   right: 0;
 }
@@ -11995,6 +11995,11 @@ h2.title:before {
 .cp {
   margin: 0 1.5em 3em;
 }
+@media screen and (max-width: 767px) {
+  .cp {
+    margin: 0 0 2em;
+  }
+}
 .cp .pic {
   float: left;
   margin: 0px 1em 1em 0;
@@ -12630,6 +12635,11 @@ h2.title:before {
   width: auto;
   max-width: 160px;
   margin: 0 0.5em 0 0;
+}
+@media screen and (max-width: 767px) {
+  .cpinfoBlock3 ul li a img {
+    max-width: 100%;
+  }
 }
 .cpinfoBlock3 .sbookBlock {
   flex: 0 0 300px;

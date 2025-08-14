@@ -166,7 +166,7 @@
 /* 上一則 位置 圖片*/
 
 .prevSlider {
-  left: 0;
+  left: 15px;
   background: url('../images/slick/icon_arrow_left.svg') center center no-repeat RGBA(255, 255, 255, 0.9);
   background-size: 24px 24px;
 
@@ -184,7 +184,7 @@
 /* 下一則 位置 圖片*/
 
 .nextSlider {
-  right: 0;
+  right: 15px;
   background: url('../images/slick/icon_arrow_right.svg') center center no-repeat RGBA(255, 255, 255, 0.8);
   background-size: 24px 24px;
 
@@ -1587,12 +1587,12 @@
     }
   }
   .prevSlider {
-    top: 50%;
+    top: 65%;
     margin-top: -15px;
     left: 0;
   }
   .nextSlider {
-    top: 50%;
+    top: 65%;
     margin-top: -15px;
     right: 0;
   }
