@@ -106,7 +106,7 @@
         }
       }
       &:focus-visible {
-        border: 2px dashed $form-focus;
+        border: 2px dashed $aFocus;
         // background: #ccc !important;
       }
       @include screen('mobile') {
@@ -122,7 +122,7 @@
       font-size: 0em;
       @extend %mobileCtrlBtn;
       &:focus-visible {
-        border: 2px dashed $form-focus;
+        border: 2px dashed $aFocus;
       }
       &:before {
         width: 40px;
@@ -161,14 +161,14 @@
     margin: 0 0 0 50px;
     padding: 0;
     box-sizing: border-box;
-    font-size: 0px;
+    font-size: 0;
     a {
       display: inline-block;
     }
     img {
       display: block;
-      width: auto;
-      height: 75px;
+      max-width: 280px;
+      max-height: 75px;
     }
     @include screen('mobile') {
       padding: 0 0px 2px;
@@ -179,7 +179,7 @@
       img {
         width: auto;
         height: auto;
-        height: 52px;
+        max-height: 56px;
         margin: 0px auto;
         transform: scale(0.8);
       }
@@ -245,7 +245,7 @@
       }
     }
     &:before {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.9);
       box-shadow: rgba(50, 50, 93, 0.15) 0px 2px 10px -1px, rgba(0, 0, 0, 0.2) 0px 1px 10px -1px;
     }
     h1 {
@@ -266,6 +266,20 @@
       background: rgba(255, 255, 255, 0.6);
       box-shadow: rgba(50, 50, 93, 0.15) 0px 2px 10px -1px, rgba(0, 0, 0, 0.2) 0px 1px 10px -1px;
     }
+  }
+  .share {
+    position: absolute;
+    right: 240px;
+    top: 45px;
+    z-index: 999;
+    @include screen('mobile') {
+      display: none;
+    }
+  }
+}
+.pagebody {
+  .header .share {
+    top: 28px;
   }
 }
 

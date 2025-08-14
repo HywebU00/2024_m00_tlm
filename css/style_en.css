@@ -3585,7 +3585,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   top: 38px;
 }
 .header > .container .sidebarCtrl:focus-visible {
-  border: 2px dashed #814950;
+  border: 2px dashed #ff3e4d;
 }
 @media screen and (max-width: 767px) {
   .header > .container .sidebarCtrl {
@@ -3599,7 +3599,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   font-size: 0em;
 }
 .header > .container .searchCtrl:focus-visible {
-  border: 2px dashed #814950;
+  border: 2px dashed #ff3e4d;
 }
 .header > .container .searchCtrl:before {
   width: 40px;
@@ -3636,15 +3636,15 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin: 0 0 0 50px;
   padding: 0;
   box-sizing: border-box;
-  font-size: 0px;
+  font-size: 0;
 }
 .header h1 a {
   display: inline-block;
 }
 .header h1 img {
   display: block;
-  width: auto;
-  height: 75px;
+  max-width: 280px;
+  max-height: 75px;
 }
 @media screen and (max-width: 767px) {
   .header h1 {
@@ -3657,7 +3657,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   .header h1 img {
     width: auto;
     height: auto;
-    height: 52px;
+    max-height: 56px;
     margin: 0px auto;
     transform: scale(0.8);
   }
@@ -3731,7 +3731,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   }
 }
 .header.pageheader:before {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: rgba(50, 50, 93, 0.15) 0px 2px 10px -1px, rgba(0, 0, 0, 0.2) 0px 1px 10px -1px;
 }
 .header.pageheader h1 {
@@ -3751,6 +3751,21 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .header.pageheader.sticky {
   background: rgba(255, 255, 255, 0.6);
   box-shadow: rgba(50, 50, 93, 0.15) 0px 2px 10px -1px, rgba(0, 0, 0, 0.2) 0px 1px 10px -1px;
+}
+.header .share {
+  position: absolute;
+  right: 240px;
+  top: 45px;
+  z-index: 999;
+}
+@media screen and (max-width: 767px) {
+  .header .share {
+    display: none;
+  }
+}
+
+.pagebody .header .share {
+  top: 28px;
 }
 
 .search {
@@ -11216,14 +11231,25 @@ body.noscroll {
   background: #814950;
   color: #fff;
   position: absolute;
-  bottom: 200px;
+  bottom: 100px;
   right: 0;
   z-index: 2;
-  padding: 1em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+.opentoday:hover {
+  background: rgb(96.4306930693, 54.5693069307, 59.801980198);
+}
+.opentoday a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+}
+.opentoday a:focus-visible {
+  box-shadow: #ff3e4d 0 0 0 2px inset;
+}
 .opentoday .title {
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: bold;
   position: relative;
   padding-bottom: 0.5em;
@@ -11242,6 +11268,8 @@ body.noscroll {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 0.875em;
+  line-height: 1.3;
 }
 .opentoday ul li {
   display: block;
@@ -11249,16 +11277,19 @@ body.noscroll {
 }
 @media screen and (max-width: 991px) {
   .opentoday {
-    bottom: 180px;
+    bottom: 80px;
   }
 }
 @media screen and (max-width: 767px) {
   .opentoday {
     width: 100px;
     height: 100px;
-    padding: 0.5em;
     bottom: auto;
     top: 0;
+    display: none;
+  }
+  .opentoday a {
+    padding: 0.5em;
   }
   .opentoday .title {
     font-size: 1em;
