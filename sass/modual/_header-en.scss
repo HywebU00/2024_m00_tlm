@@ -413,6 +413,9 @@
         background: $primaryColor;
         border: solid 1px $primaryColor;
       }
+      &:focus-visible {
+        outline: dashed 2px $aFocus;
+      }
     }
     .btn,
     .btn-search {
@@ -443,7 +446,7 @@
       border: none;
       &:hover,
       &:focus {
-        color: lighten($aHover, 10);
+        color: lighten($aHover, 40);
       }
     }
   }
@@ -468,7 +471,7 @@
         color: #fff;
         &:hover,
         &:focus {
-          color: lighten($aHover, 10);
+          color: lighten($aHover, 40);
         }
       }
     }

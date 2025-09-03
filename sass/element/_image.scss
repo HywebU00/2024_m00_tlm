@@ -84,7 +84,7 @@ img {
     }
     &:focus-visible {
       &:before {
-        box-shadow: 0 0px 0px 2px $aHover inset;
+        box-shadow: 0 0px 0px 2px $aFocus inset;
       }
     }
   }

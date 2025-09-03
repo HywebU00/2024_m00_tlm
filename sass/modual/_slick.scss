@@ -640,6 +640,7 @@
       padding-left: 0.5em;
     }
   }
+
   @media screen and (min-width: 768px) {
     .prevSlider {
       top: 30px;
@@ -1104,9 +1105,11 @@
     a {
       flex: 1 1 100%;
       padding: 0;
+      display: block;
       &:focus-visible {
-        box-shadow: $aFocus 0 0 0 2px inset;
+        // box-shadow: $aFocus 0 0 0 2px;
         outline: none;
+        border: dashed 3px $aFocus;
       }
       &:hover {
         img {
@@ -1197,8 +1200,9 @@
       flex: 1 1 100%;
       padding: 0;
       &:focus-visible {
-        box-shadow: $aFocus 0 0 0 2px inset;
+        // box-shadow: $aFocus 0 0 0 2px;
         outline: none;
+        border: dashed 3px $aFocus;
       }
       &:hover {
         img {
@@ -1609,4 +1613,101 @@
   //     bottom: 0;
   //   }
   // }
+}
+
+/* ======================================== */
+/* Swiper 播放/暫停按鈕 (WCAG 優化)        */
+/* ======================================== */
+
+/* 確保 Swiper 容器是定位的基準 */
+// .swiper {
+//   position: relative;
+// }
+
+/* 按鈕基本樣式 */
+.swiper-play-pause-btn {
+  /* 定位：通常放在右下角，可以根據您的設計微調 */
+  position: absolute;
+  // bottom: 12px;
+  // right: 15px;
+  top: 12px;
+  right: 15px;
+  z-index: 10; /* 確保在分頁元件 (pagination) 之上 */
+
+  /* 尺寸與外觀 */
+  width: 32px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+
+  /* 移除原生按鈕樣式 */
+  padding: 0;
+  outline: none;
+
+  /* 過渡動畫 */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* 滑鼠懸停效果 */
+.swiper-play-pause-btn:hover {
+  background-color: rgba(0, 0, 0, 1);
+  // transform: scale(1.1);
+}
+
+/* WCAG: 鍵盤焦點樣式 */
+.swiper-play-pause-btn:focus-visible {
+  background-color: rgba(0, 0, 0, 1);
+  outline: 2px dashed $aFocus;
+  // outline-offset: 2px;
+  // box-shadow: 0 0 5px $aFocus;
+}
+
+/* 使用 ::before 偽元素繪製圖示，無需圖片 */
+.swiper-play-pause-btn::before {
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+/* 預設狀態 (暫停中)，顯示「播放」圖示 (三角形) */
+.swiper-play-pause-btn::before {
+  width: 0;
+  height: 0;
+  margin-left: 10px; /* 微調三角形使其視覺置中 */
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent white;
+}
+
+/* is-playing 狀態，顯示「暫停」圖示 (雙直線) */
+.swiper-play-pause-btn.is-playing::before {
+  width: 12px;
+  height: 14px;
+  margin-left: auto; /* 重置 margin */
+  border-style: solid;
+  border-width: 0 4px;
+  border-color: white;
+}
+
+.cpSwiper {
+  .swiper-play-pause-btn {
+    top: 3em;
+    right: 0px;
+  }
+}
+.bookSwiper {
+  .swiper-play-pause-btn {
+    top: 8em;
+    right: -5px;
+  }
+}
+.spswiperBlock {
+  .swiper-play-pause-btn {
+    top: -1em;
+    right: 0px;
+  }
 }

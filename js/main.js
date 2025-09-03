@@ -207,7 +207,7 @@ $(function () {
     //手機版menu離開最後一個選項後關閉
     _mArea.find('.sidebarClose').focusout(function () {
       hideSidebar();
-      $('h1>a').focus();
+      $('.main>a').focus();
     });
     _overlay.off('mouseenter');
   }
@@ -451,38 +451,139 @@ $(function () {
   }
 
   // search設定
-  var search_mode = false;
-  var _searchCtrl = $('.searchCtrl');
-  $('.m_search').hide();
+  // search設定 (WCAG 優化版本 - 修正焦點順序)
 
-  function searchToggle() {
-    if (!search_mode) {
-      $('.m_search').stop(true, false).slideDown('400', 'easeOutQuint');
-      // $('.m_search').find('input[type="text"]').focus();
-      search_mode = true;
-      // prevent Android sofr Keyboard
-      var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
-      if (isAndroid) {
-        _window.off('resize');
+  // 1. 變數宣告與 DOM 快取
+  const searchCtrlBtn = $('.searchCtrl');
+  const searchContainer = $('.m_search');
+  const sidebarCtrlBtn = $('.sidebarCtrl'); // 新增：預先選取下一個目標
+
+  if (searchCtrlBtn.length > 0 && searchContainer.length > 0) {
+    const focusableElements = searchContainer.find('a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
+    const searchInput = searchContainer.find('input[type="text"]');
+    const lastFocusableElement = focusableElements.last();
+
+    // 2. 初始化狀態
+    let isSearchOpen = false;
+    let wasFocusedByMouse = false;
+    searchContainer.hide();
+
+    // 3. 初始化 ARIA 屬性
+    const searchContainerId = searchContainer.attr('id') || 'm_search_panel';
+    if (!searchContainer.attr('id')) {
+      searchContainer.attr('id', searchContainerId);
+    }
+    searchCtrlBtn.attr('aria-expanded', 'false');
+    searchCtrlBtn.attr('aria-controls', searchContainerId);
+
+    // 4. 將 toggleSearch 拆分為更明確的 open/close 函式
+    function openSearch() {
+      if (isSearchOpen) return;
+      isSearchOpen = true;
+      searchCtrlBtn.attr('aria-expanded', 'true');
+      searchContainer.slideDown(300, function () {
+        if (searchInput.length > 0) {
+          searchInput.focus();
+        }
+      });
+    }
+
+    function closeSearch(returnFocus = true) {
+      if (!isSearchOpen) return;
+      isSearchOpen = false;
+      searchCtrlBtn.attr('aria-expanded', 'false');
+      searchContainer.slideUp(300, function () {
+        if (returnFocus) {
+          searchCtrlBtn.focus();
+        }
+      });
+    }
+
+    // --- 事件監聽器 ---
+
+    // 5. 當滑鼠在按鈕上「按下」時，設定旗標
+    searchCtrlBtn.on('mousedown', () => {
+      wasFocusedByMouse = true;
+    });
+
+    // 6. 當按鈕取得「焦點」時 (Tab 鍵)
+    searchCtrlBtn.on('focus', () => {
+      if (wasFocusedByMouse) {
+        wasFocusedByMouse = false;
+        return;
       }
-    } else {
-      $('.m_search').slideUp('400', 'easeOutQuint');
-      search_mode = false;
+      openSearch();
+    });
+
+    // 7. 當按鈕被「點擊」時
+    searchCtrlBtn.on('click', function (e) {
+      e.preventDefault();
+      if (isSearchOpen) {
+        closeSearch();
+      } else {
+        openSearch();
+      }
+    });
+
+    // 8. **【核心修改】** 從最後一個元素 Tab 出去時，手動控制焦點
+    if (lastFocusableElement.length > 0) {
+      lastFocusableElement.on('keydown', function (e) {
+        if (e.key === 'Tab' && !e.shiftKey) {
+          // (1) 阻止 Tab 鍵的預設行為
+          e.preventDefault();
+
+          // (2) 呼叫關閉函式 (不返回焦點)
+          closeSearch(false);
+
+          // (3) 手動將焦點移到下一個按鈕
+          if (sidebarCtrlBtn.length > 0) {
+            sidebarCtrlBtn.focus();
+          }
+        }
+      });
     }
+
+    // 9. 按下 Escape 鍵時，關閉區塊並返回焦點
+    $(document).on('keydown', function (e) {
+      if (e.key === 'Escape' && isSearchOpen) {
+        closeSearch();
+      }
+    });
   }
-  _searchCtrl.off().on('click', function (e) {
-    searchToggle();
-  });
-  // 如果點在外面
-  $(document.body).on('click', function (e) {
-    if (search_mode) {
-      searchToggle();
-      search_mode = false;
-    }
-  });
-  $('.m_search ,.searchCtrl').on('click', function (e) {
-    e.stopPropagation();
-  });
+  // --- search設定結束 ---
+
+  // var search_mode = false;
+  // var _searchCtrl = $('.searchCtrl');
+  // $('.m_search').hide();
+
+  // function searchToggle() {
+  //   if (!search_mode) {
+  //     $('.m_search').stop(true, false).slideDown('400', 'easeOutQuint');
+  //     // $('.m_search').find('input[type="text"]').focus();
+  //     search_mode = true;
+  //     // prevent Android sofr Keyboard
+  //     var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
+  //     if (isAndroid) {
+  //       _window.off('resize');
+  //     }
+  //   } else {
+  //     $('.m_search').slideUp('400', 'easeOutQuint');
+  //     search_mode = false;
+  //   }
+  // }
+  // _searchCtrl.off().on('click', function (e) {
+  //   searchToggle();
+  // });
+  // // 如果點在外面
+  // $(document.body).on('click', function (e) {
+  //   if (search_mode) {
+  //     searchToggle();
+  //     search_mode = false;
+  //   }
+  // });
+  // $('.m_search ,.searchCtrl').on('click', function (e) {
+  //   e.stopPropagation();
+  // });
   // fixed navbar
   var resizeNavTimer;
   if ($('.header').length > 0) {

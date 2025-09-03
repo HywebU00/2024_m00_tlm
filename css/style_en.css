@@ -1602,6 +1602,14 @@ th {
   }
 }
 
+.innerpage .accesskey {
+  position: absolute;
+  top: 300px;
+  left: 5px;
+  z-index: 9;
+  color: #fff;
+}
+
 footer .accesskey {
   color: #222;
   left: 0;
@@ -2632,7 +2640,7 @@ img.loaded {
   right: 0;
 }
 .img-container a:focus-visible:before {
-  box-shadow: 0 0px 0px 2px #814950 inset;
+  box-shadow: 0 0px 0px 2px #ff3e4d inset;
 }
 .img-container img {
   position: absolute;
@@ -3911,6 +3919,9 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   background: #814950;
   border: solid 1px #814950;
 }
+.m_search .form_grp input:focus-visible {
+  outline: dashed 2px #ff3e4d;
+}
 .m_search .form_grp .btn,
 .m_search .form_grp .btn-search {
   min-width: auto;
@@ -3941,7 +3952,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   border: none;
 }
 .m_search .btn_grp .btn:hover, .m_search .btn_grp .btn:focus {
-  color: rgb(161.5693069307, 91.4306930693, 100.198019802);
+  color: rgb(217.4158415842, 188.5841584158, 192.1881188119);
 }
 .m_search .keywordHot {
   flex: 1 1 100%;
@@ -3964,7 +3975,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   color: #fff;
 }
 .m_search .keywordHot ul a:hover, .m_search .keywordHot ul a:focus {
-  color: rgb(161.5693069307, 91.4306930693, 100.198019802);
+  color: rgb(217.4158415842, 188.5841584158, 192.1881188119);
 }
 
 /*----往下滾跑出的banner----*/
@@ -8116,7 +8127,7 @@ table.table_sprite tr:nth-child(even) {
 .thumbnail a:hover img {
   transform: scale(1.1);
 }
-.thumbnail a:focus:before {
+.thumbnail a:focus-visible:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -8126,7 +8137,7 @@ table.table_sprite tr:nth-child(even) {
   right: 0;
   bottom: 0;
   z-index: 1;
-  box-shadow: 0px 0px 0px 1px #814950 inset;
+  box-shadow: 0px 0px 0px 2px #ff3e4d inset;
 }
 .thumbnail .img-container {
   overflow: hidden;
@@ -9550,8 +9561,8 @@ table.table_sprite tr:nth-child(even) {
   padding: 0;
 }
 .cpSwiper .swiper-slide a:focus-visible {
-  box-shadow: #ff3e4d 0 0 0 2px inset;
   outline: none;
+  border: dashed 3px #ff3e4d;
 }
 .cpSwiper .swiper-slide a:hover img {
   transform: scale(1.1);
@@ -9656,8 +9667,8 @@ table.table_sprite tr:nth-child(even) {
   padding: 0;
 }
 .spSwiper .swiper-slide a:focus-visible {
-  box-shadow: #ff3e4d 0 0 0 2px inset;
   outline: none;
+  border: dashed 3px #ff3e4d;
 }
 .spSwiper .swiper-slide a:hover img {
   transform: scale(1.1);
@@ -10087,6 +10098,86 @@ table.table_sprite tr:nth-child(even) {
   top: 50%;
   margin-top: -15px;
   right: 0;
+}
+
+/* ======================================== */
+/* Swiper 播放/暫停按鈕 (WCAG 優化)        */
+/* ======================================== */
+/* 確保 Swiper 容器是定位的基準 */
+/* 按鈕基本樣式 */
+.swiper-play-pause-btn {
+  /* 定位：通常放在右下角，可以根據您的設計微調 */
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  z-index: 10; /* 確保在分頁元件 (pagination) 之上 */
+  /* 尺寸與外觀 */
+  width: 32px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  /* 移除原生按鈕樣式 */
+  padding: 0;
+  outline: none;
+  /* 過渡動畫 */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* 滑鼠懸停效果 */
+.swiper-play-pause-btn:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+/* WCAG: 鍵盤焦點樣式 */
+.swiper-play-pause-btn:focus-visible {
+  background-color: rgb(0, 0, 0);
+  outline: 2px dashed #ff3e4d;
+}
+
+/* 使用 ::before 偽元素繪製圖示，無需圖片 */
+.swiper-play-pause-btn::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+/* 預設狀態 (暫停中)，顯示「播放」圖示 (三角形) */
+.swiper-play-pause-btn::before {
+  width: 0;
+  height: 0;
+  margin-left: 10px; /* 微調三角形使其視覺置中 */
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent white;
+}
+
+/* is-playing 狀態，顯示「暫停」圖示 (雙直線) */
+.swiper-play-pause-btn.is-playing::before {
+  width: 12px;
+  height: 14px;
+  margin-left: auto; /* 重置 margin */
+  border-style: solid;
+  border-width: 0 4px;
+  border-color: white;
+}
+
+.cpSwiper .swiper-play-pause-btn {
+  top: 3em;
+  right: 0px;
+}
+
+.bookSwiper .swiper-play-pause-btn {
+  top: 8em;
+  right: -5px;
+}
+
+.spswiperBlock .swiper-play-pause-btn {
+  top: -1em;
+  right: 0px;
 }
 
 .function_panel {
@@ -13347,10 +13438,10 @@ h2.title:before {
   text-align: center;
 }
 .calendar_Tb table td.othermonth .num_date {
-  color: #d5d5d5;
+  color: #757575;
 }
 .calendar_Tb table td.othermonth .num_date.satsun {
-  color: #fdbcda !important;
+  color: #e40719 !important;
 }
 @media screen and (max-width: 575px) {
   .calendar_Tb table td.othermonth {
@@ -13362,7 +13453,7 @@ h2.title:before {
   top: 5px;
   right: 5px;
   text-align: center;
-  color: #595757;
+  color: #353434;
   font-size: 1.063em;
   font-weight: bold;
   width: 1.5em;
@@ -13383,7 +13474,7 @@ h2.title:before {
   border-radius: 50%;
 }
 .calendar_Tb table .num_date.satsun {
-  color: #a87e7b;
+  color: #976763;
 }
 .calendar_Tb table ul {
   margin: 25px 0 0;
@@ -13401,7 +13492,7 @@ h2.title:before {
 .calendar_Tb table ul li a {
   display: block;
   padding: 8px;
-  background-color: #595757;
+  background-color: #504e4e;
   color: #fff;
   font-size: 0.938em;
   border-radius: 5px;
@@ -13428,7 +13519,7 @@ h2.title:before {
   margin: 0.3em 0;
 }
 .calendar_Tb table ul li a.exp {
-  background-color: #999;
+  background-color: #757575;
 }
 .calendar_Tb table ul li a.today {
   background-color: #814950;
