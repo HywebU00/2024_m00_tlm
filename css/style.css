@@ -1592,6 +1592,7 @@ th {
   position: absolute;
   top: 5px;
   left: 5px;
+  left: 5px;
   z-index: 9;
   color: #fff;
   font-size: 1em;
@@ -1600,6 +1601,14 @@ th {
   .accesskey {
     display: none;
   }
+}
+
+.main .accesskey {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  z-index: 9;
+  color: #fff;
 }
 
 .innerpage .accesskey {

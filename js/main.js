@@ -47,7 +47,7 @@ $(function () {
   /*-----------------------------------*/
   _body.prepend('<aside class="sidebar"><div class="m_area"><button type="button" class="sidebarClose">關閉</button></div><div class="menu_overlay"></div></aside>');
 
-  $('header .container').prepend('<button type="button" class="searchCtrl">查詢</button><button type="button" class="sidebarCtrl" aria-haspopup="true" aria-expanded="false">側欄選單</button>');
+  $('header .container').prepend('<button type="button" class="searchCtrl" accesskey="S" aria-expanded="false" aria-controls="m_search_panel">查詢</button><button type="button" class="sidebarCtrl" aria-haspopup="true" aria-expanded="false">側欄選單</button>');
 
   let menu_status = false;
   let _sidebar = $('.sidebar');
@@ -456,16 +456,15 @@ $(function () {
   // 1. 變數宣告與 DOM 快取
   const searchCtrlBtn = $('.searchCtrl');
   const searchContainer = $('.m_search');
-  const sidebarCtrlBtn = $('.sidebarCtrl'); // 新增：預先選取下一個目標
+  const sidebarCtrlBtn = $('.sidebarCtrl'); // 下一個可聚焦目標
 
   if (searchCtrlBtn.length > 0 && searchContainer.length > 0) {
     const focusableElements = searchContainer.find('a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
-    const searchInput = searchContainer.find('input[type="text"]');
+    const searchInput = searchContainer.find('input[type="text"]'); // 選取第一個文字輸入框
     const lastFocusableElement = focusableElements.last();
 
     // 2. 初始化狀態
     let isSearchOpen = false;
-    let wasFocusedByMouse = false;
     searchContainer.hide();
 
     // 3. 初始化 ARIA 屬性
@@ -476,14 +475,14 @@ $(function () {
     searchCtrlBtn.attr('aria-expanded', 'false');
     searchCtrlBtn.attr('aria-controls', searchContainerId);
 
-    // 4. 將 toggleSearch 拆分為更明確的 open/close 函式
+    // 4. 定義 open/close 函式
     function openSearch() {
       if (isSearchOpen) return;
       isSearchOpen = true;
       searchCtrlBtn.attr('aria-expanded', 'true');
       searchContainer.slideDown(300, function () {
         if (searchInput.length > 0) {
-          searchInput.focus();
+          searchInput.focus(); // 展開後，自動聚焦到輸入框
         }
       });
     }
@@ -494,28 +493,18 @@ $(function () {
       searchCtrlBtn.attr('aria-expanded', 'false');
       searchContainer.slideUp(300, function () {
         if (returnFocus) {
-          searchCtrlBtn.focus();
+          searchCtrlBtn.focus(); // 關閉後，焦點返回按鈕
         }
       });
     }
 
     // --- 事件監聽器 ---
 
-    // 5. 當滑鼠在按鈕上「按下」時，設定旗標
-    searchCtrlBtn.on('mousedown', () => {
-      wasFocusedByMouse = true;
-    });
+    // 【核心修改】移除 'mousedown' 和 'focus' 事件監聽器
+    // 讓 'click' 成為唯一的觸發方式，解決事件衝突問題。
+    // 無論是滑鼠點擊、鍵盤按 Enter/Space，還是 accesskey 快捷鍵，最終都會觸發 'click'。
 
-    // 6. 當按鈕取得「焦點」時 (Tab 鍵)
-    searchCtrlBtn.on('focus', () => {
-      if (wasFocusedByMouse) {
-        wasFocusedByMouse = false;
-        return;
-      }
-      openSearch();
-    });
-
-    // 7. 當按鈕被「點擊」時
+    // 5. 按鈕的「點擊」事件 (Click)
     searchCtrlBtn.on('click', function (e) {
       e.preventDefault();
       if (isSearchOpen) {
@@ -525,25 +514,20 @@ $(function () {
       }
     });
 
-    // 8. **【核心修改】** 從最後一個元素 Tab 出去時，手動控制焦點
+    // 6. 從最後一個元素 Tab 出去時，手動控制焦點
     if (lastFocusableElement.length > 0) {
       lastFocusableElement.on('keydown', function (e) {
         if (e.key === 'Tab' && !e.shiftKey) {
-          // (1) 阻止 Tab 鍵的預設行為
           e.preventDefault();
-
-          // (2) 呼叫關閉函式 (不返回焦點)
-          closeSearch(false);
-
-          // (3) 手動將焦點移到下一個按鈕
+          closeSearch(false); // 關閉但不讓焦點返回
           if (sidebarCtrlBtn.length > 0) {
-            sidebarCtrlBtn.focus();
+            sidebarCtrlBtn.focus(); // 焦點移到下一個元素
           }
         }
       });
     }
 
-    // 9. 按下 Escape 鍵時，關閉區塊並返回焦點
+    // 7. 按下 Escape 鍵時，關閉區塊並返回焦點
     $(document).on('keydown', function (e) {
       if (e.key === 'Escape' && isSearchOpen) {
         closeSearch();
@@ -552,38 +536,6 @@ $(function () {
   }
   // --- search設定結束 ---
 
-  // var search_mode = false;
-  // var _searchCtrl = $('.searchCtrl');
-  // $('.m_search').hide();
-
-  // function searchToggle() {
-  //   if (!search_mode) {
-  //     $('.m_search').stop(true, false).slideDown('400', 'easeOutQuint');
-  //     // $('.m_search').find('input[type="text"]').focus();
-  //     search_mode = true;
-  //     // prevent Android sofr Keyboard
-  //     var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
-  //     if (isAndroid) {
-  //       _window.off('resize');
-  //     }
-  //   } else {
-  //     $('.m_search').slideUp('400', 'easeOutQuint');
-  //     search_mode = false;
-  //   }
-  // }
-  // _searchCtrl.off().on('click', function (e) {
-  //   searchToggle();
-  // });
-  // // 如果點在外面
-  // $(document.body).on('click', function (e) {
-  //   if (search_mode) {
-  //     searchToggle();
-  //     search_mode = false;
-  //   }
-  // });
-  // $('.m_search ,.searchCtrl').on('click', function (e) {
-  //   e.stopPropagation();
-  // });
   // fixed navbar
   var resizeNavTimer;
   if ($('.header').length > 0) {
@@ -946,10 +898,25 @@ $(function () {
   /*-----------------------------------*/
   $(document).on('keydown', function (e) {
     // alt+S 查詢
-    if (e.altKey && e.keyCode == 83) {
-      $('html, body').animate({ scrollTop: 0 }, 200, 'easeOutExpo');
-      $('.search').find('input[type="text"]').focus();
-    }
+    // if (e.altKey && e.keyCode == 83) {
+    //   $('html, body').animate({ scrollTop: 0 }, 200, 'easeOutExpo');
+    //   $('.search').find('input[type="text"]').focus();
+    // }
+    e.altKey && 83 == e.keyCode && ($('html, body').animate({ scrollTop: 0 }, 200, 'easeOutExpo'), $('.m_search').fadeIn(), $('.m_search').find('input[type="text"]').focus()),
+      e.altKey && 85 == e.keyCode && ($('html, body').animate({ scrollTop: 0 }, 200, 'easeOutExpo'), $('header').find('.accesskey').focus()),
+      e.altKey &&
+        67 == e.keyCode &&
+        ($('html, body')
+          .stop(!0, !0)
+          .animate({ scrollTop: $('.main').find('.accesskey').offset().top }, 800, 'easeOutExpo'),
+        $('.main').find('.accesskey').focus()),
+      e.altKey &&
+        90 == e.keyCode &&
+        ($('html, body')
+          .stop(!0, !0)
+          .animate({ scrollTop: $('footer').find('.accesskey').offset().top }, 800, 'easeOutExpo'),
+        $('footer').find('.accesskey').focus()),
+      27 == e.keyCode && ($('.m_search').hide(), $('.m_search').find('input[type="text"]').focusout());
     // alt+U header
     if (e.altKey && e.keyCode == 85) {
       $('html, body').animate({ scrollTop: 0 }, 200, 'easeOutExpo');
