@@ -926,7 +926,7 @@ $(function () {
     if (e.altKey && e.keyCode == 67) {
       $('html, body')
         .stop(true, true)
-        .animate({ scrollTop: $('.main').find('.accesskey').offset().top - 100 }, 800, 'easeOutExpo');
+        .animate({ scrollTop: $('.main').find('.accesskey').offset().top - 200 }, 800, 'easeOutExpo');
       $('.main').find('.accesskey').focus();
     }
     // alt+Z footer
