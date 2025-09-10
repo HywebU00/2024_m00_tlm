@@ -10256,6 +10256,29 @@ table.table_sprite tr:nth-child(even) {
   right: 0px;
 }
 
+.eventsSwiper .swiper-play-pause-btn,
+.collectionSwiper .swiper-play-pause-btn {
+  right: 16%;
+}
+@media screen and (max-width: 1250px) {
+  .eventsSwiper .swiper-play-pause-btn,
+  .collectionSwiper .swiper-play-pause-btn {
+    right: 18%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .eventsSwiper .swiper-play-pause-btn,
+  .collectionSwiper .swiper-play-pause-btn {
+    right: 20%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .eventsSwiper .swiper-play-pause-btn,
+  .collectionSwiper .swiper-play-pause-btn {
+    right: 5%;
+  }
+}
+
 .function_panel {
   margin: -4.6em 2% 0.2em;
   padding: 0.5em 0 0.5em;

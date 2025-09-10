@@ -69,7 +69,8 @@ $(function () {
       });
 
       // 插入按鈕
-      swiperEl.appendChild(playPauseBtn);
+      // swiperEl.appendChild(playPauseBtn);
+      swiperEl.prepend(playPauseBtn);
     }
 
     // 初始化 Swiper 並儲存實例
